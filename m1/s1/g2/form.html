@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        i form hanno 2 possibili metodi
+
+        GET -> sporca l'indirizzo, cioè aggiumge de query params contenenti 
+            i dati inviati.Ha un limite alla quantitè di dati inviabili
+
+        POST -> Non sporca e nasconde i dati imviati, non risente della
+            quantità di dati
+
+        Nel form sempre mettere il nome delle variabile nei tag input,select...
+    -->
+    <form method="get">
+        <input type="text" name="nome" required placeholder="Inserisci il tuo nome">
+        <input type="password" name="password" placeholder="password">
+        <input type="email" placeholder="email">
+        
+        <!-- con for e id e lo stesso nome colego i 2 tag in modo da scrivere fato che checkbox non ha lo spazio per scrivere dentro-->
+        <label for="consenso">Acconsento al trattamento dei dati</label>
+        <input id="consenso" type="checkbox">
+        
+        <hr>  
+
+        <select>
+            <option value="">-- Seleziona --</option>
+            <option value="roma">--Roma</option>
+            <option value="milano">--Milano</option>
+            <option value="Napoli">--Napoli</option>
+        </select>
+        <textarea cols="30" rows="10"></textarea>
+
+        <button>Invia</button>
+    </form>
+</body>
+</html>
