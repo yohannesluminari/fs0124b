@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- id - l'id Pippo è diverso da pippo -> è keysensitive -->
+    <header id="Header"></header>
+    <main id="header"></main>
+
+    <!-- id non puo' essere ripetuto,massimo 1 per selettore,può dare problemi più in js che in html e css
+    class possiamo usarne quanti ne vogliamo ed è ANCHE lui keysensitive -->
+    <h3 id="colore-rosso">Titolo</h3>
+    <h3 class="colore-giallo">Titolo</h3>
+    <h3 class="colore-verde" class="colore-giallo">Titolo</h3>
+</body>
+</html>

@@ -1,0 +1,36 @@
+div{
+    color: red;
+    background-color: blue;
+}
+
+/* spazio per indicare che span è child diretto del parent h2*/
+h2 span{ /* peso 1+1 -- peso 2*/
+    color: blue;
+    text-decoration: underline;
+}
+/* lo span a riga 16 non viene codificato perche ha un peso di 1 mentre a riga 7 c'è uno span
+che vale due(h2 vale 1 e span vale 1 insieme valgono 2) quindi vince il conflitto quello più specifico 
+e il testo risulterà underline e non overline*/
+span{
+    text-decoration: overline;
+}
+
+ul, ol{ /* peso 1 ul , peso 1 ol -- totale peso 1 */
+    margin-top: 10px;
+}
+
+
+#colore-rosso{ /* id - peso 100 */
+    color: red;
+}
+.colore-giallo.colore-verde{ /*  peso 20 */
+    font-size: 20px;
+}
+h3.colore-giallo.colore-verde{ /*  peso 21 */
+    font-size: 20px;
+}
+
+h3{ /* ha priorità su tutto quello che ha una peso maggiore di h3...usarlo è una sconfitta e un omicidio 
+    verso un povero web developer */
+    color: red !important;
+}
