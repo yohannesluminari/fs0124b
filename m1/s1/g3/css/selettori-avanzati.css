@@ -1,0 +1,55 @@
+#genitore>p{
+    color: red;
+}
+blockquote + p { /* il + prende solo il primo elemento dopo la stessa + in questo caso il primo p*/
+    border:4px solid red ;
+}
+
+blockquote + p + p { /* salta il primo p e modifica il secondo*/
+    border:4px solid red ;
+    text-transform: uppercase;
+}
+
+
+blockquote ~ p { /* il ~ prende in considerazione solo il p successivo e adiacente */
+    border:4px solid green ;
+}
+
+/*inzio pseudo classi ::first-letter ::fisrt-letter ::before ::after*/
+a:hover{ 
+    background-color: RED;
+    transition: 1s; /* ci mette 1s a raggiungere il colore rosso*/
+}
+a:visited{  /* se un sito è visitato rimane comunque nero */
+    color: black;
+}
+
+a:active{   /* mentre clicco e tengo premuto codifica il codice*/
+    color: black;
+}
+
+/* fine pseudo classi*/
+
+table{
+    width: 100%;
+}
+td{
+    border: 1px solid black
+}
+tr:nth-of-type(1){  /* colora la prima riga tr - posso mewttere anche odd che colora solo le tr dispari*/
+    background-color: red;
+}
+
+tr:nth-of-type(2) td:first-child{  /* fa bold la prima cella della seconda riga(tr)*/
+    font-weight: bold;
+}
+tr td:first-child::before{ /* prendi la prima riga dei tr e aggiungici ::before*/
+    content: "#"; /* obbligatorio con before e after e quindi mette #
+    su ogni cella deella prima colonna mentre after al contarrio lo mette alla fine 
+    delle stesse celle.Se tolgo il content scompare l'asterisco */
+}
+
+tr td:first-child:not(.escluso)::before{ 
+    content: "#"; /* quindi mette #su ogni cella della prima colonna escludendo(not) 
+    quello con la classe escluso  */
+}

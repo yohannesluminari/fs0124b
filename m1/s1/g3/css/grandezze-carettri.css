@@ -1,0 +1,24 @@
+:root{
+    font-size: 25px;
+}
+
+#p1{
+    font-size:16px;
+}
+
+#p2{ /*in questo caso 1rem= 25px perchè l'elemento root ha impostato questa
+    come dimensione di riferiemnto*/
+    font-size:1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+#p3{
+    font-size:10px;
+}
+
+#p3 p{ /*in questo caso 1em= 10px perchè il genitore a riga 14 ha impostato questa
+    come dimensione di riferiemnto*/
+    font-size:1em;
+}
+
