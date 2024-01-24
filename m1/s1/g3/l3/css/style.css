@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, serif;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+  
+nav {
+  padding: 1rem 0;
+  color: rgb(33, 72, 67);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+nav span span {
+  font-weight: 600;
+} 
+
+#logo {
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+h1~h1 {
+  word-wrap:break-word; 
+}
+
+h2 {
+  font-weight: 100;
+}
+
+h3 {
+  font-weight: 65;
+}
+
+.content {
+  width: 50%;
+  margin: auto;
+  text-align: left; 
+}
+
+.content video {
+  width: 100%;
+
+}
+
+#author {
+  display: block;
+  color: black;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#feature {
+  border-left: 1px solid #ecc35b;
+  padding-left: 1rem;
+  margin-top: 2rem;
+}
+
+#feature span {
+  color: #ec5206;
+  display: block;
+}
+
+#feature a {
+  color: rgb(4, 240, 240);
+}
+
+.ingredients {
+  margin-top: 4rem;
+}
+
+.ingredients p, ol li p:first-of-type {
+  font-weight: bold;
+}
+
+.section-header {
+  border-bottom: 2px ;
+}
+
+.link {
+  color: rgb(8, 255, 255);
+}
