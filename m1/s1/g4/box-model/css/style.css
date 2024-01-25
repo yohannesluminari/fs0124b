@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+} /* negli elementi linea come span non si puo cambiare la dimesnione*/
+
+#d2{
+    min-height: 20px;
+    max-height: 25px;
+    background-color: green;
+} /* con max height se testo esce fuori non rientra nel box*/
+
+#d3{
+    max-width: 600px;
+    background-color: yellow;
+} /* in schermi più grandi di 600 la fascia verde non ricopre l'intera lunghezza*/
+
+#d4{
+    padding: 3rem;
+    /* il padding aumenta le dimensioni con il padding*/
+    /* con  box-sizing: border-box; il padding lo toglie e lo aggiunge 
+    fuori dal box d4 cosi le dimesioni rimangono quelle della classe square...
+    puo essere messo anche all'inizio per influenzare l'intera pagina
+    guarda a riga 1 per esempio*/
+} 
+
+
+
+
