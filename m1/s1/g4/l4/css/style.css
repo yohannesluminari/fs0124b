@@ -56,8 +56,8 @@ h1{
     font-size: 40px;
     font-weight: bolder;
 }
-h2{
-    padding-top: 10px;
+caption,h2{
+    padding-top: 8px;
     padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
@@ -75,10 +75,43 @@ p>a{
 }
 
 table{
-    padding-top: 15px;
+    text-align: center;
+    width: 100%;
 }
 
 thead{
+    height: 80px;
+    line-height: 30px;
     background-color: blue;
+    text-align: center;
+    color: white;
+}
+tbody{
+    height: 240px;
+}
+.break-word {
+    word-wrap: break-word;
 }
 
+.blue{
+    color: rgb(106, 172, 225);
+    text-decoration: none;
+}
+
+
+  iframe {
+    border-radius: 5%;
+    width: 420px;
+    height: 250px;
+  }
+
+  section{
+    background-color: rgb(240, 236, 236);
+    padding-top: 30px;
+    margin-top: 20px;
+  }
+  novita{
+    background-color: rgb(240, 236, 236);
+    padding-top: 30px;
+    margin-top: 20px;
+  }
