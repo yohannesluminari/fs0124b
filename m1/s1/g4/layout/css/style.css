@@ -1,0 +1,31 @@
+.container{
+    margin: 0 auto;
+    background-color: red;
+}
+.colonne{
+    background-color: bisque;
+    height: 200px;
+    width: calc(100% / 4 - 3px);
+    margin-bottom: 10px;
+    display: inline-block; /*richiede per forza la lunghezza invece di far andare a capo fa continuare
+    --> trasfroma un element block in uno inline quindi in parole povere non va a cap..lascia però un margine
+     a lato tra un box e un altro..per questp conviene usare flex
+    width: calc(100% / 4 - 3px); con questo gli dico prendi il 100% del container e dividilo
+    per il numero di box cosi lo centro bene poi tolgo 3px in questo caso per togliere il margine a dx
+    del colore rosso del container*/
+
+    
+    /* display: none; fa scomparire un elemento e los spazio scomparte
+       opacity: 0;  uguale per opacity ma non scompare ma è trasparente
+       visibility: hidden; */
+
+       
+    /* input[type=password]{border:2px solid red;} selettore di attributo
+       input:focus {box-shadow: 0 0 45 5px red;}  pseudo classe
+       input:required{background-color: red;} pseudo classe
+       input:checked{background-color: green;} pseudo classe
+       targetta specifici input e fa qualcosa
+    */
+
+
+}

@@ -1,0 +1,19 @@
+input[type=checkbox]{ 
+    display: none; /*nasconde il quadratino dell'input type checkbox*/
+}
+
+input[type=checkbox]:checked + ul{ 
+    height: 200px; /*qui dice se un input type checkbox viene premuto devi fare diventare
+    di 200px il primo ul che viene subuto dopo l'input*/
+}
+ 
+ul{
+    background-color: blueviolet;
+    overflow: hidden;
+    transition: height 0.0000000000000000000000000001s;
+}
+
+li{
+    border: 1px solid red;
+    padding: 5px;
+}

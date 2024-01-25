@@ -36,6 +36,9 @@ con auto centro l'elemento. Margin puo avere margini negativi
     fuori dal box d4 cosi le dimesioni rimangono quelle della classe square...
     puo essere messo anche all'inizio per influenzare l'intera pagina
     guarda a riga 1 per esempio*/
+    
+    MARGIN-LEFT:auto;
+    MARGIN-RIGHT:auto; /*CON QUESTI DUE TAG IL BOX VIENE CENTRATP*/
 } 
 #d5{
     padding: 100px;
