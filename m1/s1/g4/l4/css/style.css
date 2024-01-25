@@ -1,0 +1,68 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* HEADER */
+
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
+body{ 
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../img/sfondo.png);
+    background-repeat: repeat-y;
+    margin: 20px;
+}
+/* HEADER */
+#container{ 
+   padding-top:20px;
+   margin: 8px;
+   background-color: #108eb7;
+}
+img{
+   height: 100px;
+   width: 250px;
+}
+header{
+    text-align: center;
+    color: white;
+}
+ul,a{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+li>a{
+    color: white;
+}
+
+
+/* MAIN */
+main{
+    padding-top: 20px;
+    background-color: white;
+    border: 1px solid rgb(254, 151, 254);
+    border-top:none;
+    margin: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+h1{
+    font-size: 40px;
+}
+h1~p{
+    padding-top: 70px;
+}
+
+p>a{
+    color: purple;
+    text-decoration: none;
+}
+.elenco{
+    padding-top: 15px;
+}
