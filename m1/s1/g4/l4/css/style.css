@@ -37,7 +37,7 @@ ul,a{
     padding-top: 20px;
     padding-bottom: 40px;
 }
-li>a{
+a{
     color: white;
 }
 
@@ -54,6 +54,13 @@ main{
 }
 h1{
     font-size: 40px;
+    font-weight: bolder;
+}
+h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 h1~p{
     padding-top: 70px;
@@ -63,6 +70,15 @@ p>a{
     color: purple;
     text-decoration: none;
 }
-.elenco{
+.elenco-puntato{
+    padding-top: 12px;
+}
+
+table{
     padding-top: 15px;
 }
+
+thead{
+    background-color: blue;
+}
+
