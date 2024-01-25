@@ -18,6 +18,17 @@
     background-color: yellow;
 } /* in schermi più grandi di 600 la fascia verde non ricopre l'intera lunghezza*/
 
+
+/* PADDING
+padding sposta solo il contenuto dai bordi.Padding non puo avere margini negativi
+
+*/
+
+
+/* MARGIN
+margin sposta il box dal margine/bordo della pagina o ripetto a un altro elemento
+con auto centro l'elemento. Margin puo avere margini negativi
+*/
 #d4{
     padding: 3rem;
     /* il padding aumenta le dimensioni con il padding*/
@@ -33,7 +44,47 @@
     fuori dal box d4 cosi le dimesioni rimangono quelle della classe square...
     puo essere messo anche all'inizio per influenzare l'intera pagina
     guarda a riga 1 per esempio*/
+    border: 5px dotted black;
+    border-left: none; /* se devo bordare solo 3 dei 4 bordi questo mi permette di eliminare il bordo 
+    di uno dei lati a scelta-in questo caso quello destro*/
+    /*
+    border: 5px solid black;
+    border: 5px dashed black;
+    border: 5px outset black;
+    border-top:
+    border-keft:
+    border-right:
+    border-bottom:display:;
+    */
+    margin-top: 10px; /*sepra i box in senso verticale*/
 } 
+
+#d6{
+    margin-top: 10px;
+    border-radius: 50%;
+    /*
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    */
+    background: transparent;
+    border: 10px dashed black;
+    border-right: none; 
+}
+
+/* Overflow
+margin sposta il box dal margine/bordo della pagina o ripetto a un altro elemento
+con auto centro l'elemento. Margin puo avere margini negativi
+*/
+#d8{
+    height: 70px;
+    background-color: blue;
+    /*
+    overflow: hidden; /*taglia il contenuto che esce fuori dal box*/
+    overflow: scroll;  /*crea 2 barre(x-y) che scorrendo permette di leggere il testo che esce senza allungare il box--solo verticalmente pero in y*/
+    overflow-y: scroll; /*uguale sopra solo che toglie la barra di scorrimento x verticale(comunque brutto ma più carino)*/
+
+    overflow: auto;  /*simile a riga 81 ma non serve aggiungere y*/
+}
 
 
 
