@@ -65,7 +65,9 @@ caption,h2{
 h1~p{
     padding-top: 70px;
 }
-
+h2{
+    font-size: 30px;
+}
 p>a{
     color: purple;
     text-decoration: none;
@@ -99,19 +101,24 @@ tbody{
 }
 
 
-  iframe {
+iframe {
     border-radius: 5%;
     width: 420px;
     height: 250px;
-  }
+}
 
-  section{
+section{
     background-color: rgb(240, 236, 236);
     padding-top: 30px;
     margin-top: 20px;
-  }
-  novita{
-    background-color: rgb(240, 236, 236);
-    padding-top: 30px;
-    margin-top: 20px;
-  }
+  
+}
+section >p{
+    margin-top: 10px;
+    padding-top: 10px;
+  
+}
+button{
+    color: white;
+    background-color: blue;
+}
