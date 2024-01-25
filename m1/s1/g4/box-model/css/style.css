@@ -26,6 +26,17 @@
     puo essere messo anche all'inizio per influenzare l'intera pagina
     guarda a riga 1 per esempio*/
 } 
+#d5{
+    padding: 100px;
+    /* il padding aumenta le dimensioni con il padding*/
+    /* con  box-sizing: border-box; il padding lo toglie e lo aggiunge 
+    fuori dal box d4 cosi le dimesioni rimangono quelle della classe square...
+    puo essere messo anche all'inizio per influenzare l'intera pagina
+    guarda a riga 1 per esempio*/
+} 
+
+
+
 
 
 

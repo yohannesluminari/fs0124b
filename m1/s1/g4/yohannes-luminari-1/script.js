@@ -11,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener("keydown", (event) => {
         var name = event.key;
         var code = event.code;
-        //alert(`Key pressed ${name} \r\n Key code value: ${code}`);
         if (code === "Enter") {
             const t = document.getElementById("input-1").value;
             document.getElementById("titleImg").innerHTML = t;
