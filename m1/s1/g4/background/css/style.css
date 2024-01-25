@@ -1,0 +1,36 @@
+#box1{
+    margin-top: 20px;
+    height: 500px;
+    background-image: url(/m1/s1/g4/yohannes-luminari-1/images/leone.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+}
+
+#box2{
+    height: 400px;
+
+    background-image: url(..//image/logo.svg), url(../image/img.jpg);
+    /*
+    background-image: url(../image/logo.svg), url(../image/img.jpg);
+    background-position: left, center permeyye di mettere la prima immagina a sinistra
+    e altra al centro a coprire comunque tutto..risultano sovvrapposti;
+    */
+    background-size: 100px, cover;   /* possibilità di deformare l'immagine ma compre l'intera lunghezza del box */
+    /*background-size: contain;  non deforma l'immagine perche non viene ingrandita ma viene ripetuta
+    per comprire l'intera lunghezza*/
+    background-position: left,bottom;
+    background-repeat: no-repeat;
+   
+    border: 2px solid black;
+}
+
+#box3{
+    height: 200px;
+    background-image: linear-gradient(to left, rgb(225, 92, 225),rgb(88, 4, 88),purple);
+    background-image: linear-gradient(100deg, rgb(225, 92, 225),rgb(88, 4, 88),purple);
+    background-image: linear-gradient(to bottom, rgb(225, 92, 225),rgb(88, 4, 88),purple);
+    background-image: radial-gradient(red,orange,yellow);
+
+    /*CSS GRADIENT SITO PER CERCARE TUTTE LA VARIE SFUMATURE DI UN COLORE E CREARE GRADIENT LINEAR O RDAIANT*/
+}

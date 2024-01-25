@@ -1,0 +1,6 @@
+#box{
+    background-color: bisque;
+    height: 100vh; /*dove 1vh sta per l*1% dell'intera pagina
+    attenzione però perche rimane fisso in verticale/altezza e varia in base alla lunghezza
+    orizzontale dello schermo igrandendosi o riducendosi*/
+}
