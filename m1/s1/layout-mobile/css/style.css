@@ -1,0 +1,31 @@
+body{
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'open sans';
+    line-height: 1.65;
+    justify-content: center;
+    text-align: center;
+}
+
+header{
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+h1{
+    font-weight: bold;
+    font-size: 50px;
+}
+.headings{
+    color: #25a2c3;
+    font-family: 'Monseratt';
+    line-height: 1.5;
+    padding-top: 30px;
+    margin-top: 0;
+}
+.break-word {
+    word-wrap: break-word;
+}
+main{
+    background-image: url(../images/banner.jpg);
+}
