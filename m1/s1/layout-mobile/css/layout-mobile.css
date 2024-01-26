@@ -103,10 +103,6 @@ footer{
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.footer{
-    position: relative;
-    display: inline;
-}
 
 h2{
     font-size: 2rem;
@@ -117,13 +113,13 @@ footer ~h2 , .sezione1 >h2{
     margin-bottom: 15px;
 }
 
-
-i{
-    position: absolute;
-    position: left;
+.footer{
+    display: block;
+}
+.footer~p{
+    padding-top: 30px;
 }
 .info{
-    display: block;
     color:#c8e7f0;
 }
 
@@ -133,4 +129,5 @@ i{
 
 hr{
     border: solid 1px #dee1e3;
+    padding-bottom: 30px;
 }

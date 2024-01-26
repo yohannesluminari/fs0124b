@@ -1,7 +1,7 @@
 
 body{
     color: #393d41;
-    font-size: 1.2rem;
+    font-size: 3.1rem;
     font-family: 'open sans';
     line-height: 1.65;
     justify-content: center;
@@ -22,9 +22,8 @@ header{
     padding-bottom: 30px;
 }
 
-h1{
-    font-weight: bold;
-    font-size: 50px;
+#h1{
+    font-size: 8rem;
 }
 .headings{
     color: #25a2c3;
@@ -32,6 +31,7 @@ h1{
     line-height: 1.5;
     padding-top: 30px;
     margin-top: 0;
+    font-size: 4rem;
 }
 .sezione1>h2{
     color: white;
@@ -53,10 +53,10 @@ h1{
     color: white;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 6%;
+    border-radius: 5%;
     padding: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
     
    
 }
@@ -85,6 +85,7 @@ section > .imgSquare{
     margin-top: 90px;
     padding-top: 20px;
     padding-bottom: 80px;
+    
 }
 #riconoscimenti{
     margin-top: 20px;
@@ -113,13 +114,19 @@ footer{
 h2{
     font-size: 2rem;
 }
+#h2{
+    font-size: 5rem;
+    padding-bottom: 50px;
+}
 footer ~h2 , .sezione1 >h2{
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-
+.footer~p{
+    padding-top: 70px;
+}
 i{
     position: absolute;
     position: left;
