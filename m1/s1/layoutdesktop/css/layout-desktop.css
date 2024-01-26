@@ -7,8 +7,16 @@ body{
     justify-content: center;
     text-align: center;
 }
-
+.container{
+    justify-content: calc(100%-2.5em);
+    text-align: calc(100%-2.5em);
+    width: 100%;
+}
+img{
+    width: 70%;
+}
 header{
+    width: 100%;
     background-color: black;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -34,7 +42,6 @@ h1{
 
 #main{
     background-image: url(../images/banner.jpg);
-    background-repeat: no-repeat;
     padding-bottom: 50px;
 }
 
@@ -50,6 +57,7 @@ h1{
     padding: 15px;
     padding-left: 30px;
     padding-right: 30px;
+    
    
 }
 
@@ -74,16 +82,14 @@ section > .imgSquare{
 .sezione1{
     background-color:  #f04c2f;
     color: white;
-    margin-top: 60px;
+    margin-top: 90px;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 80px;
 }
 #riconoscimenti{
     margin-top: 20px;
 }
-img{
-    max-width: 100%;
-}
+
 .sezione2{
     margin-top: 60px;
 }

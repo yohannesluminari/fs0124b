@@ -76,13 +76,13 @@ section > .imgSquare{
     color: white;
     margin-top: 60px;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
 #riconoscimenti{
     margin-top: 20px;
 }
 img{
-    max-width: 100%;
+    max-width: 90%;
 }
 .sezione2{
     margin-top: 60px;
@@ -102,6 +102,10 @@ footer{
     margin-top: 60px;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+.footer{
+    position: relative;
+    display: inline;
 }
 
 h2{
