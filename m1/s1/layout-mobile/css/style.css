@@ -28,9 +28,6 @@ h1{
     word-wrap: break-word;
 }
 
-p{
-    
-}
 main{
     background-image: url(../images/banner.jpg);
 }
@@ -45,8 +42,27 @@ a{
 
 section{
     background-color: white;
+    padding-bottom: 0px;
 }
-section > img{
+
+section > .imgSquare{
     padding-top: 40px;
     border-radius: 50%;
+}
+
+.sezione1{
+    padding-top: 0px;
+    background-color: orangered;
+    color: white;
+}
+.sezione3{
+    padding-top: 30px;
+}
+.sezione4{
+    padding-top: 30px;
+}
+
+.sezione5{
+    background-color: #25a2c3;
+    padding-top: 90px;
 }
