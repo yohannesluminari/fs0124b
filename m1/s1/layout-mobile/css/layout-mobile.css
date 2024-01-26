@@ -1,3 +1,4 @@
+/*
 body{
     color: #393d41;
     font-size: 1.2rem;
@@ -30,13 +31,108 @@ h1{
 
 main{
     background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
 }
 .partiamo{
     background-color: orangered;
     color: white;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 8%;
-    padding: 10px;
+    border-radius: 6%;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+section{
+    background-color: white;
+    padding-bottom: 0px;
+}
+
+section > .imgSquare{
+    padding-top: 40px;
+    border-radius: 50%;
+}
+
+.sezione1{
+    background-color: orangered;
+    color: white;
+}
+img{
+    max-width: 100%;
+}
+.sezione3{
+    padding-top: 30px;
+}
+.sezione4{
+    padding-top: 30px;
+}
+
+footer{
+    background-color:#25a2c3;
+    color: white;
+    padding-bottom: 40px;
+}
+i{
+    position: absolute;
+    position: left;
+}
+.info{
+    display: block;
+    color: white;
+}
+
+.a-white{
+    color: white;
+}*/
+
+body{
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'open sans';
+    line-height: 1.65;
+    justify-content: center;
+    text-align: center;
+}
+
+header{
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 50px;
+}
+.headings{
+    color: #25a2c3;
+    font-family: 'Monseratt';
+    line-height: 1.5;
+    padding-top: 30px;
+    margin-top: 0;
+}
+.break-word {
+    word-wrap: break-word;
+}
+
+#main{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+
+.partiamo{
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6%;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 
