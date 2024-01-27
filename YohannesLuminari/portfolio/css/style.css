@@ -1,9 +1,22 @@
-.logo{
+.header{
+    justify-content: center;
     text-align: center;
+    align-items: center;
     background-color:black;
+    display: flex;
+    width: 100%;
 }
 
 img{
     width: 10%;
+
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    margin: 0 25px;
+    font-weight: 500;
+    color: aliceblue;
 
 }
