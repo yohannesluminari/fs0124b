@@ -1,11 +1,14 @@
 body{
     background-image: url(../images/nayt.jpg);
     background-size: cover; 
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #quote{
-    text-align: center;
-
     color: white;
 }
 .break-word{
