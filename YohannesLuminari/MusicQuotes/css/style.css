@@ -1,0 +1,13 @@
+body{
+    background-image: url(../images/nayt.jpg);
+    background-size: cover; 
+}
+
+#quote{
+    text-align: center;
+
+    color: white;
+}
+.break-word{
+    word-wrap: break-word;
+}
