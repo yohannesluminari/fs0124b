@@ -1,0 +1,58 @@
+body{
+    background-color: black;
+
+}
+.header{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color:black;
+    display: flex;
+    width: 100%;
+    position: fixed;
+}
+
+.header img{
+    width: 12%;
+
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    margin: 0 25px;
+    font-size: 25px;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+
+}
+.card-1{
+    border: 10px solid red;
+    position: absolute;
+    color: white;
+    margin-top: 250px;
+    position: absolute;
+    
+    
+}
+.card-2{
+    border: 10px solid red;
+    position: absolute;
+    color: white;
+    margin-top: 250px;
+    position: absolute;
+    left: 500px;    
+
+}
+
+
+#card{
+   
+    position: relative;
+
+
+}
+.card-1 img{
+    width: 32%;
+}
