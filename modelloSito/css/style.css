@@ -1,6 +1,5 @@
-body{
-    background-color: black;
-
+*{
+    box-sizing: border-box;
 }
 header{
     text-align: center;
@@ -8,7 +7,6 @@ header{
     padding: 20px;
     width: 100%;
     display: inline;
-    position: fixed;
 }
 
 header img{
@@ -25,4 +23,36 @@ nav ul li a{
     letter-spacing: 0.2em;
     margin-left: 100px;
     margin-right: 100px;
+}
+
+main{
+    padding:20px;
+    background-color: red;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.card{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+}
+main img{
+    padding-top:200px;
+    width: 100%;
+}
+
+h1{text-align: center;}
+
+main h1{
+    color:black;
+    font-weight: 500;
+    font-size: 60px;
 }
