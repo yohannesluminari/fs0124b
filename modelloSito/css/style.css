@@ -7,18 +7,22 @@ header{
     background-color:black;
     padding: 20px;
     width: 100%;
+    display: inline;
+    position: fixed;
 }
 
 header img{
     width: 12%;
 
 }
-nav ul{
-    color: white;
-}
 nav ul li{
     text-align: center;
+    display: inline;
 }
 nav ul li a{
+    color: white;
     display: inline;
+    letter-spacing: 0.2em;
+    margin-left: 100px;
+    margin-right: 100px;
 }
