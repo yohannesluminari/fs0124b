@@ -43,9 +43,10 @@ main{
     padding: 20px;
     text-align: center;
     width: calc(33.33% - 20px);
+    border: 2px solid white;
 }
 main img{
-    padding-top:200px;
+    padding-top:20px;
     width: 100%;
 }
 
@@ -55,4 +56,12 @@ main h1{
     color:black;
     font-weight: 500;
     font-size: 60px;
+}
+
+footer{
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: inline;
 }
