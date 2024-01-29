@@ -1,13 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        
-    </script>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            /*
+                let e const sono soggette al blockscope in questo caso locale e non globale
+                variabile a è riconosciuta solo all'interno delle graffe
+            */
+
+            //  questa è globale e compare anche all'interno delle graffe oltre che fuori
+            let b = 1; 
+
+            {
+                let a = 0;
+                console.log(a); 
+                console.log(b); 
+            }
+            console.log(b);
+            //  console.log(a);  non riconosciuta fuori dalle graffe 
+
+            //  var è obsoleta in quanto può comparire ovunque anche se usato solo un blockscope locale
+            {
+                var d = 0;
+                console.log(d); 
+            }
+            console.log(d); 
+
+            //  var è obsoleta in quanto può comparire ovunque anche se usato solo un blockscope locale
+            let e = 8;
+            {
+                console.log(e); 
+                // let e = 5;  con questa riassegnazione cancella il risultato console.log e provoca errore
+            }
+            console.log(e); 
+    
+            // CONST - variabile costante - NON PUO ESSERE RIASSEGNATA
+            const NOME = "Mario";
+            console.log(NOME);
+
+            const USER = {
+                nome: "Mario",
+                cognome: "Rossi"
+            }
+            
+            // CONST - può essere riassegnata se si tratta di oggetti
+            //Object.freeze((USER))  CON QUESTO BLOCCO LA RIASSEGNAZIONE ALL'OGGETTO USER
+
+            console.log(USER.cognome);
+
+            USER.cognome = "Bianchi";
+            console.log(USER.cognome);
+
+            var t;
+            console.log(t); // valore - undefined
+          
+        </script>
+    </body>
+    </html>
