@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // ARRAY - è una lista
+        // posso mettere dentro qualsiasi valore ma solitamente si usa un solo tipo di dato
+        let array = ['',1,true,[],{}]; 
+
+        {
+
+            let nomiPizze = ['Margherita','Diavola'];
+            //Per scoprire che posizione ha una proprietà che non si ripete
+            console.log(nomiPizze.indexOf('Diavola')); // 1
+
+            // leggere un array
+            console.log(nomiPizze[0],nomiPizze[1]);
+            nomiPizze[0] = 'Capricciosa';
+            console.log(nomiPizze[0],nomiPizze[1]);
+        }
+
+
+        // MODIFICA ORDINE ARRAY
+        const animali = [ 'gatto',
+        'cane',
+        'zebra'
+        ]
+        console.log(animali[0])
+
+        // mostra lista in ordine alfabetico o crescente se numeri modificandine e salvandone l'ordine inziale
+        animali.sort();
+
+        console.log(animali) 
+        console.log(animali[0]) // diverso dal rimo sopra al sort
+
+    </script>
+</body>
+</html>
