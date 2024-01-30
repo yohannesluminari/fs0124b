@@ -67,15 +67,21 @@ if( totalShoppingCart > 50) {
 }
 
 
-
-
-
-
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const sconto = 0.2;
+if( totalShoppingCart > 50) {
+  totalShoppingCart -= totalShoppingCart * sconto;
+  console.log("hai speso: " + totalShoppingCart);
+}else{
+  totalShoppingCart =  totalShoppingCart * sconto;
+  console.log("hai speso: " + totalShoppingCart );
+}
+
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -84,14 +90,37 @@ if( totalShoppingCart > 50) {
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const numero1 = 333;
+const numero2 = 12;
+const numero3 = 2;
+const decrescente = ordinaDecrescente(numero1, numero2, numero3);
+function ordinaDecrescente(num1, num2, num3) {
+  let numeri = [num1, num2, num3];
+  numeri.sort(function(a, b) {
+      return b - a;
+  });
+  return numeri;
+}
+console.log("Numeri ordinati in ordine decrescente:", decrescente);
+
+
+
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
+let number = 5;
+console.log("il tipo di dato è un " + typeof number);
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
+let pari = 6;
+if ( a % 2 == 0){
+  console.log(pari+ ": è un numero pari " );
+}else{
+  console.log(pari+ ": è un numero dispari " );
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
