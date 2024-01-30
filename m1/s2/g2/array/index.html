@@ -39,6 +39,26 @@
         console.log(animali) 
         console.log(animali[0]) // diverso dal rimo sopra al sort
 
+        /*Inverte l'ultimo ordine -- in questo caso grazie prima al sort ordina in ordine
+        decrescente per i numeri e dall'ultima lettera alla prima per le stringhe*/
+        animali.reverse();
+        console.log(animali)
+
+
+        // AGGIUNGERE VALORE ALL'ARRAY
+
+        const animali1 = [ 'cigno',
+        'cane',
+        'zebra'
+        ]
+        // push aggiunge uno o più elementi in un array
+        animali1.push('Gatto', 'leone')
+        console.log(animali1);
+
+        // LEGGE LUNGHEZZA dell'array
+        console.log(animali1.length);
+        console.log(animali1[0].length); // legge lunghezza prima parola
+        console.log(animali1[animali1.length - 1]);  // ti mostra l'ultima parola alla posizone length - 1
     </script>
 </body>
 </html>
