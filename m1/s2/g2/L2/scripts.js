@@ -17,11 +17,22 @@ if ( x > y){
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
+  // let a = prompt("Inserisci un numero diverso da 5");
+  // if ( a !== 5){
+  //   console.log("not equal");
+  // }
+
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
+
+let b = prompt("Inserisci un numero");
+if ( b % 5 == 0){
+  console.log("divisibile");
+}
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
