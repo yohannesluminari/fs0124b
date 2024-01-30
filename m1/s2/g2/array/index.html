@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <script>
 
         // ARRAY - è una lista
         // posso mettere dentro qualsiasi valore ma solitamente si usa un solo tipo di dato
-        let array = ['',1,true,[],{}]; 
+        let array = ['', 1, true, [], {}];
 
         {
 
-            let nomiPizze = ['Margherita','Diavola'];
+            let nomiPizze = ['Margherita', 'Diavola'];
             //Per scoprire che posizione ha una proprietà che non si ripete
             console.log(nomiPizze.indexOf('Diavola')); // 1
 
             // leggere un array
-            console.log(nomiPizze[0],nomiPizze[1]);
+            console.log(nomiPizze[0], nomiPizze[1]);
             nomiPizze[0] = 'Capricciosa';
-            console.log(nomiPizze[0],nomiPizze[1]);
+            console.log(nomiPizze[0], nomiPizze[1]);
         }
 
 
         // MODIFICA ORDINE ARRAY
-        const animali = [ 'gatto',
-        'cane',
-        'zebra'
+        const animali = ['gatto',
+            'cane',
+            'zebra'
         ]
         console.log(animali[0])
 
         // mostra lista in ordine alfabetico o crescente se numeri modificandine e salvandone l'ordine inziale
         animali.sort();
 
-        console.log(animali) 
+        console.log(animali)
         console.log(animali[0]) // diverso dal rimo sopra al sort
 
         /*Inverte l'ultimo ordine -- in questo caso grazie prima al sort ordina in ordine
@@ -47,18 +49,31 @@
 
         // AGGIUNGERE VALORE ALL'ARRAY
 
-        const animali1 = [ 'cigno',
-        'cane',
-        'zebra'
+        const animali1 = ['cigno',
+            'cane',
+            'zebra'
         ]
         // push aggiunge uno o più elementi in un array
-        animali1.push('Gatto', 'leone')
+        animali1.push('Gatto', 'leone');
         console.log(animali1);
+
 
         // LEGGE LUNGHEZZA dell'array
         console.log(animali1.length);
         console.log(animali1[0].length); // legge lunghezza prima parola
         console.log(animali1[animali1.length - 1]);  // ti mostra l'ultima parola alla posizone length - 1
+
+
+        /* delete cancella un intero array/oggetto o solo una proprietà però nel caso di un array
+        provoca un buco a livello di conteggio che creano casini quindi das non usare */
+
+        const animali2 = {
+            name: 'Leone',
+            anni: '3'
+        }
+        delete animali2.name;
+        console.log(animali2.name);
     </script>
 </body>
+
 </html>
