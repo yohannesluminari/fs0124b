@@ -6,6 +6,7 @@
 let x = 12;
 let y = 4;
 if ( x > y){
+
   console.log(x + " è il numero maggiore");
 }else if ( x === y ){
   console.log(x + " è " +  y + " sono numeri uguali");
@@ -53,14 +54,27 @@ if ( n1 == 8 || n2 == 8 || n1 -  n2 == 8 || n2 - n1 == 8 || n1 + n2 == 8){
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let totalShoppingCart = 34;
+const spedizione = 10;
+if( totalShoppingCart > 50) {
+  totalShoppingCart =totalShoppingCart
+  console.log("hai speso: " + totalShoppingCart);
+}else{
+  totalShoppingCart = totalShoppingCart + spedizione
+  console.log("hai speso: " + totalShoppingCart );
+}
+
+
+
+
+
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
@@ -68,13 +82,11 @@ if ( n1 == 8 || n2 == 8 || n1 -  n2 == 8 || n2 - n1 == 8 || n1 + n2 == 8){
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
