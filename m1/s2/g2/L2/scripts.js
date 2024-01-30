@@ -73,13 +73,14 @@ if( totalShoppingCart > 50) {
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const sconto = 0.2;
+const sconto = 20;
+const percentuale = totalShoppingCart
 if( totalShoppingCart > 50) {
-  totalShoppingCart -= totalShoppingCart * sconto;
+  totalShoppingCart -= (sconto / 100)*percentuale;
   console.log("hai speso: " + totalShoppingCart);
 }else{
-  totalShoppingCart =[totalShoppingCart - totalShoppingCart * sconto] + spedizione;
-  console.log("hai speso: " + totalShoppingCart );
+  totalShoppingCart -= [(sconto / 100) *percentuale]  + spedizione ;
+  console.log("hai speso: " + totalShoppingCart);
 }
 
 
