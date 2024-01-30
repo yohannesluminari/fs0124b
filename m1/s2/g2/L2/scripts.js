@@ -59,7 +59,7 @@ if ( n1 == 8 || n2 == 8 || n1 -  n2 == 8 || n2 - n1 == 8 || n1 + n2 == 8){
 let totalShoppingCart = 34;
 const spedizione = 10;
 if( totalShoppingCart > 50) {
-  totalShoppingCart =totalShoppingCart
+  totalShoppingCart = totalShoppingCart
   console.log("hai speso: " + totalShoppingCart);
 }else{
   totalShoppingCart = totalShoppingCart + spedizione
@@ -78,7 +78,7 @@ if( totalShoppingCart > 50) {
   totalShoppingCart -= totalShoppingCart * sconto;
   console.log("hai speso: " + totalShoppingCart);
 }else{
-  totalShoppingCart =  totalShoppingCart * sconto;
+  totalShoppingCart =[totalShoppingCart - totalShoppingCart * sconto] + spedizione;
   console.log("hai speso: " + totalShoppingCart );
 }
 
@@ -148,18 +148,24 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
+me.professione = "Ingegnere";
+console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
+delete me.lastName;
+console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
+delete me.skills;
+console.log(me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -167,10 +173,18 @@ const me = {
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
+let array = [];
+for(let i = 1;i <=10;i++){
+  array[i]= i;
+}
+console.log(array)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
+let length = array.length;
+array[length - 1] = 100;
+console.log(array)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
