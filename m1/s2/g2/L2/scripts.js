@@ -3,6 +3,15 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let x = 12;
+let y = 4;
+if ( x > y){
+  console.log(x + " è il numero maggiore");
+}else if ( x === y ){
+  console.log(x + " è " +  y + " sono numeri uguali");
+} else {
+  console.log(y + " è il numero maggiore");
+}
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
