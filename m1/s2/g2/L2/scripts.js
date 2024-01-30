@@ -16,6 +16,7 @@ if ( x > y){
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
+/* SCRIVI QUI LA TUA RISPOSTA */
 
   // let a = prompt("Inserisci un numero diverso da 5");
   // if ( a !== 5){
@@ -23,24 +24,29 @@ if ( x > y){
   // }
 
 
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
 */
-
-let b = prompt("Inserisci un numero");
-if ( b % 5 == 0){
-  console.log("divisibile");
-}
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+// let b = prompt("Inserisci un numero");
+// if ( b % 5 == 0){
+//   console.log("divisibile");
+// }
+
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
-
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let n1 = 12;
+let n2 = 4;
+
+if ( n1 == 8 || n2 == 8 || n1 -  n2 == 8 || n2 - n1 == 8 || n1 + n2 == 8){
+  console.log("bho non so cosa scrivere perchè non hai detto nulla ma nel dubbio si sei entrato dentro al ciclo")
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
