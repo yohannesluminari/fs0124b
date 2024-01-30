@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// OBJ VARIABILE CHE CONTIENE ,tra graffe, UN OGGETTO
+        const obj = {
+            string : 'ciao',
+            number: 9,
+            boolean: true,
+            oggetto: {},
+            array: [1,2,3,4,5]
+        }
+        console.log(obj);
+
+        {
+            let pizza = {
+                gusto: 'Margherita',
+                prezzo: 5,
+                disponibile: true,
+                "lista ingredienti": 'mozzarella, pomodoro'
+            }
+            
+            // lettera di valore da una proprieta il cui nome non rispetta la sintsassi js..le quadre si usano solo in questi casi
+            console.log(pizza['lista ingredienti']); 
+
+            // LEGGERE E RIASSEGNARE LE PROPRITA DI UN OGGETTO
+            console.log(pizza.gusto) // Margherita
+            pizza.gusto = 'Diavola'  // Diavola
+            console.log(pizza.gusto)
+        }
+
+        let pizza = {
+                gusto: 'Margherita',
+                prezzo: 5,
+                disponibile: true
+            } 
+
+
+        /* 
+        SONO UGUALI E ASSEGNANO LE PROPRIETA DELL'OGGETTO PIZZAMA UN NUOVO OGGETTO
+        SENZA MODIFICARE L'OGGETTO INIZIALE PIZZA A DIFFERENZA DEL PRIMO CASO
+        
+        const pizza1 = pizza
+        const pizz1 = Object.assign(pizza);
+        const pizz2 = Spread.operator(pizza);
+        */
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+        // COSTRUTTORI - variabile nome lettera grande per convenzione per creare le pizze dinicamente in questo caso
+        {
+            let pizza3 = {
+                gusto: 'Margherita',
+                prezzo: 5,
+                disponibile: true,
+            }
+
+            function Pizza() {
+                this.gusto = 'Margherita';
+                this.prezzo = 5;
+                this.ponibile = true;
+            }
+
+            let margherita = new Pizza();
+            let diavola = new Pizza();
+            diavola.gusto = 'Diavola' ;
+
+            document.write((margherita.gusto));
+            
+            document.write(margherita);
+            console.log(margherita);
+            console.log(dia);
+
+
+        }
+
+      
+
+    </script>
+    
+</body>
+</html>
