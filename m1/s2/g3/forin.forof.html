@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+ 
+        // FOR OF
+        let arrPizze = ['Margherita', 'Diavola', 'Capricciosa'];
+
+        // la i è come fosse pizzaCiclata..quindi cicla le pizze dentro (of) arrPizze e finisce una volta che non trova nulla
+        for(let pizzaCiclata of arrPizze){
+            if(pizzaCiclata == 'Diavola'){
+                continue; // Non stampa Diavola e continua il cicl ocon l'incremento di pizzaCiclata
+            }
+            console.log(pizzaCiclata);
+        }
+
+
+         // Filtrare i SOLO i nomi  dell'array 'users' e metterli in un array 'nomi' vuoto con il metodo push
+
+        
+         let users = [
+            {
+                nome: 'Mario',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Giovanni',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Luca',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Marta',
+                cognome: 'Rossi',
+            }
+        ]
+        let nomiUsers = [];
+
+        for (let utente of users){
+            nomiUsers.push(utente.nome)
+        }
+
+        console.log(nomiUsers);
+   
+         
+        // FILTRARE ARRAY SENZA FOR MA CON METODI
+        let users1 = [
+            {
+                nome: 'Mario',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Giovanni',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Luca',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Marta',
+                cognome: 'Rossi',
+            }
+        ]
+
+
+        // Filtro tutti i nomi dell' array
+        console.log(users1.map(u => u.nome));
+
+        // filtro tutti gli elementi con nome Mario
+        console.log(users1.filter(u => u.nome == 'Mario'));
+
+
+    </script>
+</body>
+</html>

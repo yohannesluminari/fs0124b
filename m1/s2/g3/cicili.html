@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let i = 0;
+
+        while(i < 10 ){
+            console.log(i + ": é minore di 10");
+            document.write(i);
+            i++;
+        }
+        //console.log(i + ": non é minore di 10 infatti è fioricdal ciclo while");
+
+        document.write('<hr>');
+        
+        let x = 10;
+
+        while(x > 0 ){
+            console.log(x + ": é maggiore di 0");
+            document.write(x);
+            x--;
+        }
+
+        document.write('<hr>');
+        // Il do-while fa almeno un'esecuzione a differenza del while che può anche fare 0 istruzioni
+        let y = 10;
+        do{
+            document.write(y);
+            y--;
+        }while( y < 0)
+
+
+        document.write('<hr>');
+
+        for( let k = 0; k < 10; k += 2 ) {
+            document.write(k);
+            console.log(k + ": valore di k");
+        }
+
+        document.write('<hr>');
+        
+
+        for(let a = 0;a < 10;a++ ){
+
+            if( a == 2 ){
+                continue; 
+                // Non viene eseguita il 2 quindi non lo vedremo a schermo e invrementa a e ricomicnia il ciclo
+            }
+        
+            if( a == 5 ){
+                break; 
+                // Si ferma il ciclo se arriva a 5
+            }
+
+            console.log(a)
+            document.write(a);
+        }
+
+
+  
+        // Filtrare i numeri > 5 dell'array 'numeri' e metterli in un array 'arr' vuoto con il metodo push
+
+        let numeri = [14,7,5,8,3,12];
+        let arr = [];
+
+        for (let v = 0;v < numeri.length; v++){
+            let numeroCiclato = numeri[v];
+
+            if( numeroCiclato > 5 ){
+                arr.push(numeroCiclato);
+            }
+        }
+
+        console.log(arr);
+   
+
+        // Filtrare i SOLO i nomi  dell'array 'users' e metterli in un array 'nomi' vuoto con il metodo push
+
+        
+        let users = [
+            {
+                nome: 'Mario',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Giovanni',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Luca',
+                cognome: 'Roossi',
+            },
+            {
+                nome: 'Marta',
+                cognome: 'Rossi',
+            }
+        ]
+        let nomiUsers = [];
+
+        for (let c = 0;c< users.length; c++){
+            nomiUsers.push(users[c].nome)
+        }
+
+        console.log(nomiUsers);
+   
+
+
+           
+       
+    </script>
+</body>
+</html>

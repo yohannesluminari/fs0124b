@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="pizza">
+        <option value="">Scegli pizza<option>
+        <option value="Wursetl">Wursetl</option>
+        <option value="Diavola">Diavola</option>
+        <option value="Gourmet">Gourmet</option>
+        <option value="Battuta">Battuta</option>
+    </select>
+
+    <script>
+
+
+        let selectPizza = document.getElementById('pizza');
+        selectPizza.addEventListener('change', scegliPIzza);
+
+        function scegliPIzza() {
+            let pizza = selectPizza.value;
+
+            if(!pizza) return // blocca nel caso scegliessi il ptimo value di sekect
+            switch (pizza) {
+
+                case 'Margherita':
+                    console.log('Pizza Margherita costa 5£');
+
+                case 'Diavola':
+                    console.log('Pizza Margherita costa 7£');
+                    break;
+
+                case 'Wurstel':
+                    console.log('Pizza Margherita costa 6£');
+                    break;
+
+                //Se non uso il break raggruppo uno o più case insieme 
+
+                case 'Gourmet':
+                    console.log('Pizza Margherita costa 10£');
+
+                case 'Battuta':
+                    console.log('Pizza Margherita costa 10£');
+                    break;
+                default:
+                    console.log('Pizza non disponibiile');
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

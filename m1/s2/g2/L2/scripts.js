@@ -188,4 +188,5 @@ let length = array.length;
 array[length - 1] = 100;
 console.log(array)
 
+// array.splice(9,1,100)  sostistuisce/elimina - 9 - lunghezza, 1 - numero che voglio cambiare, 100 - numero con cui si cambia 1
 /* SCRIVI QUI LA TUA RISPOSTA */
