@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 header{
     text-align: center;
     background-color:black;
@@ -42,6 +43,7 @@ main{
     border-radius: 5px;
     padding: 20px;
     text-align: center;
+
     width: calc(33.33% - 20px);
     border: 2px solid white;
 }
