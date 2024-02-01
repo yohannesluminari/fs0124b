@@ -181,7 +181,7 @@ let shoppingCart = [
         quantity: "2",
     },
     {
-        price: "20",
+        price: "120",
         name: "Frigo",
         id: "2",
         quantity:"1",
@@ -217,12 +217,39 @@ console.log("Iltotale è: " + shoppingCartTotal(shoppingCart));
  Crea una funzione chiamata "addToShoppingCart" che riceve un nuovo oggetto dello stesso tipo, lo aggiunge a "shoppingCart" e ritorna il nuovo numero totale degli elementi.
 */
 
+let nuovoOgetto = { 
+    price: "2",
+    name: "pen",
+    id: "4",
+    quantity: "1",
+}
+function addToShoppingCart(nuovoOgg) {
+    
+}
+console.log("Esercizio EXTRA-3");
+console.log("L'Array è lungo: " );
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 4
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
  Crea una funzione chiamata "maxShoppingCart" che riceve l'array "shoppingCart" e ritorna l'oggetto più costoso in esso contenuto.
 */
+function maxShoppingCart(carta) {
+
+    let max = carta[0];
+
+    for (let i = 0; i < carta.length; i++) {
+
+        if (carta[i].price > max.price) {
+            max = carta[i];
+        }
+    }
+
+    return max;
+}
+
+console.log("Esercizio EXTRA-4" + max);
+console.log("Più costosoo:", maxShoppingCart(shoppingCart));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
