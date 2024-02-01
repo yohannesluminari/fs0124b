@@ -22,6 +22,21 @@
         // let restituisciSaluto = () => return 'ciao'; Sbagliato con il RETURN
         let restituisciSaluto = () => 'ciao'; // il return è sottiniesto anzi se lo metti è errore perchè hai solo 1 istruzione
         restituisciSaluto();
+
+        let incrementoSomma = (a,b) => {
+            a++;
+            b++;
+            a + b;
+        }
+
+        let raddoppia = a => a * 2;
+        console.log(raddoppia(4546));
+
+        let x = [2,3,4,5,6,7,8,9];
+
+        // raddoppia tutti i numeri di un array per 2 in questo caso
+        x.map( n => n * 2);
+        console.log(x);
    
    
    

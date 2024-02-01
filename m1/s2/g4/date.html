@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let adesso = new Date(); // crea un nuovo oggetto sul modello di date
+
+
+        console.log(adesso); // Da la data del computer quindi può essere sbagliata se il computer ha orario diverso
+
+        // numero mese partedno da 0
+        console.log("Oggi è il giorno: " + adesso.getMonth());
+        //ordine parte da domenica quindi giorno 0: domenica, giorno 1: Lunedi
+        console.log("Oggi è il giorno: " + adesso.getDay());
+        console.log(adesso.getHours());
+        console.log(adesso.getSeconds());
+
+
+            // configuro la data come voglio -  CERCARE DOCIMENTAZIONE
+        const options = {
+            weekend: 'long',
+
+        }
+        console.log(adesso.toLocaleDateString('it-IT',options));
+
+
+         // modificare data
+
+         console.log(adesso.setMonth(2)); // siamo passati a marzo
+         // con -2 torna a 2 mesi prima se gli dico +50 conta fino a 50 ricominciando da gennaio dopo dicembre
+        console.log( adesso.setMonth(-11)); 
+    </script>
+</body>
+</html>
