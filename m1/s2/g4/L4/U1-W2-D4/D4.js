@@ -1,6 +1,11 @@
 /* ESERCIZIO 1
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
+function area (l1, l2) {
+    return l1 * l2;
+}
+console.log("Esercizio 1");
+console.log("L'area del rettangolo è: " + area(3,7));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -9,6 +14,15 @@
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare
  la loro somma moltiplicata per tre.
 */
+function crazySum (n1, n2) {
+    if( n1 === n2 ){
+        return (n1 + n2) *3
+    }else{
+        return n1 + n2;
+    }
+}
+console.log("Esercizio 2");
+console.log("Il risultato è: " + crazySum(2,7));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -16,6 +30,15 @@
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
+let n2 = 400 ;
+function crazyDiff (n2) {
+    
+    if( n2 > 19){
+        return Math.abs(19 - n2)*3;
+    }else return Math.abs(19 - n2);
+}
+console.log("Esercizio 3");
+console.log("Il risultato è: " + crazyDiff(n2,19));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -24,6 +47,17 @@
  se n è uguale a 400.
 */
 
+function boundary (n) {
+    
+    if((n >= 20 && n <= 100) || n == 400) { // pensavo amche 20 incluso..se non fosse incluso nella consegna basta togliere l'uguale n2>20
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log("Esercizio 4");
+console.log("Il risultato è: " + boundary(10));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 5
@@ -31,6 +65,18 @@
  La funzione deve aggiungere la parola "EPICODE" all'inizio della stringa fornita, ma se la stringa fornita comincia già con "EPICODE" allora deve
  ritornare la stringa originale senza alterarla.
 */
+
+
+function epify (string) {
+    
+    if((stringa >= 20 && n <= 100) || n == 400) { // pensavo amche 20 incluso..se non fosse incluso nella consegna basta togliere l'uguale n2>20
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log("Esercizio 4");
+console.log("Il risultato è: " + boundary(10));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
