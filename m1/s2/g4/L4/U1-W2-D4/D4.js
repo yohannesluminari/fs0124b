@@ -88,12 +88,20 @@ function check3and7 (n) {
     if(n % 3 == 0 || n % 7 == 0) return n + " è un multiplo di 3 e 7";
     else return n + " non è un multiplo di 3 e 7";
 }
+console.log("Esercizio 6");
 console.log(check3and7(21));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
+let splitReverse = "";
+function reverseString(string){
+    splitReverse = string.split("").reverse().join("");
+    return splitReverse;
+}
+console.log("Esercizio 7");
+console.log(reverseString("EPICODE"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -101,7 +109,13 @@ console.log(check3and7(21));
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
-
+let splitReverse = "";
+function reverseString(string){
+    splitReverse = string.split("").reverse().join("");
+    return splitReverse;
+}
+console.log("Esercizio 7");
+console.log(reverseString("EPICODE"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
