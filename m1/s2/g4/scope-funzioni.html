@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let b = 1; // scope globale
+        function test() {
+            let a = 0; //scope locale alla function
+            console.log(b);
+            return a;
+        }
+        console.log(test());
+
+        // console.log(b); // errore se non invoco test()
+        // console.log(a); mi da errore perche non sa cos'è a
+
+
+
+
+
+        // let funzioneAnonima = function(){
+        //     return "ciao"
+        // }
+
+        // Funzioni senza none che solo grazie alle tonde eseguono quello che c'è all'interno sezna tonde e nome errore
+        (
+            function () {
+                console.log("Funziona");
+            }
+        )(); // funzione che si autoesegue
+
+        // clousure - Funzioni annidate
+        function clouser(){
+            let prova = 1; // accessibile a quella interna . dall'esterno all'interno - scope globale alle 2 funzioni
+            function figlia(){
+                let prova1 = 1; // appartiene solo a function figlia e non a quella fuori 
+                console.log(prova1);
+            }
+
+            // console.log(prova1); qui no nla riconosce
+        }
+
+
+        function prima(a){
+            return function secondo(b){
+                return function terzo(c){
+                    return a + b + c;
+               }
+            }
+        }
+        console.log(prima(2)(5)(7))
+    </script>
+
+</body>
+
+</html>

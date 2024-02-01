@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 1) mostra un dato ma non salva e non mi da nessujn dato
+        function mostraSaluto() { // definizione
+
+            document.write('Buongiorno Bro');
+            document.write('<hr>')
+            document.write('Buong;iorno Girls');
+            console.log('Buongiorno bro');
+        }
+        mostraSaluto(); // invocazione...senza non stamoa in document write e non stampa in console finchè non richiamata
+
+
+        // 2) mostra e restituisce un valore di qualsiasi tipo...
+        // qui posso assegnare questa variabili dopo il RETURN(sennò siamo al caso 1) a una qualsiasai variabile(saluto) per salvarlo
+        function restituisciSaluto() {
+            return 5; // return blocca tutto ciò che viene dopo..FINISCE la funzione
+        }
+        let saluto = restituisciSaluto();
+        console.log(saluto);
+
+
+    </script>
+
+</body>
+
+</html>

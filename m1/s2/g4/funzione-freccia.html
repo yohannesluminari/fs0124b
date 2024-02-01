@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let mostraSaluto = () => {
+            // non si può usare this nelle funzioni freccia
+            console.log('Modo 2 alternativo per fare una funzione');
+        } 
+
+        mostraSaluto();
+        // function mostraSaluto (){
+        //     console.log('Modo 1 alternativo per fare una funzione');
+        // }
+
+        // let restituisciSaluto = () => return 'ciao'; Sbagliato con il RETURN
+        let restituisciSaluto = () => 'ciao'; // il return è sottiniesto anzi se lo metti è errore perchè hai solo 1 istruzione
+        restituisciSaluto();
+   
+   
+   
+   </script>
+</body>
+</html>
