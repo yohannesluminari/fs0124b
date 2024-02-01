@@ -135,11 +135,14 @@ console.log(cutString(" Ciao come stai? "));
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
+const arrayNumeri =[];
+function giveMeRandom(n){
 
-function cutString(string){
-    let cut = string.slice(1, string.length - 1);
-    return cut;
+    for( let i = 0;  i < n; i++){
+        arrayNumeri.push(Math.floor(Math.random()* 11))
+    }
+    return arrayNumeri;
 }
-console.log("Esercizio 9");
-console.log(cutString(" Ciao come stai? "));
+console.log("Esercizio 10");
+console.log(giveMeRandom(10));
 /* SCRIVI QUI LA TUA RISPOSTA */
