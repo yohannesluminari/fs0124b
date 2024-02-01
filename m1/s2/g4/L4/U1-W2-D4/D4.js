@@ -95,8 +95,9 @@ console.log(check3and7(21));
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
-let splitReverse = "";
+
 function reverseString(string){
+    let splitReverse = "";
     splitReverse = string.split("").reverse().join("");
     return splitReverse;
 }
@@ -109,13 +110,13 @@ console.log(reverseString("EPICODE"));
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
-let splitReverse = "";
-function reverseString(string){
-    splitReverse = string.split("").reverse().join("");
-    return splitReverse;
+function upperFirst(string){
+    let splitReverse = string.split(" ");
+    
+    
 }
-console.log("Esercizio 7");
-console.log(reverseString("EPICODE"));
+console.log("Esercizio 8");
+console.log(upperFirst("epicode is the way"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9
@@ -123,10 +124,22 @@ console.log(reverseString("EPICODE"));
  della stringa originale.
 */
 
+function cutString(string){
+    let cut = string.slice(1, string.length - 1);
+    return cut;
+}
+console.log("Esercizio 9");
+console.log(cutString(" Ciao come stai? "));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
+function cutString(string){
+    let cut = string.slice(1, string.length - 1);
+    return cut;
+}
+console.log("Esercizio 9");
+console.log(cutString(" Ciao come stai? "));
 /* SCRIVI QUI LA TUA RISPOSTA */
