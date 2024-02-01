@@ -66,17 +66,16 @@ console.log("Il risultato è: " + boundary(10));
  ritornare la stringa originale senza alterarla.
 */
 
-
 function epify (string) {
     
-    if((stringa >= 20 && n <= 100) || n == 400) { // pensavo amche 20 incluso..se non fosse incluso nella consegna basta togliere l'uguale n2>20
-        return true;
+    if(string.startsWith("EPICODE")) { 
+        return string;
     }else{
-        return false;
+        return "EPICODE " + string;
     }
 }
-console.log("Esercizio 4");
-console.log("Il risultato è: " + boundary(10));
+console.log("Esercizio 5");
+console.log(epify("EPICODE is the way"));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -85,6 +84,11 @@ console.log("Il risultato è: " + boundary(10));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
+function check3and7 (n) {
+    if(n % 3 == 0 || n % 7 == 0) return n + " è un multiplo di 3 e 7";
+    else return n + " non è un multiplo di 3 e 7";
+}
+console.log(check3and7(21));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
