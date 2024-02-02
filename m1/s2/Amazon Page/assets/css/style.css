@@ -1,1 +1,37 @@
 /* Your styles here */
+.text-center{
+    text-align: center;
+    width: 100%;
+}
+.big-dark{
+    color: #eaeded;
+    background-color: #f56600;
+}
+
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    margin: 20px 20px 20px 20px;
+}
+header{
+    background-color: rgb(14, 40, 62);
+
+}
+nav{
+    background-color: rgb(12, 47, 75);
+    color: #eaeded;
+    padding: 20px 0 20px 0;
+}
+ul li{
+    display: inline;
+    letter-spacing: 0.3em;
+}
+ul li a{
+    padding-left: 50px;
+}
+
+main{
+    background-color: gray;
+}
