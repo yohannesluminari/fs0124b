@@ -37,7 +37,7 @@
 <body>
   <div>
     <h1>Questo è il titolo della pagina</h1>
-    <h2>Questo è il sottotitolo della pagina</h2>
+    <h2 >Questo è il sottotitolo della pagina</h2>
   </div>
 
   <div>
@@ -210,10 +210,10 @@
       const lista = document.querySelectorAll('ul');
       const li = document.querySelector('li');
 
-      lista.forEach( li => {
+      lista.forEach(li => {
         li.style.backgroundColor = 'green';
-        })
-    
+      })
+
     }
     paintItGreen();
 
@@ -221,20 +221,57 @@
      Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
     */
 
-    const makeItClickable = function () { }
+    const makeItClickable = function () {
+      const h1 = document.querySelector('h1');
 
+      let testo = h1.textContent;
+
+      // Rimuovi l'ultima lettera
+      testo = testo.slice(0, -1);
+
+      // Aggiorna il testo dell'h1
+      h1.textContent = testo;
+    }
+
+    makeItClickable();
     /* ESERCIZIO 10
      Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
     */
 
     const revealFooterLink = function () { }
+    const footer = document.querySelector('footer');
+
+    footer.addEventListener('click', function (event) {
+
+      const href = event.target.closest('footer a');
+
+    });
 
     /* ESERCIZIO 11
      Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
      La tabella avrà 4 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
   */
 
-    const generateTable = function () { }
+    const generateTable = function () {
+      const Tabella = [
+        { immagine: "img.jpg", nome: "Prodotto 1", quantita: 2, prezzo: 3 },
+        { immagine: "img.jpg", nome: "Prodotto 2", quantita: 1, prezzo: 5 },
+        { immagine: "umg.jpg", nome: "Prodotto 3", quantita: 21, prezzo: 34 },
+        { immagine: "umg.jpg", nome: "Prodotto 4", quantita: 9, prezzo: 1 }
+      ];
+
+
+      const tableArea = document.getElementById("tableArea");
+
+      const table = document.createElement('table');
+
+
+      const thead = document.createElement('thead');
+      const tr = document.createElement('tr');
+      tr.innerHTML = '<th>Immagine</th><th>Nome Prodotto</th><th>Quantità</th><th>Prezzo</th>';
+      thead.appendChild(thead);
+      table.appendChild(tr);
+    }
 
     /* ESERCIZIO 12
      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
@@ -247,12 +284,30 @@
   */
 
     const hideAllImages = function () { }
+    const immagini = document.querySelectorAll('#tableArea, img');
+
+
+    immagini.forEach(function (img) {
+      img.style.display = 'none';
+    });
 
     /* EXTRA ESERCIZIO 15
     Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
   */
 
-    const changeColorWithRandom = function () { }
+    const changeColorWithRandom = function () {
+      const h2 = document.getElementById("changeMyColor");
+
+
+      const colori =[ "blue", "red", "orange", "yellow", "green", "blue"];
+  
+      const numero = Math.floor(Math.random() * colori.length);
+
+      h2.style.color = colori[numero];
+
+    }
+
+    changeColorWithRandom ();
   </script>
 </body>
 
