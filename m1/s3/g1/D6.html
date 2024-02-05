@@ -107,10 +107,10 @@
     const changePcontent = function () { }
     const div = document.querySelector("div");
     if (div) {
-      // Seleziona tutti i paragrafi figli dell'elemento div
+     
       const p = div.getElementsByTagName('p');
 
-      // Itera su ogni paragrafo e cambia il testo
+ 
       for (let i = 0; i < p.length; i++) {
         p[i].textContent = "TESTO P NUOVO";
         div.append(p[i]);
@@ -226,10 +226,9 @@
 
       let testo = h1.textContent;
 
-      // Rimuovi l'ultima lettera
       testo = testo.slice(0, -1);
 
-      // Aggiorna il testo dell'h1
+    
       h1.textContent = testo;
     }
 
