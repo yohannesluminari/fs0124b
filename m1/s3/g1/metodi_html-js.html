@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test">Prova</div>
+
+    <div class="blocco">Elmento con classe blocco</div>
+    <div class="blocco">Elmento con classe blocco</div>
+    <div class="blocco">Elmento con classe blocco</div>
+    <div class="block">Elmento con classe block</div>
+   
+    <script>
+
+    let test = document.getElementById("test"); // DA NULL SE NON C'è UN ID UGUALE
+  
+    console.log(test.innerText = "CIAOO");
+    console.log(test.style.color = "green");
+    console.log(test.style.fontSize = "150px");
+   
+
+    const classi = document.getElementsByClassName("blocco") 
+    // VISUSALIZZA UNA SORTA DI ARRAY CON TUTTE LE CLASSI SSENZA I METODI AVANZATI TIPO POP DEGLI ARRAY...LI SCOORO CON I CILI TIPO FOR
+    console.log(classi)
+
+    //classi[1].style.backgroundColor = "green"; // coloro il secondo blocco dell'array classi
+
+        for(let i =0; i < classi.length; i++){
+            // Unico modo per in questo caso colorare  tutti gli elementi con classe blocco
+            classi[i].style.backgroundColor = "green"; 
+        }
+
+    const tags = document.getElementsByTagName("div")
+    console.log(tags);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function test(){
+
+        // }
+
+        // let obj = {
+        //     test:function(){  // METODO
+
+        //     }
+        // }
+
+        // obb.test() ; // RICHIAMO METODO
+
+
+    </script>
+</body>
+</html>
