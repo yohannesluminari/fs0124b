@@ -38,7 +38,12 @@
 
 
 
-
+    // METODO CICLICO SOLO PER ARRAY SENZA INCREMENTO E INDICE - 
+    // cicla tutti gli elementi div in questo caso ossia con array from trasforma un "oseudo array" in un array vero e prorprio
+    Array.from(tags).forEach(element =>  {
+        element.innerText = "Modificato";
+        element.style.backgroundColor = "red";
+    });
 
 
 

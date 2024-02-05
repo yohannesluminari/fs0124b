@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div div="test">Test</div>
+    <div class="blocco">Eleemnto con classe blocco</div>
+    <div class="blocco">Eleemnto con classe blocco</div>
+    <div class="blocco">Eleemnto con classe blocco</div>
+
+    <script>
+        // può mettere QUALUNQUE query di css(id,classi,nomi tag, pseudo classi...
+        // tutti tranne :before e :after)
+
+        let test = document.querySelector("#test");
+
+        // Restituisce solo il PRIMO se comprende più di un elemento
+        let blocco = document.querySelector(".blocco");
+
+        // TUTTI GLI ELEMENTI CON CLASSE BLOCCO
+        let blocco1 = document.querySelectorAll(".blocco");
+
+
+
+        let tuttiDiv = document.querySelectorAll("div");
+        tuttiDiv.forEach(div => div.style.backgroundColor = "red");
+
+
+
+
+
+
+    </script>
+</body>
+</html>
