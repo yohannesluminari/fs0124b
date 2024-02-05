@@ -104,9 +104,11 @@
      Scrivi una funzione che cambi il testo dei p figli di un div
     */
 
-    const changePcontent = function () {
-      const div = document.querySelectorAll("div p").innerHTML = 'Testo del paragrafo cambiato'
-     }
+    const changePcontent = function () { }
+     const p = document.querySelector("div p");
+     p.forEach(el => el.innerHTML = 'Testo del paragrafo cambiato')
+    
+
     changePcontent();
 
     /* ESERCIZIO 4
