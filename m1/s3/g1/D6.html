@@ -106,19 +106,14 @@
 
     const changePcontent = function () { }
     const div = document.querySelector("div");
-    if (div) {
-     
+
       const p = div.getElementsByTagName('p');
 
- 
       for (let i = 0; i < p.length; i++) {
         p[i].textContent = "TESTO P NUOVO";
         div.append(p[i]);
       }
-    } else {
-      console.error("ERRORE");
-    }
-
+    
     changePcontent();
 
     /* ESERCIZIO 4
