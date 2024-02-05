@@ -28,7 +28,7 @@ const target = document.querySelector('#target')
 
         li.style.fontSize = '50px';
         li2.style.fontSize = '50px';
-        li3.style.fontSize = '50px';
+        li.style.fontSize = '50px';
         li.innerText = 'Elemento lista 1';
         li2.innerText = 'Elemento lista 2';
         li3.innerText = 'Elemento lista 3';
@@ -42,7 +42,6 @@ const target = document.querySelector('#target')
         li2.addEventListener('click',function(){
             li2.style.backgroundColor = 'red';
         })
-        
         ul.append(li,li2,li3)// aggiunge dentro ul un tag che decido io in questo caso quello appena sopra creato li
         
         target.append(ul); // appendo tutto al div target per farlo apparire nel browser

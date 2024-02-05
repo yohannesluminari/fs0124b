@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu"></div>
+    
+
+    <script>
+        
+
+        let pizze = [
+            {
+                gusto: 'Margherita',
+                prezzo: 6
+            },
+            {
+                gusto: 'Diavola',
+                prezzo: 8
+            },
+            {
+                gusto: 'Capricciosa',
+                prezzo: 12
+            },
+            {
+                gusto: 'Gourmet',
+                prezzo: 18
+            }
+        ]
+
+        // per ogni pizza aggiungi u ndiv scrivici dentro il gusto di p ( pizza) e poi rendilo visibile nel DOM
+
+        let menu = document.getElementById('menu');
+        pizze.forEach( p => {
+            let div = document.createElement('div');
+            div.innerHTML = p.gusto;
+            menu.append(div);
+        })
+    </script>
+</body>
+</html>

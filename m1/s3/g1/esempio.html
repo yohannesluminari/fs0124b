@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quadrato{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button id='crea'> Crea Quadrati</button>
+    <div id="target"></div>
+
+    <script>
+
+        const bottone = document.getElementById('crea');
+        const target = document.getElementById('target');
+
+        // crea quadrati ogni volta che faccio click sul bottone
+        bottone.addEventListener('click', function(){
+
+            const div = document.createElement('div')// ho creato un div
+            div.classList.add('quadrato');// aggiungo una classe al div
+
+            target.append(div);
+            
+        })
+    </script>
+
+
+
+
+</body>
+</html>
