@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- <div id="test"> -->
+        
+    <div id="target">
+    
+    </div>
+    <script>
+
+const target = document.querySelector('#target')
+        const test = document.querySelector("#test");
+        // inner.HTML modifica l'intero tag quindi se dentro ho esempio una tabella scompare
+        // test.innerHTML = "<ul> <li>elemento</li><li>elemento</li><li>elemento</li><li>elemento</li><li>elemento</li><li>elemento</li><li>elemento</li>"
+
+        let ul = document.createElement("ul");
+
+        let li = document.createElement('li');
+        let li2 = document.createElement('li');
+        let li3 = document.createElement('li');
+
+        li.style.fontSize = '50px';
+        li2.style.fontSize = '50px';
+        li3.style.fontSize = '50px';
+        li.innerText = 'Elemento lista 1';
+        li2.innerText = 'Elemento lista 2';
+        li3.innerText = 'Elemento lista 3';
+
+        /* 
+        Con append posso inserire più elementi con la vitgola. Con appendChild solo uno. 
+        Con prePend aggiumge un solo elemento ma all'inizio invece che alla fine della lista
+        */
+
+        // Se premo li2 il background-color diventa rosso
+        li2.addEventListener('click',function(){
+            li2.style.backgroundColor = 'red';
+        })
+        
+        ul.append(li,li2,li3)// aggiunge dentro ul un tag che decido io in questo caso quello appena sopra creato li
+        
+        target.append(ul); // appendo tutto al div target per farlo apparire nel browser
+        console.log(ul);
+    </script>
+</body>
+</html>
