@@ -37,7 +37,7 @@
 <body>
   <div>
     <h1>Questo è il titolo della pagina</h1>
-    <h2 >Questo è il sottotitolo della pagina</h2>
+    <h2>Questo è il sottotitolo della pagina</h2>
   </div>
 
   <div>
@@ -105,9 +105,9 @@
     */
 
     const changePcontent = function () { }
-     const p = document.querySelector("div p");
-     p.forEach(el => el.innerHTML = 'Testo del paragrafo cambiato')
-    
+    const p = document.querySelectorAll("div p");
+    p.forEach(el => el.innerHTML = 'Testo del paragrafo cambiato')
+
 
     changePcontent();
 
@@ -115,15 +115,13 @@
      Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
     */
 
-    const changeUrls = function () { }
-    const links = document.querySelectorAll('a');
+    const changeUrls = function () {
+      const links = document.querySelectorAll('a:not(footer a)');
 
-    links.forEach(function (links) {
+      links.forEach(el => el.innerHTML =  'https://www.google.com')
 
-      if (!links.closest('footer')) {
-        links.href = "https://www.google.com";
-      }
-    });
+    }
+
     changeUrls();
 
 
@@ -218,7 +216,7 @@
 
       testo = testo.slice(0, -1);
 
-    
+
       h1.textContent = testo;
     }
 
@@ -288,15 +286,15 @@
       const h2 = document.getElementById("changeMyColor");
 
 
-      const colori =[ "blue", "red", "orange", "yellow", "green", "blue"];
-  
+      const colori = ["blue", "red", "orange", "yellow", "green", "blue"];
+
       const numero = Math.floor(Math.random() * colori.length);
 
       h2.style.color = colori[numero];
 
     }
 
-    changeColorWithRandom ();
+    changeColorWithRandom();
   </script>
 </body>
 
