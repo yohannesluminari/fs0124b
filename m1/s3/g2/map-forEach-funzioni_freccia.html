@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <ul id="ciao">
+        <li>1</li>
+        <li>2</li>
+    </ul>
+
+
+    <script>
+
+        // forEach
+
+        var fiori = [
+    {
+        nome: "Rosa",
+        colore: "Rosso",
+        altezza: 30,
+     
+    },
+    {
+        nome: "Tulipano",
+        colore: "Giallo",
+        altezza: 25
+    },
+    {
+        nome: "Girasole",
+        colore: "Giallo",
+        altezza: 50
+    },
+    {
+        nome: "Orchidea",
+        colore: "Viola",
+        altezza: 40
+    },
+    {
+        nome: "Lavanda",
+        colore: "Lilla",
+        altezza: 35
+    }
+];
+
+        fiori.forEach ( (fiore) => {
+            console.log(fiore);
+        } ) ;// non torna nulla se non gli pggetti 
+
+        const nuovoArrayFiori = fiori.map((fiore) => fiore.nome)
+        console.log(nuovoArrayFiori); // crea un nuovo array in questo caso tipo stringa con il nome dei fiori
+
+
+
+         // map
+        const nuovoArrayFiori1 = fiori.map((fiore) => {
+            
+            return { 
+                ...fiore,
+                nome: fiore.nome.toUpperCase(),
+            };
+        });
+
+        console.log(nuovoArrayFiori1);
+
+
+        // gli dico di scrivere un li con il nome di ogni fiore dell'oggetto
+        const ul = document.getElementById('ciao');
+        const html = fiori.map((fiore) => `<li> ${fiore.nome}</li>` );
+        ul.innerHTML = html.join ('');
+        console.log(html);
+
+
+        // find simile a filter ma invece di dare un array mi torna solo il primo elemento che trova 
+        const trovato = fiori.find((fiore) => fiore.altezza == 35);
+
+        //findIndex simile a find 
+        const trovato1 = fiori.findIndex((fiore) => fiore.altezza == 35);
+
+        // filter
+
+        const filtrato = fiori.filter((fiore) =>  fiore.altezza > 35)
+        console.log(filtrato);
+
+        // filtro propiretà che includono la lettera p e non il tag ma la lettera dell'alfabeto
+        const filtratoP = fiori.filter((fiore) =>  fiore.nome.includes('p'))
+        console.log(filtratoP);
+
+        // reduce somma in questo caso l'altezza all'interno dell'array fiori con il parametro della proprietà altezza di ogni fioir
+        /* 
+            temp è la somma temporale che si può impostare in questo caso fissata a 0
+            curr invece è il singolo oggetto in una array di oggetti o un numero/stringa in unarray di numeri/stringhe...
+              quindi in questo caso devo entrare nella proprieta altezza per accedere al valore 
+        */
+        const totAltezza = fiori.reduce((temp, curr) => temp + curr.altezza, 0);
+        console.log(`Altezza totale è: ${totAltezza}`);
+
+        // invece di sommare da sinistra adestra somma da destra a sinistra
+        const totAltezzaInvertita = fiori.reduceRight((temp, curr) => temp + curr.altezza, 0);
+        console.log(`Altezza totale da dx a sx è: ${totAltezza}`);
+
+        const totAltezzaX2 = fiori.reduce((temp, curr) =>( temp + curr.altezza), 0);
+        console.log(`Altezza totale moltipliticata x 2 è: ${totAltezzaX2*2}`);
+
+
+
+
+
+        
+
+        /*
+            indexOF - RESTITUISCE LA POSIZIONE DI UN NUMERO O STRINGA
+            se su indexof gli un elemento che non c'è mi restituisce -1
+         */
+
+        let flowers = ["Rosa", "Tulipano", "Girasole", "Orchidea", "Lavanda"];
+
+        console.log(flowers.indexOf('Tulipano'));
+
+        // controllo se si inscerisce stringa diversa da quelle dell'array
+        const exist = (arr, el) => {
+            const index = arr.indexOf(el)
+            if(index !== -1){
+                return index
+            } else return false
+        }
+        console.log(exist(flowers, "Lavanda"));
+        console.log(exist(flowers, "lavanda"));
+        console.log(exist(flowers, "Lava"));
+
+
+
+        // some - every
+
+        // controlla se tutti gli elementi contengono la lettera p - true/false
+        console.log('QUI 1 '+ flowers.every((fiore) => fiore.includes('a')));
+
+        // controlla se almeno uno degli  elementi contengono la lettera p- true/false
+       console.log("QUI 2 "+ flowers.some((fiore) => fiore.includes('o')));
+
+    </script>
+</body>
+</html>

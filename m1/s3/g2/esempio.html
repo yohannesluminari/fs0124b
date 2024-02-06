@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.container{
+            gap: 20px;
+            display: inline-flex;
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+    
+    <h1> Il prezzo totale é <span></span></h1>
+
+    <script>
+
+var products = [
+    {
+        id: 1,
+        name: "Telefono",
+        price: 500,
+        category: "Elettronica"
+    },
+    {
+        id: 2,
+        name: "Libro",
+        price: 20,
+        category: "Libri"
+    },
+    {
+        id: 3,
+        name: "T-shirt",
+        price: 30,
+        category: "Abbigliamento"
+    },
+    {
+        id: 4,
+        name: "Mouse",
+        price: 25,
+        category: "Elettronica"
+    }
+];
+    
+    const container = document.querySelector('.container');
+
+    products.forEach((prod) => {
+
+        const { id,name,price,category} = prod;
+        container.innerHTML += `
+        
+            <div class="card">
+                <h3> ${id} </h3>
+                <p> ${name} </p>
+                <p> ${price} </p>
+                <p> ${category} </p>
+            </div 
+        `
+    });
+    const totale = document.querySelector( "h1 span");
+    totale.innerText = products.reduce((temp , curr) => temp + curr.price, 0) + "$";
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>
