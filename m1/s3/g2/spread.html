@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+// SPREAD OPERATOR ...
+        const user = {
+            name: 'Yohannes',
+            email: 'jhfedijuf@fnbduj',
+            ruolo: 'mago'
+        }
+
+        const userDetails = {
+            // i 3 puntini sono lo "spread Operator"  => aggiungono le prorietà dell'oggetto user all'oggetto userDetails
+            ...user,
+            class: '3B',
+            number: '23454543333'
+        }
+
+
+        console.log(user);
+        console.log(userDetails);
+
+
+        const array = [ 'a', 'b', 'c','d','e'];
+        const array1 = [...array, 'f', 'g', 'h','i','l'];
+        //posso farlo anche con array.push('f', 'g') ma mi cambia l'array originale
+        console.log(array1);
+    
+
+
+        // SPREAD OPERATOR ... anche loro i 3 puntini come 'simbolo'
+        const sum = function (text, numeroA,numeroB) {
+            return numeroA + numeroB + text
+
+        }
+        console.log(sum('pippo', 34,12));
+
+        // molto più veloce rispetto a sopra in qunto gli dico ci possono essere infinti numeri in un array e con un cilco li sommo
+        const sum1 = function (text, ...numeri) {
+            let sum = 0;
+            for(let i = 0; i < numeri.length; i++){
+                sum += numeri[i];
+            }
+            return sum + text;
+        }
+        console.log(sum1('pippo', 34,12,2,23,45,76,78,98,90));
+
+
+        // DESTRUCTURING
+
+        const persona = {
+            name: 'Luca',
+            età: 22,
+            città: 'Roma'
+        }
+
+
+        const nome1 = persona.name;
+        
+        // fa la stessa cosa ma con il destructung..nome delle variabili deve essere uguale a quello delle proprietà
+        const {name, città} = persona;
+      
+        // per cambiare prprorietà tocca per forza usare i metodi 'vecchi' però con il destrcting posso isolare 
+        // una proprietà e volendo anche scorrerlo se è un array senzaz richiamare l'oggetto al cui è all'interno
+        persona.name = 'Marco';
+        console.log(persona);
+
+        // TEMPLATE LITERALS
+
+        const  creaStringa1 = (nome, ruolo, email) => {
+            return(
+                "L'utente " + nome + " con ruolo"
+                            + ruolo + " con email"
+                            + email
+            )
+           
+        }
+        const  creaStringa = (user) => {
+            // return(
+            //     "L'utente " + nome + " con ruolo"
+            //                 + ruolo + " con email"
+            //                 + email
+            // )
+            return ` L'utente ${user.name} con eamil ${user.email}ha il suo ruolo di ${user.ruolo} `;
+        }
+
+
+        console.log(creaStringa());
+
+
+  
+
+
+
+
+
+    </script>
+</body>
+</html>

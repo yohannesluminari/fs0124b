@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <ul id="ciao">
+        <li>1</li>
+        <li>2</li>
+    </ul>
+
+
+    <script>
+
+        // forEach
+
+        var fiori = [
+    {
+        nome: "Rosa",
+        colore: "Rosso",
+        altezza: 30,
+     
+    },
+    {
+        nome: "Tulipano",
+        colore: "Giallo",
+        altezza: 25
+    },
+    {
+        nome: "Girasole",
+        colore: "Giallo",
+        altezza: 50
+    },
+    {
+        nome: "Orchidea",
+        colore: "Viola",
+        altezza: 40
+    },
+    {
+        nome: "Lavanda",
+        colore: "Lilla",
+        altezza: 35
+    }
+];
+
+        fiori.forEach ( (fiore) => {
+            console.log(fiore);
+        } ) ;// non torna nulla se non gli pggetti 
+
+        const nuovoArrayFiori = fiori.map((fiore) => fiore.nome)
+        console.log(nuovoArrayFiori); // crea un nuovo array in questo caso tipo stringa con il nome dei fiori
+
+
+
+         // map
+        const nuovoArrayFiori1 = fiori.map((fiore) => {
+            
+            return { 
+                ...fiore,
+                nome: fiore.nome.toUpperCase(),
+            };
+        });
+
+        console.log(nuovoArrayFiori1);
+
+
+        // gli dico di scrivere un li con il nome di ogni fiore dell'oggetto
+        const ul = document.getElementById('ciao');
+        const html = fiori.map((fiore) => `<li> ${fiore.nome}</li>` );
+        ul.innerHTML = html.join ('');
+        console.log(html);
+
+
+
+        // filter
+
+        const filtrato = fiori.filter((fiore) =>  fiore.altezza > 35)
+        console.log(filtrato);
+
+        // filtro propiretà che includono la lettera p e non il tag ma la lettera dell'alfabeto
+        const filtratoP = fiori.filter((fiore) =>  fiore.nome.includes('p'))
+        console.log(filtratoP);
+    </script>
+</body>
+</html>
