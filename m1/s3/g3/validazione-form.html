@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     
+    FORM: input , textArea, select -->
+    
+    <form action="">
+
+        <input id="nome" class="required" type="text" placeholder="Nome">
+        <input id="email" class="required" type="email" placeholder="Email">
+        <input id="password" class="required" type="password" placeholder="Password">
+
+        <button id="invia">Invia</button>
+
+    </form>
+
+    <script>
+
+        const invia = document.getElementById('invia');
+
+        invia.addEventListener('click', function(e){
+            // preventDefault specifico degli event(e) bloccol'invio
+            // di default e permette il console log...senza
+            // la pagina si ricarica e non ha il tempo di stampare
+            e.preventDefault();
+            // console.log('inviato');
+
+            // VALIDAZIONE
+            let nome = document.getElementById('nome');
+            let email = document.getElementById('email');
+            let password = document.getElementById('password');
+
+            let valid = true;
+                // Controllo vallori
+            if(!nome.value){
+
+                // valid - se uno dei form è vuoto blocca l'invio
+                nome.style.border = '2px solid red';
+                valid = false;
+                console.log('Campo nome vuoto');
+            }
+            if(email.value === ''){
+
+                email.style.border = '2px solid green';
+                valid = false;
+                console.log('Campo email vuoto')
+            }
+            if(password.value === ''){
+
+                password.style.border = '2px solid blue';
+                valid = false;
+                console.log('Campo password vuoto')
+            }
+
+            if(valid){
+                
+                // invia form
+            }
+
+            // FA LA STESSA COSA DI QUELLO SOPRA SOLO PIù DINAMICAMENTE CON CICLO FOREACH
+            const campi =document.querySelectorAll('.required')
+
+            campi.forEach(el => {
+                if(el.value == ''){
+                    console.log(`campo ${el.placeholder} vuoto`)
+                    valid = false
+                }
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>
