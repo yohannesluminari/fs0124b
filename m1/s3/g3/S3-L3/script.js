@@ -37,8 +37,9 @@
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.onclick = function() {
-           
             li.remove();
+            // ho avuto difficoltà a gestire il layout degli li e i bottoni corrispondent. Ho pensato di creare un div 
+            // per mettere dentro gli li e i bottoni per gestirlo meglio ma mi sembrava di fare  un casino e niente questo 
         };
 
         li.appendChild(deleteButton);
