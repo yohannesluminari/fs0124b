@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<button onclick="test()">Click</button>
+<button id="bottone">Click1</button>
+<div id="saluto"></div>
+
+    
+
+
+    <script>
+
+        let bottone = document.getElementById('bottone');
+
+        // Unico modo per fare esempio eventi-attributo qualora passo una variabile a mostrasaluto in questo caso test
+        bottone.addEventListener('click', function (){
+            test();
+        });
+
+
+        function  test (parametro){
+            
+            let areaSaluto = document.getElementById('saluto');
+            areaSaluto.innerHTML = 'Ciao';
+            console.log(areaSaluto);
+        }
+
+
+    </script>
+</body>
+</html>

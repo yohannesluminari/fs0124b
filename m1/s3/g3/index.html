@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: black;
+        }
+        .blocco{
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            border: 2px solid red;
+        }
+        /* pre {
+            font-family: monospace;
+            white-space: pre-wrap;
+            font-size: 1.5em;
+            color: white;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <pre>
+        ____  __     __  ____   __    __  ____   __    __  ____   __   __
+       (  _ \(  )   / _\(  _ \ /  \  /  \(  _ \ /  \  /  \(  _ \ /  \ (  )
+        ) _ (/ (_/\( (_) ) __/(  O )(  O )) __/(  O )(  O )) __/(  O )/ (_/\
+       (____/\____/ \__/(____) \__/  \__/(__)   \__/  \__/(__)   \__/ \____/
+     </pre> -->
+    
+    <div>
+        <div class="blocco"></div>
+        <div class="blocco"></div>
+        <div class="blocco"></div>
+        <div class="blocco"></div>
+    </div>
+
+
+    <script>
+
+        let blocchi = document.querySelectorAll('.blocco');
+
+        blocchi.forEach(el => {
+
+            // el.addEventListener('click', function(){
+
+            //     // this fa riferimento a el in questo caso quindi al singolo elemento(singolo quadrato)
+            //     this.style.backgroundColor = 'yellow';
+            // })
+
+            el.addEventListener('click', () => {
+
+                // this non va usato in funzione freccia
+                el.style.backgroundColor = 'white';
+            })
+        })
+
+    </script>
+</body>
+</html>

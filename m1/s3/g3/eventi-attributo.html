@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="mostraSaluto()">Click</button>
+    <button id="bottone">Click1</button>
+    <div id="saluto"></div>
+    <script>
+
+        let bottone = document.getElementById('bottone');
+
+        bottone.addEventListener('click', mostraSaluto)
+
+
+        function  mostraSaluto (){
+            
+            let areaSaluto = document.getElementById('saluto');
+            areaSaluto.innerHTML = 'Ciao';
+        }
+
+        // // Uguale a quello sopra
+        // <button onclick="mostraSaluto('Ciamo mondo')">Click</button>
+        // function  mostraSaluto (testo){
+            
+        //     let areaSaluto = document.getElementById('saluto');
+        //     areaSaluto.innerHTML = testo;
+        // }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
