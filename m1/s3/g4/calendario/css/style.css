@@ -1,0 +1,96 @@
+:root{
+    --main-blue: #131334;
+    --main-purple: #7a408a ;
+    --dark-blue:  #0c0b1d;
+}
+
+.month-name,h3,h4{
+    font-weight: bold;
+}
+
+.month-name{
+    font-size: 4em; 
+    text-transform: capitalize;
+}
+
+
+
+.add-meeting-wrap h4{
+    font-size: 1.5em;
+}
+
+.epiCalendar input{
+    background-color: var(--dark-blue);
+    max-width: 100%;
+}
+
+.epiCalendar input, .btn{
+   border: none;
+   border-radius: 3px;
+   color: white;
+   padding: 8px 10px;
+}
+
+
+.epiCalendar{
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 500;
+   /* height: 500px;
+   width: 500px; */
+   color: white;
+   background-color: var(--main-blue);
+   padding: 5px 10px 30px 10px;
+   box-sizing: border-box;
+   font-size: 14px;
+}
+
+
+.day-wrap{
+    background-color: var(--dark-blue);
+    display: flex;    /* gli elementi giorni si sviluppano uno a fianco all'altro */
+    flex-wrap: wrap;   /*se esaurisci lo spazio vai a capo */
+    margin-bottom: 30px;
+}
+
+
+.day{
+    /* flex - grow, shrink, basis */
+    flex: 0 1 calc(100% / 7);
+    text-align: center;
+    padding: 25px 0;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.8em;
+    color: white;
+}
+
+
+.day:hover{
+  background-color: var(--main-purple);
+}
+
+.day.today{
+    color: var(--main-purple);
+}
+
+.add-event{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    flex: 1 1 auto;
+    
+}
+.col .big-col{
+    flex-grow: 2;
+    
+}
+
+.input-title{
+    padding: 30px;
+}
+
+.btn{
+    background-color: var(--main-purple);
+
+}

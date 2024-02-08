@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+h1{
+    font-size: 50px;
+    color: red;
+    text-align: center;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+th {
+    border: 2px solid white;
+}
+
+td {
+    border: 2px solid white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+
+
+#myTable1 td th {
+    border: 2px solid white;
+}
