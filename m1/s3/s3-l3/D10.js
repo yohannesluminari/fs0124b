@@ -704,7 +704,10 @@ function listAvuota() {
 
   const list = document.getElementById("myList");
 
+  // svuoto il contenuto della lista
   list.innerHTML = "";
+ 
+  // list.remove();  rimuovo la lista
 }
 
 
