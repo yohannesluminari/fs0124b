@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color:#323946;
+}
