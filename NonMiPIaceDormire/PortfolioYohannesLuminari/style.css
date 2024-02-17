@@ -85,6 +85,7 @@ section {
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
+    margin-top: 2rem;
 }
 
 .home-content h3:nth-child(2) {
@@ -103,6 +104,7 @@ span {
 
 .home-content p {
     font-size: 1.6rem;
+    margin-top: 5rem;
 }
 
 
@@ -116,10 +118,11 @@ span {
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    padding-left: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: 34rem;
     transition: .5s ease;
-    gap: 2rem;
+    gap: 8rem;
 }
 
 .social-media i {
@@ -147,28 +150,29 @@ span {
 }
 
 /* ABOUT SECTION */
-.about {
-    display: inline-flex;
+.about1 {
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--second-bg-color);
     gap: 2rem;
 }
 
-.about img {
-    width: 35vw;
+.about1 img {
+    width: 33vw;
+    margin-left: -26rem;
 }
 
-.about-content h2 {
+.about1-content h2 {
     text-align: left;
     line-height: 1.2;
 }
 
-.about-content h3 {
+.about1-content h3 {
     font-size: 2.6rem;
 }
 
-.about-content p {
+.about1-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
@@ -176,4 +180,19 @@ span {
 .heading {
     text-align: center;
     font-size: 4.5rem
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    text-align: center;
+    color: var(--second-color);
+    font-size: 2rem;
+    margin-top: 23rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+   margin-left: 7rem ;
 }
