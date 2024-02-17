@@ -9,5 +9,32 @@
 :root{
     --bg-color: #1f242d;
     --second-bg-color: #323946;
-    --text-color:#323946;
+    --text-color:#fff;
+    --main-color: #ff0080;
 }
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    background-color: var(--bg-color) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 2em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
