@@ -30,6 +30,11 @@ body{
     align-items: center;
 }
 
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
 .logo{
     color: var(--text-color);
     font-size: 2.5rem;
@@ -52,4 +57,14 @@ body{
 #menu-icon{
     font-size: 3.6rem;
     color: var(--text-color);
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content{
+    font-size: 2.4rem;
+    font: 600;
 }
