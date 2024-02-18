@@ -68,7 +68,7 @@ body{
 
 .container .box a{
 	font-size: 3em;
-	color: red;
+	color: blue;
 }
 .container .box:hover .name{
 	top: 40px;
@@ -170,7 +170,7 @@ h1{
 	left: 20px;
 	font-size: 4em;
 	font-weight: 900;
-	color: white;
+	color: red;
 	font-style: italic;
 	
 }
@@ -181,7 +181,7 @@ h1{
 	right: 20px;
 	font-size: 3em;
 	font-weight: 900;
-	color: white;
+	color: red;
 	font-style: italic;
 	
 }
