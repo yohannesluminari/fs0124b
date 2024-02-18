@@ -7,7 +7,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background: #131313;
+	background: linear-gradient(white, black);
 }
 .container{
 	position: relative;
@@ -20,15 +20,14 @@ body{
 }
 .container .box{
 	position: relative;
-	width: 600px;
-	height: 800px;
+	width: 1200px;
+	height: 900px; 
 	margin: 40px;
-	background: #232323;
+	background: linear-gradient(to left, black, white);
 	border-radius: 20px;
 	transform-style: preserve-3d;
 }
-.container .box::before{
-	content: 'NIKE';
+/* .container .box::before .marca{
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -39,8 +38,7 @@ body{
 	opacity: 0;
 	transition: 0.5s;
 }
-.container .box::after{
-	content: 'SHOES';
+.container .box::before .marca1{
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
@@ -50,11 +48,8 @@ body{
 	font-style: italic;
 	opacity: 0;
 	transition: 0.5s;
-}
-.container .box::before
-.container .box::after{
-	opacity: 0.04;	
-}
+} */
+
 
 .container .box .name{
 	position: relative;
@@ -67,9 +62,14 @@ body{
 	transform: translate3d(0,0,75px);
 	transition: 0.5s;
 	opacity: 0;
+	font-size: 4em;
 	/* z-index: 10; */
 }
 
+.container .box a{
+	font-size: 3em;
+	color: red;
+}
 .container .box:hover .name{
 	top: 40px;
 	opacity: 1;
@@ -117,20 +117,72 @@ body{
 }
 
 .container .box .circle{
-	width: 500px;
-	height: 500px;
-	left: 9%;
-	top: 25%;
+	width: 600px;
+	height: 600px;
+	left: 28%;
+	top: 17%;
 	border-radius: 50%;
 	position: absolute;
 	background-color: white;
 }
-.container .box .circle{
-	width: 500px;
-	height: 500px;
-	left: 9%;
-	top: 25%;
-	border-radius: 50%;
-	position: absolute;
-	background-color: white;
+.container .box:nth-child(2) .circle
+{
+	background: linear-gradient(#00f7ff, #ff0000)
 }
+.container .box:nth-child(1) .circle
+{
+	background: linear-gradient(#2200e5, #ff00e6)
+}
+.container .box:nth-child(3) .circle
+{
+	
+	background: linear-gradient(#016c31, #9f9d00)
+}
+
+.container .box:hover .product
+{
+	transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+@keyframes shake {
+    0% { transform: translate3d(0, 0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate3d(-5px, 0, 0); }
+    20%, 40%, 60%, 80% { transform: translate3d(5px, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+.container .box:hover {
+    animation: shake 0.5s ease;
+}
+.container .box:hover {
+    animation: shake 0.5s ease;
+}
+
+h2{
+	color: #232323;
+}
+h1{
+	font-size: 18em;
+}
+.container .box .marca{
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	font-size: 4em;
+	font-weight: 900;
+	color: white;
+	font-style: italic;
+	
+}
+
+.container .box .marca1{
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+	font-size: 3em;
+	font-weight: 900;
+	color: white;
+	font-style: italic;
+	
+}
+
