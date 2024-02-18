@@ -21,7 +21,7 @@ body{
 .container .box{
 	position: relative;
 	width: 600px;
-	height: 600px;
+	height: 800px;
 	margin: 40px;
 	background: #232323;
 	border-radius: 20px;
@@ -109,9 +109,19 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 500px;
+    width: 600px;
     transition: 0.5s;
     z-index: 20; /* Imposta uno z-index superiore per farlo apparire sopra il cerchio */
     transform-style: preserve-3d;
     transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+}
+
+.container .box .circle{
+	width: 500px;
+	height: 500px;
+	left: 9%;
+	top: 25%;
+	border-radius: 50%;
+	position: absolute;
+	background-color: white;
 }
