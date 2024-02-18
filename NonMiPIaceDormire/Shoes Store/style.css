@@ -125,3 +125,12 @@ body{
 	position: absolute;
 	background-color: white;
 }
+.container .box .circle{
+	width: 500px;
+	height: 500px;
+	left: 9%;
+	top: 25%;
+	border-radius: 50%;
+	position: absolute;
+	background-color: white;
+}
