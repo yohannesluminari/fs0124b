@@ -316,4 +316,23 @@ footer a {
         display: inline-flex;
         flex-wrap: nowrap;
     }
+
+    
+    
 }
+@media print and (min-width: 1500px) {
+    /* Nascondi il video */
+    iframe {
+      display: none;
+    }
+    
+    /* Nascondi gli articoli */
+    aside{
+      display: none;
+    }
+    
+    /* Nascondi il footer */
+    footer {
+      display: none;
+    }
+  }
