@@ -220,6 +220,14 @@ footer a {
     color: fuchsia;
 }
 
+@media screen and (min-width: 400px) {
+
+    table {
+        margin: 0 auto;
+    }
+
+}
+
 @media screen and (min-width: 576px) {
 
     body {
@@ -257,6 +265,9 @@ footer a {
     footer {
         font-size: 2.8rem;
     }
+    .href{
+
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -268,8 +279,7 @@ footer a {
         margin: 0 auto;
     }
     h1 {
-        font-size: 5.8rem;
-        letter-spacing: -0.11em;
+        font-size: 5rem;
         margin-bottom: 1.7em;
     }
     footer {
@@ -279,15 +289,14 @@ footer a {
         display: flex;
     }
     .article{
-        display: inline-flex;
-        flex-wrap: nowrap;
+        display: flex;
     }
 }
 
 
 @media screen and (min-width: 1400px) {
     body {
-        font-size: 6.4rem;
+        font-size: 5.4rem;
     }
 
     table {
@@ -295,11 +304,10 @@ footer a {
     }
     h1 {
         font-size: 7.8rem;
-        letter-spacing: 2em;
         margin-bottom: 1.7em;
     }
     footer {
-        font-size: 2.8rem;
+        font-size: 5.6rem;
     }
     .section1{
         display: flex;
