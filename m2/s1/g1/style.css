@@ -1,0 +1,49 @@
+.col {
+    height: 400px;
+    background-color: aqua;
+    border: 2px solid black;
+    vertical-align: top;
+}
+
+@media screen and (min-width: 480px) {
+    .col {
+        width: 400px;
+        display: flex;
+        background-color: green;
+        display: inline-block;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .col {
+        /* width: calc(100% / 3 - 270px); toglie il bordo presente di default sul css */
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .col {
+        width: calc(100% / 4 - 270px);
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .col {
+        width: calc(100% / 4 - 270px);
+        background-color: red;
+    }
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    .container{
+        width: 1440px;
+        margin: 0 auto;
+    }
+}

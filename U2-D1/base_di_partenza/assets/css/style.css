@@ -178,3 +178,16 @@ footer {
 footer a {
     color: fuchsia;
 }
+
+@media screen and (min-width: 1200px){
+    .ciao{
+        margin: 0 auto;
+        width: 800px;
+    }
+      table{
+        
+        margin: 0 auto;
+        width: 600px;
+    } 
+}
+    
