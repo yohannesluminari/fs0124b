@@ -435,3 +435,21 @@ footer a {
     display: none;
   }
 }
+
+
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Disponi i bottoni uno sotto l'altro */
+  align-items: flex-end; /* Allinea i bottoni a destra */
+}
+
+.button {
+  margin-top: -15%; /* Aggiunge spazio tra i bottoni */
+  height: 40px;
+  width: 40px;
+  background-color: gray;
+  margin-bottom: -20px;
+  opacity: 0.5;
+}
+

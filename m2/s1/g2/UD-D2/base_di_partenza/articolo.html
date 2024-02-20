@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./assets/css/font-awesome.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Collegamento a Font Awesome -->
 </head>
 
 <body id="top">
@@ -168,8 +170,26 @@
         <p>Blog Epicode &copy;2021</p>
         <address>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi Einaudi 2 - Milano. P.IVA
             00112233. <a href="mailto:info@epicode.school"
-                title="contattami per informazioni/lavoro/privacy">info@epicode.school</a></address>
+                title="contattami per informazioni/lavoro/privacy">info@epicode.school</a>
+            </address>
+            <div class="button-container">
+                <div class="button btn1"><button><i class="fab fa-facebook"></i></button></div>
+                <div class="button btn2"><i class="fas fa-calendar-alt"></i> </div>
+                <div class="button btn3"><i class="fas fa-sign-out-alt"></i> </div>
+            </div>
     </footer>
 </body>
+
+<script>
+    
+    const scrollToTop = document.querySelector(".btn3");
+
+
+scrollToTop.addEventListener("click", function() {
+  document.body.scrollTop = 0; // Per Safari
+  document.documentElement.scrollTop = 0; // Per Chrome, Firefox, IE e Opera
+});
+
+</script>
 
 </html>
