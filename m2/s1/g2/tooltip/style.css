@@ -1,0 +1,33 @@
+.tooltip-wrap{
+    margin: 100px;
+    margin-left: 100px;
+    background-color: red;
+    width: fit-content;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tooltip{
+   display: none;
+}
+
+.tooltip:before{
+    content: " ";
+    background-color: aquamarine;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    z-index: -1;
+    left: -7px;
+    transform: rotate(45deg);
+}
+
+.tooltip-wrap:hover .tooltip{
+   display: block;
+   position: absolute;
+   right: -100%;
+   background-color: aquamarine;
+   top: 0;
+   padding: 10px;
+}

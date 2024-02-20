@@ -1,0 +1,21 @@
+.relative{
+    height: 100vh;
+    background-color: red;
+    padding:15px
+}
+
+.relative-element{
+    background-color: yellow;
+    font-size: 2rem;
+    border: 1px solid red;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.relative-element:nth-last-of-type(3){
+    position: relative;
+    top: -15px;
+    left: 15px;
+}

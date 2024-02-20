@@ -1,0 +1,47 @@
+header {
+    background-color: purple;
+    height: 70px;
+}
+
+header ul {
+    display: flex;
+}
+
+
+header ul li {
+    flex-grow: 1;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+header ul li:hover {
+    background-color: white;
+    color: purple;
+    border-color: purple ;
+}
+
+
+header ul li:hover a{
+    color: purple;
+    border-color: purple ;
+}
+
+/* sottoelemtno */
+.has-children:hover .submenu{
+    display: block;
+
+}
+.submenu{
+    display: none;
+    position: relative; /* copre eventuale contenuto sotto */
+    background-color: white;
+}

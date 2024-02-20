@@ -1,0 +1,39 @@
+.absolute-element{
+    background-color: yellow;
+    font-size: 2rem;
+    border: 1px solid red;
+    padding: 15px;
+    text-align: center;
+    aspect-ratio: 1/1;
+    width: 100px;
+    height: 100px;
+    position: absolute;  /*con position asbolute si sovrappongono */
+}
+
+.absolute{
+    width: 90vw;
+    padding-top: 20px;
+    margin: 0 auto;
+    background-color: aqua;
+    margin-top: 100px;
+    aspect-ratio: 1/1;
+    position: relative;
+    text-align: center;
+}
+
+.absolute-element:nth-last-of-type(2){
+    right: 0;
+    bottom: 0;
+}
+.absolute-element:nth-last-of-type(1){
+    left: 0;
+    bottom: 0;
+}
+.absolute-element:nth-last-of-type(3){
+    right: 0;
+    top: 0;
+}
+.absolute-element:nth-last-of-type(4){
+    left: 0;
+    top: 0;
+}
