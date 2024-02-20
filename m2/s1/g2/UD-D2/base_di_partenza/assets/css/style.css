@@ -132,7 +132,13 @@ dl,
 blockquote {
   margin-bottom: 1.2em;
 }
+.clearfix{
+  width: 100%;
+}
 
+.imgLeft{
+ float: left;
+}
 h1 + p {
   color: #a0a0a0;
 }
@@ -325,7 +331,23 @@ aside div p:last-child {
   font-size: 0.8em;
   text-align: right;
 }
-
+.fa-fas{
+  position: relative;
+}
+.logo-aside .fas.fa-tag {
+  position: absolute; 
+  right: -0;
+  top: 0; 
+  font-size: 60px;
+  opacity: 0.3;
+}
+.logosvg{
+  display: inline-block;
+  background-image: url('path/to/underline.svg'); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center;
+}
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
@@ -347,6 +369,21 @@ footer a {
   color: fuchsia;
 }
 
+@media screen and (min-width: 1194px) {
+  .fa-fas{
+    border: none;
+    width: 100%;
+  }
+
+  .logo-aside .fas.fa-tag {
+    position: absolute; 
+    right: 0;
+    top: -30px; 
+    font-size: 80px;
+    opacity: 0.3;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   header,
   main,
@@ -356,7 +393,19 @@ footer a {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 300px) {
+  .section {
+    position: relative;
+  }
+  .novita{
+    top: -54px;
+    left: 15px;
+    max-width: 200px; 
+    position: absolute;
+    padding: 8px 40px 8px 40px; /* Aggiungi spazio interno */
+  }
 
+}
 @media print {
   body {
     font-size: 24px;
