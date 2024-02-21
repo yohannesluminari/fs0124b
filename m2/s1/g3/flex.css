@@ -1,0 +1,37 @@
+body {
+    margin: 50px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    /* flex-direction: row;  allinea a sinistra su una riga orizzontale ed è la prorprietà default del flex */
+    /* flex-direction: column; allinea a sinistra su una riga verticale ed è la prorprietà default del flex */
+
+    justify-content: space-between;
+    /*si applica sul lato lungo */
+    align-items: center;
+    /*si applica sul lato corto */
+    /* justify-content: space-between; allinea gli elementi lasciando lo stesso spazio l'uno dall'altro */
+    /* justify-content: space-around; allinea gli elementi lasciando lo stesso spazio l'uno dall'altro 
+       tra gli elementi e meno margine ai margini sx e dx esterni*/
+
+    align-content: center; /* gestisce la spsozione di u nelemento all'anadata a capo */
+    /* quando gli elemnti vanno a capo li mette al centro senza il margine che creerebbe senza questa propr */
+}
+
+.child {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    margin: 50px;
+}
+
+.child h1 {
+    font-size: 100px;
+    transform: translateY(100%);
+    text-align: center;
+}
