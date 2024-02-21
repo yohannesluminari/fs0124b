@@ -1,0 +1,54 @@
+/* Reset dei margini e dei padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stili per la barra di navigazione */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 50px 200px 50px 200px;
+    align-items: center;
+    justify-content: space-between; /* Mette l'immagine al centro */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Stili per gli elementi della barra di navigazione */
+.nav-item {
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+}
+.column{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/* Stili per il logo */
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Stili per il titolo */
+.nav-title {
+    margin: 0;
+}
+
+/* Stili per il div con flex-grow */
+.flex-grow {
+    flex-grow: 1;
+}
