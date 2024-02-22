@@ -9,10 +9,20 @@
     background-color: red;
     border: 2px solid white;
 }
-#q1{
+/* #q1{
     transform: rotateX(45deg);
 }
 
 #q2{
     transform: translateZ(54px);
+} */
+
+#q1{
+    transition: all 3s;
+}
+
+
+#q1:hover{
+    background-color: blue;
+    width: 1200px;
 }
