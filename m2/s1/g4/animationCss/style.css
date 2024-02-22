@@ -24,5 +24,58 @@
 
 #q1:hover{
     background-color: blue;
-    width: 1200px;
+    width: 2500px;
+}
+#q3:hover{
+    animation-play-state: paused;
+}
+
+#q2{
+    animation: rotate 1s infinite;
+    text-align: center;
+    animation-timing-function: linear;
+    color: white;
+    font-size: 10rem;
+}
+
+#q3{
+    animation-name:rotate, muovi;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    animation-direction: normal,alternate;
+    /* normal fa riferimtno a rotate e gli dice di seguire il 
+    flusso normale quindi torna al punto di partenza come facesse 
+    un giro e continua alternate è applicato a muovi e quando
+    finisce spazio invece di tornare all'inizio fa il percorso contarrio 
+    */
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+
+@keyframes muovi {
+    from { margin-left:0;}
+    to { margin-left:90%;}
+}
+
+#q4{
+    animation-name: lampeggia;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes lampeggia {
+    0% { background-color: blue;}
+    10% { background-color: green;}
+    35% { background-color: red;}
+    50% { background-color: purple;}
+    70% { background-color: white;}
+    80% { background-color: black;}
+    100% { background-color: yellow;}
 }
