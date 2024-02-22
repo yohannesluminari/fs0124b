@@ -8,3 +8,36 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  #container{
+    text-align: center;
+    font-size: 150px;
+    color: black;
+    background-color: white;
+    padding: 350px;
+    font-weight: 600;
+  }
+  
+  .parole {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .parole i {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  .parole .s, .parole .a {
+    display: none;
+  }
+
