@@ -1,0 +1,16 @@
+.scena{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    perspective: 400px;
+    transform-style: preserve-3d;
+    overflow: hidden; 
+
+}
+.testo{
+    font-size: 5rem;
+    color: yellow;
+    transform: rotateX(50deg), translateY(-150px);
+    bottom: 0;
+    position: absolute;
+}
