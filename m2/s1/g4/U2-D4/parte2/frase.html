@@ -20,12 +20,27 @@
 					<br>
 					ed un pizzico di originalità
 					<span class="parole">
-						<i class="i">interfacce web</i>
-						<i class="s">single page app</i>
-						<i class="a">app native</i>
+						<i class="s">interfacce web</i>
+						<i class="a">single page app</i>
+						<i class="i">app native</i>
 					</span>
 				</p>
 			</div>
 		</main>
     </body>
+
+	
+	<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    let parole = document.querySelectorAll('.parole i');
+    let current = 0;
+    let interval = setInterval(function() {
+        parole[current].style.display = 'none';
+        current = (current + 1) % parole.length; 
+        parole[current].style.display = 'inline';
+    }, 5000); /* Cambia parola ogni 5 secondi */
+});
+
+	</script>
 </html>

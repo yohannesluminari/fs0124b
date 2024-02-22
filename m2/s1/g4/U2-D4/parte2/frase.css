@@ -7,7 +7,6 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
-
 body, html {
     height: 100%;
     margin: 0;
@@ -17,27 +16,28 @@ body, html {
     background-color: black;
   }
   
-  #container{
+  #container {
     text-align: center;
     font-size: 150px;
+    border: 10px solid black;
     color: black;
     background-color: white;
-    padding: 350px;
+    padding: 100px;
     font-weight: 600;
   }
   
   .parole {
     display: inline-block;
     margin-top: 10px;
+    color: blue;
   }
   
   .parole i {
-    display: block;
-    margin-top: 5px;
-    font-style: italic;
+    display: none; /* Inizialmente le nascondo tutte */
+    transition: opacity 1s ease-in-out;
   }
   
-  .parole .s, .parole .a {
-    display: none;
+  .parole .s {
+    display: inline; /* Mostra solo la prima parola */
   }
-
+  
