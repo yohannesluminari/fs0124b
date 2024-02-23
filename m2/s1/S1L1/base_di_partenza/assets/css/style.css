@@ -9,8 +9,8 @@ body {
 }
 
 .header {
-
-    height: auto;
+position: fixed;
+    width: 100vw;
     display: flex;
     border-bottom: 1px solid black;
     text-align: center;
@@ -19,7 +19,7 @@ body {
 
 .logo {
     width: 10%;
-    padding: 30px;
+    padding: 50px;
     margin-left: 8%;
 }
 
@@ -31,7 +31,7 @@ nav {
     margin-left: 20%;
 }
 
-nav #start {
+#start {
     justify-content: center;
     align-items: center;
     border-radius: 40px;
@@ -67,10 +67,9 @@ nav ul li a {
 }
 
 .section1 {
-    height: 50vh;
-    width: 100vw;
     border-bottom: 1px solid #191919;
-    ;
+    margin-bottom: 100px;
+    /* margin-top: 100px; qui ho provato a staccare la sewzione con svg di M dall'header se magari trovi il motivo e me lo scrivi nella correzione grazie */
     background-color: #FFC017;
     display: flex;
     align-items: center;
@@ -221,7 +220,7 @@ h3 {
     display: flex;
     justify-content: column;
     align-self: center;
-    margin-left: 400px;
+    margin-left: 250px;
     margin-top: -150px;
 }
 .updateSec{
@@ -229,7 +228,26 @@ h3 {
     justify-content: column;
 }
 
-footer{
-    margin-left: 100px;
-    margin-top: -150px;
+.footer{
+    position: absolute;
+    margin-left: 55%;
+    margin-top: -220px;
+}
+
+.footer h2{
+  
+    font-weight: 800;
+    font-size: 1.6rem;
+    display: column;
+}
+
+.footer button{
+   padding: 20px;
+   margin: 30px;
+}
+
+.listHelp a{
+    text-decoration: none;
+    color: black;
+    padding: 30px;
 }
