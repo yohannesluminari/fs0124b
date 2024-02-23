@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 body {
     width: 100vw;
-    font-family: Verdana Tahoma, sans-serif;
+    height: 100vh;
+    font-family: 'Spectral', serif
 }
 
 .header {
@@ -9,7 +14,7 @@ body {
     display: flex;
     border-bottom: 1px solid black;
     text-align: center;
-    background-color: rgb(255, 201, 5);
+    background-color: #FFC017;
 }
 
 .logo {
@@ -26,11 +31,11 @@ nav {
     margin-left: 20%;
 }
 
-nav  #start {
+nav #start {
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-    background-color: black;
+    background-color: #191919;
     color: white;
     padding: 15px;
 }
@@ -52,7 +57,7 @@ nav ul li {
 
 nav ul li:last-child {
     margin-right: 0;
-   
+
 }
 
 nav ul li a {
@@ -61,38 +66,41 @@ nav ul li a {
 
 }
 
-.section1{
+.section1 {
     height: 50vh;
     width: 100vw;
-    border-bottom: 1px solid black;
-    background-color: rgb(255, 201, 5);
+    border-bottom: 1px solid #191919;
+    ;
+    background-color: #FFC017;
     display: flex;
     align-items: center;
 }
 
-.svg{
-    flex: 1; 
+.svg {
+    flex: 1;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     padding: 20px;
 }
 
-.textsvg{
-    flex: 1; 
-    padding: 20px; 
+.textsvg {
+    flex: 1;
+    padding: 20px;
     margin-left: 120px;
 }
-.textsvg h1{
+
+.textsvg h1 {
     font-size: 7rem;
     margin-bottom: 20px;
     font-weight: 600;
 }
 
-.textsvg p{
+.textsvg p {
     font-size: 2rem;
     margin-bottom: 20px;
 }
-.textsvg button{
+
+.textsvg button {
     font-size: 2rem;
     margin-top: 20px;
     background-color: black;
@@ -100,7 +108,8 @@ nav ul li a {
     padding: 20px 40px 20px 40px;
     border-radius: 40px;
 }
-nav  #start {
+
+nav #start {
     justify-content: center;
     align-items: center;
     border-radius: 40px;
@@ -110,43 +119,117 @@ nav  #start {
 }
 
 /* SEZIONE 2  */
-.svgSection2{
+.svgSection2 {
     margin: 100px 200px 0px;
     display: flex;
     flex-direction: row;
     text-align: center;
 }
 
-.svgSection2 .s{
+.svgSection2 .s {
     align-self: center;
     margin-left: 20px;
 }
 
-.trend{
+.trend {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100VW;
+    width: 100vw;
 }
 
-.trend img{
+.trend img {
     width: 10%;
     border-radius: 50%;
     margin-left: 50px;
 }
-.trend h3{
-  font-size: 40px;
-  color: gray;
-  opacity: 0.5;
+
+.trend h3 {
+    font-size: 40px;
+    color: gray;
+    opacity: 0.5;
 }
-.trend p{
+
+.trend p {
     font-size: 18px;
     margin-left: 20px;
     font-weight: 600;
-  }
+}
 
-  .trendNotice{
-    display: flex;
+.trendNotice {
+    display: block;
     flex-wrap: wrap;
     flex-direction: flex-start;
-  }
+}
+
+
+.section3 {
+    margin-top: 100px;
+    border-top: 1px solid rgb(112, 112, 112, 0.2);
+    margin-left: 200px;
+}
+
+/* mi rendo conto che con piu calma potevo fare un unica classe per le immagini e gli he o i bottoni però non so neanche se finisco quindi preferisco cocentrami sul risulatato in se poi se ho tempo provo a sistemare */
+.artist {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+.artist h3 {
+    margin-left: 80px;
+    font-size: 20px;
+
+}
+.artistName{
+    margin-top: -34px;
+}
+
+.artistImg {
+    border-radius: 50%;
+    width: 3%;
+}
+
+.section3Column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    max-width: 20%;
+}
+
+.artistUpdate{
+    display: flex;
+}
+
+.update{
+    margin-top: 30px;
+}
+
+.artistUpdate img{
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.column2{
+    width: 15%;
+    display: flex;
+    justify-content: column;
+    align-self: center;
+    margin-left: 400px;
+    margin-top: -150px;
+}
+.updateSec{
+    display: flex;
+    justify-content: column;
+}
+
+footer{
+    margin-left: 100px;
+    margin-top: -150px;
+}
