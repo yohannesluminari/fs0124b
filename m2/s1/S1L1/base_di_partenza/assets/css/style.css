@@ -111,7 +111,7 @@ nav  #start {
 
 /* SEZIONE 2  */
 .svgSection2{
-    margin: 50px 100px 0 100px;
+    margin: 100px 200px 0px;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -119,25 +119,34 @@ nav  #start {
 
 .svgSection2 .s{
     align-self: center;
+    margin-left: 20px;
 }
 
-.number{
+.trend{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100VW;
 }
-.number img{
-    width: 20%;
+
+.trend img{
+    width: 10%;
     border-radius: 50%;
     margin-left: 50px;
 }
-.number .image02{
-    width: 13%;
-    border-radius: 50%;
-    margin-left: 50px;
-}
-.number h3{
+.trend h3{
   font-size: 40px;
   color: gray;
   opacity: 0.5;
 }
+.trend p{
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 600;
+  }
+
+  .trendNotice{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: flex-start;
+  }
