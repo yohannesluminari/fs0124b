@@ -155,7 +155,7 @@
 
             <div class="row">
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div class="col-12 col-sm-6 col-xl-4 " id="welcome">
                     <div class="card border-3 border-info mb-3">
                         <img src="../img/bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -167,7 +167,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div class="col-12 col-sm-6 col-xl-4" id="welcome">
                     <div class="card border-3 border-info mb-3">
                         <img src="../img/bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -179,7 +179,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4 mb-3">
+                <div class="col-12 col-sm-6 col-xl-4 mb-3" id="welcome">
                     <div class="card border-3 border-info">
                         <img src="../img/bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4 mb-3">
+                <div class="col-12 col-sm-6 col-xl-4 mb-3" id="welcome">
                     <div class="card border-3 border-info">
                         <img src="../img/bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -203,7 +203,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4 mb-3">
+                <div class="col-12 col-sm-6 col-xl-4 mb-3" id="welcome">
                     <div class="card border-3 border-info">
                         <img src="../img/bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -215,7 +215,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4 mb-3">
+                <div class="col-12 col-sm-6 col-xl-4 mb-3" id="welcome">
                     <div class="card border-3 border-info">
                         <img src="../img/bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -255,38 +255,32 @@
             <div class="row">
                 <div class="col-6 col-md-4 col-lg mb-4">
                     <div class="card shadow border-0">
-                        <img src="../img/bg.png"
-                            class="card-img" alt="maldives" />
+                        <img src="../img/bg.png" class="card-img" alt="maldives" />
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg mb-4">
                     <div class="card shadow border-0">
-                        <img src="../img/bg.png"
-                            class="card-img" alt="maldives" />
+                        <img src="../img/bg.png" class="card-img" alt="maldives" />
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg mb-4">
                     <div class="card shadow border-0">
-                        <img src="../img/bg.png"
-                            class="card-img" alt="maldives" />
+                        <img src="../img/bg.png" class="card-img" alt="maldives" />
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg mb-4">
                     <div class="card shadow border-0">
-                        <img src="../img/bg.png"
-                            class="card-img" alt="maldives" />
+                        <img src="../img/bg.png" class="card-img" alt="maldives" />
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg mb-4">
                     <div class="card shadow border-0">
-                        <img src="../img/bg.png"
-                            class="card-img" alt="maldives" />
+                        <img src="../img/bg.png" class="card-img" alt="maldives" />
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg mb-4">
                     <div class="card shadow border-0">
-                        <img src="../img/bg.png"
-                            class="card-img" alt="maldives" />
+                        <img src="../img/bg.png" class="card-img" alt="maldives" />
                     </div>
                 </div>
             </div>
@@ -337,15 +331,40 @@
 
 
     <footer
-    class="container-fluid text-light bg-dark  d-flex flex-column  align-items-center p-5 justify-content-center ">
-    <button type="button" class="btn btn-outline-secondary mb-4">
-        Contattaci
-    </button>
+        class="container-fluid text-light bg-dark  d-flex flex-column  align-items-center p-5 justify-content-center ">
+        <button type="button" class="btn btn-outline-secondary mb-4">
+            Contattaci
+        </button>
 
-    <span>@ 2021 Kalina</span>
-</footer>
+        <span>@ 2021 Kalina</span>
+    </footer>
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+
+
+        const contaViaggi = function () {
+            const cards = document.querySelectorAll(".card")
+
+            console.log(cards);
+        }
+        contaViaggi()
+
+        const addBadge = function () {
+            const cards = document.querySelectorAll("#welcome .card");
+
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                const span = `<span class="badge bg-danger position-absolute end-0 mt-2 me-2">HOT</span>`;
+                card.innerHTML += span;
+            }
+        };
+
+        addBadge();
+
+
+    </script>
 </body>
 
 </html>
