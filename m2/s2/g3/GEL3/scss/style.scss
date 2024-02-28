@@ -9,10 +9,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Roboto&family=Spectral&display=swap');
 
-body{
+header{
     background-color: $coloreBg;
 }
-h1{
+
+h2{
     @include title-big;
 }
 
@@ -21,7 +22,9 @@ nav{
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    margin: $bodyMargin;
+      //non sono riuscito a dare il padding tramite il mixin non vapisco se sbagliavo la sintassi o altro
+      margin-left: 50px;
+      margin-right: 50px;
     ul{
         display: flex;
         a{
@@ -32,15 +35,53 @@ nav{
     }
 }
 .container{
+    //non sono riuscito a dare il padding tramite il mixin non vapisco se sbagliavo la sintassi o altro
     display: flex;
     flex-wrap: nowrap;
+    margin: $bodyMargin;
+
     .flex{
         display: flex;
         flex-direction: column;
+        h1{
+            @include title-big;
+            margin-bottom: 40px;
+        }
+    }
+    button{
+        color: $coloreTesto;
+        font-size: nth($fontSize,2);
+        display: inline-flex;
+        padding: $paddingButtons;
+        margin-top: 40px;
+        border-radius: $radius;
+    }
+    button:nth-child(1){
+        background-color: nth($coloreBottoni,1);
+    }
+    button:nth-child(2){
+        background-color: nth($coloreBottoni,2);
+    }
+    button:nth-child(3){
+        background-color: nth($coloreBottoni,3);
     }
     .img{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        @include floating;
+    }
+}
+
+.images{
+    background-color: $coloreBg1;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    img{
+        width: calc(100% / 4);
+        padding-left: nth($padding, 1);
+        border-radius: 10px;
     }
 }

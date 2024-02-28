@@ -53,11 +53,11 @@ table {
   border-spacing: 0;
 }
 
-body {
+header {
   background-color: #640fc5;
 }
 
-h1 {
+h2 {
   color: black;
   font-size: 55px;
   font-weight: 900;
@@ -68,7 +68,8 @@ nav {
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  margin: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 nav ul {
   display: flex;
@@ -82,15 +83,55 @@ nav ul a {
 .container {
   display: flex;
   flex-wrap: nowrap;
+  margin: 100px;
 }
 .container .flex {
   display: flex;
   flex-direction: column;
 }
+.container .flex h1 {
+  color: black;
+  font-size: 55px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.container button {
+  color: #f4f4f4;
+  font-size: 30px;
+  display: inline-flex;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.container button:nth-child(1) {
+  background-color: #0e6cff;
+}
+.container button:nth-child(2) {
+  background-color: #ff8700;
+}
+.container button:nth-child(3) {
+  background-color: #4caf50;
+}
 .container .img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  border-radius: 10px;
+  box-shadow: 0, 0, 2, 0.3;
+  border: 1px solid red;
+}
+
+.images {
+  background-color: white;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.images img {
+  width: 25%;
+  padding-left: 20px;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
