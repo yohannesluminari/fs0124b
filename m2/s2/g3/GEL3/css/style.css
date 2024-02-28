@@ -58,9 +58,8 @@ header {
 }
 
 h2 {
-  color: black;
-  font-size: 55px;
-  font-weight: 900;
+  font-size: 45px;
+  font-weight: 900px;
 }
 
 nav {
@@ -92,7 +91,7 @@ nav ul a {
 }
 .container .flex h1 {
   color: black;
-  font-size: 55px;
+  font-size: 75px;
   font-weight: 900;
   margin-bottom: 40px;
 }
@@ -120,6 +119,7 @@ nav ul a {
   border-radius: 10px;
   box-shadow: 0, 0, 2, 0.3;
   border: 1px solid red;
+  width: 50%;
 }
 
 .images {

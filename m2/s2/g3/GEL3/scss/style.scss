@@ -1,4 +1,6 @@
 // non ho vapito se bastava anche solo un important e con le virgole mettere gli altri ma nel dubbio ho fatto cosi
+//CON IL FILE JSON NON MI VA SE NON INSERISCO L'ISTRZUZIONE CLASSICA CON IL PERCORSO DAL SCSS AL CSS IN PRATICA HO CREATO IL FILE JSON MA HO LAVORATO ALMENO PER GLI AGGIORNAMENTI DAL TERMINALE
+//quindi si c'è ma più che altro per complettezza perche in qualche maniera non mi funzionava E NON HO CAPITO PERCHE
 @import 'reset';
 @import 'colori';
 @import 'font';
@@ -14,7 +16,8 @@ header{
 }
 
 h2{
-    @include title-big;
+    font-size: nth($fontSize,3);
+    font-weight: nth($fontWeight,3);
 }
 
 nav{
@@ -71,6 +74,7 @@ nav{
         flex-direction: row;
         flex-wrap: nowrap;
         @include floating;
+        width: calc(100% / 2);
     }
 }
 
