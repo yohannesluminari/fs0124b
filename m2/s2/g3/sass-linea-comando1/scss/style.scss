@@ -5,6 +5,9 @@
 h1{
     font-size: nth($misure,3);
     color: $colore;
+    @media screen and (min-width: 800px) {
+        background-color: red;
+    }
 }
 h2{
     font-size: nth($misure,2);

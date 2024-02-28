@@ -56,6 +56,11 @@ h1 {
   font-size: 45px;
   color: blue, white;
 }
+@media screen and (min-width: 800px) {
+  h1 {
+    background-color: red;
+  }
+}
 
 h2 {
   font-size: 30px;
