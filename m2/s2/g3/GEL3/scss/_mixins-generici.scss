@@ -1,0 +1,17 @@
+@mixin title-big{
+    color: black;
+    font-size: 55px;
+    font-weight: 900;
+}
+
+@mixin floating{
+    border-radius: 50%;
+    box-shadow: (0, 0, 2, .3);
+    border: 1px solid red;
+}
+
+@mixin grid{
+    color: black;
+    font-size: 45px;
+    font-weight: 900;
+}

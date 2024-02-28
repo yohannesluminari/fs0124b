@@ -1,0 +1,46 @@
+// non ho vapito se bastava anche solo un important e con le virgole mettere gli altri ma nel dubbio ho fatto cosi
+@import 'reset';
+@import 'colori';
+@import 'font';
+@import 'spaziature';
+@import 'bottoni';
+@import 'mixins-generici';
+@import 'animazioni';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Roboto&family=Spectral&display=swap');
+
+body{
+    background-color: $coloreBg;
+}
+h1{
+    @include title-big;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: $bodyMargin;
+    ul{
+        display: flex;
+        a{
+            text-decoration: none;
+            font-size: nth($fontSize, 2);
+            color: $coloreTesto;
+        }
+    }
+}
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
