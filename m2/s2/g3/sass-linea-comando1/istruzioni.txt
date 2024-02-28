@@ -1,0 +1,1 @@
+compile nel file .json compila l'scss nella cartella css nel file style.css
