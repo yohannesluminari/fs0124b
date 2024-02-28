@@ -1,3 +1,30 @@
+@import 'reset';
+@import 'mixins';
+@import 'variabili';
+
 h1{
-    color: blue;
+    font-size: nth($misure,3);
+    color: $colore;
+}
+h2{
+    font-size: nth($misure,2);
+    color: map-get($colori, primary);
+
+}
+
+h3{
+    @include coloriFont
+}
+
+ul{
+    li{
+        background-color: black;
+        &:hover{
+            background-color: red;
+        }
+        a{
+            color: nth($colore,2);
+            font-size: nth($misure,2);
+        }
+    }
 }
