@@ -2,3 +2,11 @@
     color: purple;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+@mixin coloreDinamico($coloreSfondo){
+    @if ( lightness( $coloreSfondo ) > 50  ) {  // se il chiaro è maggiore di 50% allora è chiaro
+        color: darken($coloreSfondo, 10); // se piu chiaro scurisci del 10%
+    }@else{
+        color: lighten($coloreSfondo, 10); // se piu scuro scurisci del 10%
+    }
+}

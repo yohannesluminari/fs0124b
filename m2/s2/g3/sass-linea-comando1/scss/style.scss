@@ -1,6 +1,6 @@
 @import 'reset';
-@import 'mixins';
 @import 'variabili';
+@import 'mixins';
 
 h1{
     font-size: nth($misure,3);
@@ -26,5 +26,42 @@ ul{
             color: nth($colore,2);
             font-size: nth($misure,2);
         }
+    }
+}
+
+.area-chiara, .area-scura{
+    height: 200px;
+    font-style: italic;
+    text-decoration: line-through;
+    font-size: 1.4rem;
+}
+
+.area-chiara{
+    background-color: rgb(12, 7, 50);
+    @include coloreDinamico(rgb(12, 7, 50));
+    color: nth($colore,2);
+}
+
+.area-scura{
+    // @extend .area-chiara per non scrivere sempre aggiungo a questo le prorprieta di are chiara comune
+    background-color: rgb(146, 244, 60);
+    @include coloreDinamico(rgb(146, 244, 60));
+    color: nth($colore,2);
+}
+
+$steps: 15, 30, 45;
+
+@each $step in $steps{
+    .mt-#{$step}{  //#{} è unA 'funzionalità' che permette di creare un' INTERPOLAZIONE
+        margin-top: $step + px; 
+    }
+    .mb-#{$step}{
+        margin-bottom: $step + px;
+    }
+    .mr-#{$step}{
+        margin-right: $step + px;
+    }
+    .ml-#{$step}{
+        margin-left: $step + px;
     }
 }
