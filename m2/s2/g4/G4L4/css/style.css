@@ -11844,5 +11844,26 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+nav {
+  margin-top: 20px;
+  margin-left: 110px;
+  margin-bottom: 20px;
+}
+nav img {
+  width: 5%;
+}
+nav li {
+  margin-left: 40px;
+}
+nav .avatar1 {
+  border-radius: 50%;
+  width: 25%;
+  margin-left: 20px;
+}
+
+#hero {
+  background-color: #6f42c1;
+  width: 100vw;
+}
 
 /*# sourceMappingURL=style.css.map */
