@@ -2,69 +2,129 @@
 @import 'variabili';
 @import 'mixins';
 
-h1{
-    font-size: nth($misure,3);
+h1 {
+    font-size: nth($misure, 3);
     color: $colore;
+
     @media screen and (min-width: 800px) {
         background-color: red;
     }
 }
-h2{
-    font-size: nth($misure,2);
+
+h2 {
+    font-size: nth($misure, 2);
     color: map-get($colori, primary);
 
 }
 
-h3{
+h3 {
     @include coloriFont
 }
 
-ul{
-    li{
+ul {
+    li {
         background-color: black;
-        &:hover{
+
+        &:hover {
             background-color: red;
         }
-        a{
-            color: nth($colore,2);
-            font-size: nth($misure,2);
+
+        a {
+            color: nth($colore, 2);
+            font-size: nth($misure, 2);
         }
     }
 }
 
-.area-chiara, .area-scura{
+.area-chiara,
+.area-scura {
     height: 200px;
     font-style: italic;
     text-decoration: line-through;
     font-size: 1.4rem;
 }
 
-.area-chiara{
+.area-chiara {
     background-color: rgb(12, 7, 50);
     @include coloreDinamico(rgb(12, 7, 50));
-    color: nth($colore,2);
+    color: nth($colore, 2);
 }
 
-.area-scura{
+.area-scura {
     // @extend .area-chiara per non scrivere sempre aggiungo a questo le prorprieta di are chiara comune
     background-color: rgb(146, 244, 60);
     @include coloreDinamico(rgb(146, 244, 60));
-    color: nth($colore,2);
+    color: nth($colore, 2);
 }
 
 $steps: 15, 30, 45;
 
-@each $step in $steps{
-    .mt-#{$step}{  //#{} è unA 'funzionalità' che permette di creare un' INTERPOLAZIONE
-        margin-top: $step + px; 
+@each $step in $steps {
+    .mt-#{$step} {
+        //#{} è unA 'funzionalità' che permette di creare un' INTERPOLAZIONE
+        margin-top: $step + px;
     }
-    .mb-#{$step}{
+
+    .mb-#{$step} {
         margin-bottom: $step + px;
     }
-    .mr-#{$step}{
+
+    .mr-#{$step} {
         margin-right: $step + px;
     }
-    .ml-#{$step}{
+
+    .ml-#{$step} {
         margin-left: $step + px;
     }
 }
+
+
+@mixin spaziature($direzione, $dirAbbreviata, $misura) {
+
+    .m#{$dirAbbreviata}-#{$misura} {
+        margin-#{$direzione}: $misura + px;
+    }
+
+    .p#{$dirAbbreviata}-#{$misura} {
+        margin-#{$direzione}: $misura + px;
+    }
+
+
+}
+$sizes: 15, 30, 45;
+
+
+@mixin generaSpaziature() {
+    $sizeMap: (
+        top: t,
+        left: l,
+        bottom: b,
+        right: r
+    );
+    @each $chiave, $direzione in $sizeMap {
+        @include spaziature($chiave, $valore, 15);
+    
+    }
+}
+
+
+
+
+@include generaSpaziature(15);
+@include generaSpaziature(30);
+@include generaSpaziature(30);
+
+
+
+/* @include spaziature(top, t, 15); --> il mixin SPAZIATURE stamparà questo in style.css
+.mt-15{
+    margin-top: 15px;
+}
+.pt-15{
+    margin-top: 15px;
+}
+
+@include spaziature(left, t, 15);
+@include spaziature(right, t, 15);
+@include spaziature(bottom, t, 15);
+*/
