@@ -102,7 +102,7 @@ $sizes: 15, 30, 45;
         right: r
     );
     @each $chiave, $direzione in $sizeMap {
-        @include spaziature($chiave, $valore, 15);
+        @include spaziature($chiave, $valore, $misura);
     
     }
 }
@@ -112,7 +112,7 @@ $sizes: 15, 30, 45;
 
 @include generaSpaziature(15);
 @include generaSpaziature(30);
-@include generaSpaziature(30);
+@include generaSpaziature(40);
 
 
 
