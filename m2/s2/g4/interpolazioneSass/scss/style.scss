@@ -1,0 +1,11 @@
+@import 'mixins';
+h1 {
+    font-size: 4rem;
+    color: red;
+
+    @include breakpoint(desktop) {
+        font-size: 12rem;
+        color: green;
+    }
+
+}
