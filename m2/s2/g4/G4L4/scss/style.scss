@@ -1,24 +1,55 @@
+@import 'fonts';
 @import 'spazi';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-nav{
+body {
+    font-family: $fontFamily;
+}
+
+nav {
     margin-top: nth($margin, 3);
-    margin-left: nth($margin, 7);
     margin-bottom: nth($margin, 3);
-    img{
+    font-size: nth($fontSize, 3);
+
+    img {
         width: 5%;
     }
-    li{
+
+    li {
         margin-left: nth($margin, 4);
     }
-    .avatar1{
+
+    .avatar1 {
         border-radius: 50%;
         width: 25%;
         margin-left: nth($margin, 3);
     }
 }
 
-#hero{
+#hero {
     background-color: $purple;
     width: 100vw;
+
+    h1 {
+        font-size: nth($fontSize, 7);
+    }
+
+    button{
+        padding: nth($padding, 3);
+    }
+
+    .btn1 {
+        color: white;
+        background-color: $teal;
+    }
+
+    .btn2 {
+        color: black;
+        background-color: white;
+    }
+
+    .card-body {
+        margin-left: nth($margin, 7);
+        margin-top: nth($margin, 6);
+    }
 }
