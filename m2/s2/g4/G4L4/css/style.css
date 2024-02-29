@@ -11889,4 +11889,20 @@ nav .avatar1 {
   margin-top: 80px;
 }
 
+.container .hero h3, .container .hero .h3 {
+  font-weight: 900;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer ul li {
+  display: inline-block;
+}
+
+#cards, .h2 {
+  margin-left: 110px;
+}
+
 /*# sourceMappingURL=style.css.map */

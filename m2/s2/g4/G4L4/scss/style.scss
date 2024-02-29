@@ -53,3 +53,21 @@ nav {
         margin-top: nth($margin, 6);
     }
 }
+
+.container .hero{
+    h3{
+        font-weight: nth($fontWight,3);
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    ul li{
+        display: inline-block;
+    }
+}
+
+#cards,.h2{
+    margin-left: nth($margin, 7);
+}
