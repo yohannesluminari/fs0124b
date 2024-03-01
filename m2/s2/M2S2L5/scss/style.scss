@@ -1,36 +1,53 @@
-@mixin spaziature($direzione, $dirAbbreviata, $misura) {
+@import 'variabili';
+@import 'mixins';
 
+// *{
+//     margin-left: 2%;
+//     margin-right: 2%;
+// }
 
-    .m#{$dirAbbreviata}-#{$misura} {
-        margin-#{$direzione}: $misura + px;
-    }
-
-    .p#{$dirAbbreviata}-#{$misura} {
-        padding-#{$direzione}: $misura + px;
-    }
-
+*{
+    background-color: rgb(19, 14, 14);
 }
+.nav{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_logo {
+    width: 230px;
+    object-fit: contain;
+    align-self: center;
+  }
+  
+  .nav_avatar {
+    width: 95px;
+    object-fit: contain;
+  }
 
-@mixin generaSpaziature($misura) {
-
-    $sizesMap : (
-        top:t,
-        left:l,
-        bottom:b,
-        right:r
-    );
-
-    @each $chiave, $valore in $sizesMap {
-
-        @include spaziature($chiave, $valore, $misura);
+  .navbar-nav{
+    li a{
+        font-size: nth($fontSize,3);
+        color: white;
+        text-decoration: $none;
+    }
+    a:focus{
+        background-color: red;
 
     }
+  }
+
+  #collapse{
+    background-color: red;
+  }
+
+//   MAIN
+
+
+.section1{
+    background-color: white;
+    height: 200px;
+    width: 100%;
 }
-
-$sizes: 15, 30, 45, 60, 75, 100;
-
-@each $size in $sizes{
-    @include generaSpaziature($size);
-}
-
-

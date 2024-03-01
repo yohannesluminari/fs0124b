@@ -1,3 +1,35 @@
+.mt-0 {
+  margin-top: 0px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.mr-0 {
+  margin-right: 0px;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
 .mt-15 {
   margin-top: 15px;
 }
@@ -188,6 +220,48 @@
 
 .pr-100 {
   padding-right: 100px;
+}
+
+* {
+  background-color: rgb(19, 14, 14);
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo {
+  width: 230px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.nav_avatar {
+  width: 95px;
+  object-fit: contain;
+}
+
+.navbar-nav li a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+.navbar-nav a:focus {
+  background-color: red;
+}
+
+#collapse {
+  background-color: red;
+}
+
+.section1 {
+  background-color: white;
+  height: 200px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

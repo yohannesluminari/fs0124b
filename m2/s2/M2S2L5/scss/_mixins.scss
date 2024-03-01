@@ -1,0 +1,37 @@
+@mixin spaziature($direzione, $dirAbbreviata, $misura) {
+
+
+    .m#{$dirAbbreviata}-#{$misura} {
+        margin-#{$direzione}: $misura + px;
+    }
+
+    .p#{$dirAbbreviata}-#{$misura} {
+        padding-#{$direzione}: $misura + px;
+    }
+
+}
+
+@mixin generaSpaziature($misura) {
+
+    $sizesMap : (
+        top:t,
+        left:l,
+        bottom:b,
+        right:r
+    );
+
+    @each $chiave, $valore in $sizesMap {
+
+        @include spaziature($chiave, $valore, $misura);
+
+    }
+}
+
+$sizes: 0, 15, 30, 45, 60, 75, 100;
+
+@each $size in $sizes{
+    @include generaSpaziature($size);
+}
+
+
+
