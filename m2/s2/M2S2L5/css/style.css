@@ -286,12 +286,12 @@
   padding-right: 800px;
 }
 
-#body {
+* {
   background-color: rgb(19, 14, 14);
   box-sizing: border-box;
 }
 
-.nav {
+nav {
   position: fixed;
   width: 100%;
   display: flex;
@@ -382,7 +382,7 @@ section .headTitle h1 {
 
 .film-card {
   flex: 0 0 auto;
-  width: 250px;
+  width: 550px;
   height: 450px;
   margin-right: 40px;
 }
