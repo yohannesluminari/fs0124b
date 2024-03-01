@@ -257,6 +257,25 @@
   background-color: red;
 }
 
+section .headTitle {
+  display: flex;
+  align-items: center;
+}
+section .headTitle select {
+  border: 2px solid white;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: rgb(234, 234, 234);
+  font-size: 30px;
+  align-items: center;
+  margin-top: -23px;
+  margin-left: -130px;
+}
+section .headTitle h1 {
+  font-weight: 900;
+  font-size: 65px;
+}
+
 .films {
   position: relative;
   overflow: hidden;
