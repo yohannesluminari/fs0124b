@@ -222,6 +222,70 @@
   padding-right: 100px;
 }
 
+.mt-700 {
+  margin-top: 700px;
+}
+
+.pt-700 {
+  padding-top: 700px;
+}
+
+.ml-700 {
+  margin-left: 700px;
+}
+
+.pl-700 {
+  padding-left: 700px;
+}
+
+.mb-700 {
+  margin-bottom: 700px;
+}
+
+.pb-700 {
+  padding-bottom: 700px;
+}
+
+.mr-700 {
+  margin-right: 700px;
+}
+
+.pr-700 {
+  padding-right: 700px;
+}
+
+.mt-800 {
+  margin-top: 800px;
+}
+
+.pt-800 {
+  padding-top: 800px;
+}
+
+.ml-800 {
+  margin-left: 800px;
+}
+
+.pl-800 {
+  padding-left: 800px;
+}
+
+.mb-800 {
+  margin-bottom: 800px;
+}
+
+.pb-800 {
+  padding-bottom: 800px;
+}
+
+.mr-800 {
+  margin-right: 800px;
+}
+
+.pr-800 {
+  padding-right: 800px;
+}
+
 * {
   background-color: rgb(19, 14, 14);
   box-sizing: border-box;
@@ -274,6 +338,18 @@ section .headTitle select {
 section .headTitle h1 {
   font-weight: 900;
   font-size: 65px;
+}
+
+.iconsRight {
+  display: flex;
+}
+.iconsRight .ii {
+  justify-content: center;
+  margin-left: 10%;
+}
+.iconsRight .ii i {
+  color: white;
+  font-size: 50px;
 }
 
 .films {

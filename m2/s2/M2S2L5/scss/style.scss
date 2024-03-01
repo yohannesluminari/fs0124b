@@ -64,6 +64,19 @@ section{
     }
   } 
 }
+.iconsRight{
+  display: flex;
+  .ii{
+    justify-content:center;
+    margin-left: 10%;
+    i{
+      color: white;
+      font-size: nth($fontSize,5);
+
+    }
+  }
+  
+}
 .films {
   position: relative;
   overflow: hidden;
