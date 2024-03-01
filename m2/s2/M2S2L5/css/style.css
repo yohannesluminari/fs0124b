@@ -286,7 +286,7 @@
   padding-right: 800px;
 }
 
-* {
+#body {
   background-color: rgb(19, 14, 14);
   box-sizing: border-box;
 }
@@ -540,6 +540,10 @@ footer {
 }
 footer p {
   font-size: 20px;
+}
+
+#form {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

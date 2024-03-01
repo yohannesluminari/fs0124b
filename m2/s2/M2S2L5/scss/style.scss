@@ -6,8 +6,8 @@
 //     margin-right: 2%;
 // }
 
-*{
-    background-color: rgb(19, 14, 14);
+#body{
+    background-color: rgb(19, 14, 14) ;
     box-sizing: border-box;
 }
 .nav{
@@ -269,4 +269,8 @@ footer{
     font-size: nth($fontSize,2);
   }
 
+}
+
+#form{
+  background-color: white;
 }
