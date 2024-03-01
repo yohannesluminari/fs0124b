@@ -1,10 +1,6 @@
 @import 'variabili';
 @import 'mixins';
 
-// *{
-//     margin-left: 2%;
-//     margin-right: 2%;
-// }
 
 #body{
     background-color: rgb(19, 14, 14) ;
@@ -44,11 +40,13 @@
 
 //   MAIN
 section{
+
   .headTitle
   {
     display: flex;
     align-items: center;
     select{
+      background-color: black;
       border: 2px solid white;
       padding-left: 20px;
       padding-right: 20px;

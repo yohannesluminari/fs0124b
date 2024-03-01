@@ -326,6 +326,7 @@ section .headTitle {
   align-items: center;
 }
 section .headTitle select {
+  background-color: black;
   border: 2px solid white;
   padding-left: 20px;
   padding-right: 20px;
