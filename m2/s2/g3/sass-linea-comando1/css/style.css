@@ -1,21 +1,325 @@
-/* Error: Only 0 arguments allowed, but 1 was passed.
- *     ,
- * 97  | @mixin generaSpaziature() {
- *     |        ================== declaration
- * ... |
- * 113 | @include generaSpaziature(15);
- *     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
- *     '
- *   scss\style.scss 113:1  generaSpaziature()
- *   scss\style.scss 113:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Only 0 arguments allowed, but 1 was passed.\a     \2577 \a 97  \2502  @mixin generaSpaziature() {\d\a     \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a... \2502 \a 113 \2502  @include generaSpaziature(15);\d\a     \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a     \2575 \a   scss\\style.scss 113:1  generaSpaziature()\a   scss\\style.scss 113:1  root stylesheet";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: 45px;
+  color: blue, white;
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    background-color: red;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  color: green;
+}
+
+h3 {
+  color: purple;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+ul li {
+  background-color: black;
+}
+ul li:hover {
+  background-color: red;
+}
+ul li a {
+  color: white;
+  font-size: 30px;
+}
+
+.area-chiara,
+.area-scura {
+  height: 200px;
+  font-style: italic;
+  text-decoration: line-through;
+  font-size: 1.4rem;
+}
+
+.area-chiara {
+  background-color: rgb(12, 7, 50);
+  color: #170d5f;
+  color: white;
+}
+
+.area-scura {
+  background-color: rgb(146, 244, 60);
+  color: #77ef0e;
+  color: white;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.mt-45 {
+  margin-top: 45px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+.mr-45 {
+  margin-right: 45px;
+}
+
+.ml-45 {
+  margin-left: 45px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+
+.pl-15 {
+  padding-left: 15px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+.pr-15 {
+  padding-right: 15px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.pr-30 {
+  padding-right: 30px;
+}
+
+.mt-45 {
+  margin-top: 45px;
+}
+
+.pt-45 {
+  padding-top: 45px;
+}
+
+.ml-45 {
+  margin-left: 45px;
+}
+
+.pl-45 {
+  padding-left: 45px;
+}
+
+.mb-45 {
+  margin-bottom: 45px;
+}
+
+.pb-45 {
+  padding-bottom: 45px;
+}
+
+.mr-45 {
+  margin-right: 45px;
+}
+
+.pr-45 {
+  padding-right: 45px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+}
+
+.pt-90 {
+  padding-top: 90px;
+}
+
+.ml-90 {
+  margin-left: 90px;
+}
+
+.pl-90 {
+  padding-left: 90px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.pb-90 {
+  padding-bottom: 90px;
+}
+
+.mr-90 {
+  margin-right: 90px;
+}
+
+.pr-90 {
+  padding-right: 90px;
+}
+
+.mt-1050 {
+  margin-top: 1050px;
+}
+
+.pt-1050 {
+  padding-top: 1050px;
+}
+
+.ml-1050 {
+  margin-left: 1050px;
+}
+
+.pl-1050 {
+  padding-left: 1050px;
+}
+
+.mb-1050 {
+  margin-bottom: 1050px;
+}
+
+.pb-1050 {
+  padding-bottom: 1050px;
+}
+
+.mr-1050 {
+  margin-right: 1050px;
+}
+
+.pr-1050 {
+  padding-right: 1050px;
+}
+
+/*
+
+.mt-15{
+    margin-top:15px
+}
+.pt-15{
+    padding-top:15px
+}
+
+*/
+
+/*# sourceMappingURL=style.css.map */

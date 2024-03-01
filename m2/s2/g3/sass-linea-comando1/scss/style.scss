@@ -56,75 +56,74 @@ ul {
     @include coloreDinamico(rgb(146, 244, 60));
     color: nth($colore, 2);
 }
+$step: 15, 30, 45;
 
-$steps: 15, 30, 45;
+@each $s in $step {
 
-@each $step in $steps {
-    .mt-#{$step} {
-        //#{} è unA 'funzionalità' che permette di creare un' INTERPOLAZIONE
-        margin-top: $step + px;
+    .mt-#{$s} {
+        margin-top: $s + px;
     }
 
-    .mb-#{$step} {
-        margin-bottom: $step + px;
+    .mb-#{$s} {
+        margin-bottom: $s + px;
     }
 
-    .mr-#{$step} {
-        margin-right: $step + px;
+    .mr-#{$s} {
+        margin-right: $s + px;
     }
 
-    .ml-#{$step} {
-        margin-left: $step + px;
+    .ml-#{$s} {
+        margin-left: $s + px;
     }
+
 }
 
 
+
 @mixin spaziature($direzione, $dirAbbreviata, $misura) {
+
 
     .m#{$dirAbbreviata}-#{$misura} {
         margin-#{$direzione}: $misura + px;
     }
 
     .p#{$dirAbbreviata}-#{$misura} {
-        margin-#{$direzione}: $misura + px;
+        padding-#{$direzione}: $misura + px;
     }
 
-
 }
-$sizes: 15, 30, 45;
 
+@mixin generaSpaziature($misura) {
 
-@mixin generaSpaziature() {
-    $sizeMap: (
-        top: t,
-        left: l,
-        bottom: b,
-        right: r
+    $sizesMap : (
+        top:t,
+        left:l,
+        bottom:b,
+        right:r
     );
-    @each $chiave, $direzione in $sizeMap {
+
+    @each $chiave, $valore in $sizesMap {
+
         @include spaziature($chiave, $valore, $misura);
-    
+
     }
+}
+
+$sizes: 15, 30, 45, 90, 1050;
+
+@each $size in $sizes{
+    @include generaSpaziature($size);
 }
 
 
 
+/*
 
-@include generaSpaziature(15);
-@include generaSpaziature(30);
-@include generaSpaziature(40);
-
-
-
-/* @include spaziature(top, t, 15); --> il mixin SPAZIATURE stamparà questo in style.css
 .mt-15{
-    margin-top: 15px;
+    margin-top:15px
 }
 .pt-15{
-    margin-top: 15px;
+    padding-top:15px
 }
 
-@include spaziature(left, t, 15);
-@include spaziature(right, t, 15);
-@include spaziature(bottom, t, 15);
 */
