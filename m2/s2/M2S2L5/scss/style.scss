@@ -152,28 +152,29 @@ footer{
 #form{
   color: white;
 }
-
-.row{
- margin: 70px;
-}
-.row_poster{
-  width: 100%;
-  object-fit: contain;
-  max-height: 150px;
-  margin-right: 10px;
-  transition: transform 450ms;
-}
-.row_posters{
-  display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  padding: 20px;
+.carousel{
+  height: 250px;
+  width: 80% auto;
+ display: flex;
+ border: 2px solid red;
+ margin: 60px;
+ display: flex;
+ justify-content: space-between;
 }
 
-.row_posters:hover{
-  transform: scale(1.08);
+.carousel .switchLeft,
+.carousel .switchRight{
+  color: $white;
+  font-weight: bold;
+  height: 100%;
+  width: 45px;
+  line-height: 250px;
+  font-size: 25px;
+  background-color: red;
+  top: 0;
+  z-index: 3;
 }
 
-.row_posters::-webkit-scrollbar{
-  display: none;
+.carousel .switchLeft{
+  margin-right: 98%;
 }
