@@ -39,104 +39,104 @@ nav{
   }
 
 //   MAIN
-.wrapper > * {
-  margin: 70px; /* Margine uguale a sinistra, destra e in alto per tutti gli elementi direttamente figli di .wrapper */
-}
-.wrapper {
-  width: 100%;
-  position: relative;
-  h1{
-    font-size: nth($fontSize,5);
-    color: $white;
-  }
-}
-.wrapper i {
-  top: 50%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  font-size: 1.25rem;
-  position: absolute;
-  text-align: center;
-  line-height: 50px;
-  background: red;
-  border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-}
-.wrapper i:active{
-  transform: translateY(-50%) scale(0.85);
-}
-.wrapper i:first-child{
-  left: -22px;
-}
-.wrapper i:last-child{
-  right: -22px;
-}
-.wrapper .carousel{
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 5) - 12px);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 16px;
-  border-radius: 8px;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-.carousel.no-transition {
-  scroll-behavior: auto;
-}
-// rende più fluido lo scorrimento
-.carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-.carousel.dragging .card {
-  cursor: grab;
-  user-select: none;
-}
-.carousel :where(.card, .img) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.carousel .card {
-  scroll-snap-align: start;
-  list-style: none;
-  cursor: pointer;
-  flex-direction: column;
-  border-radius: 8px;
-}
+// .wrapper > * {
+//   margin: 70px; /* Margine uguale a sinistra, destra e in alto per tutti gli elementi direttamente figli di .wrapper */
+// }
+// .wrapper {
+//   width: 100%;
+//   position: relative;
+//   h1{
+//     font-size: nth($fontSize,5);
+//     color: $white;
+//   }
+// }
+// .wrapper i {
+//   top: 50%;
+//   height: 50px;
+//   width: 50px;
+//   cursor: pointer;
+//   font-size: 1.25rem;
+//   position: absolute;
+//   text-align: center;
+//   line-height: 50px;
+//   background: red;
+//   border-radius: 50%;
+//   box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+//   transform: translateY(-50%);
+//   transition: transform 0.1s linear;
+// }
+// .wrapper i:active{
+//   transform: translateY(-50%) scale(0.85);
+// }
+// .wrapper i:first-child{
+//   left: -22px;
+// }
+// .wrapper i:last-child{
+//   right: -22px;
+// }
+// .wrapper .carousel{
+//   display: grid;
+//   grid-auto-flow: column;
+//   grid-auto-columns: calc((100% / 5) - 12px);
+//   overflow-x: auto;
+//   scroll-snap-type: x mandatory;
+//   gap: 16px;
+//   border-radius: 8px;
+//   scroll-behavior: smooth;
+//   scrollbar-width: none;
+// }
+// .carousel::-webkit-scrollbar {
+//   display: none;
+// }
+// .carousel.no-transition {
+//   scroll-behavior: auto;
+// }
+// // rende più fluido lo scorrimento
+// .carousel.dragging {
+//   scroll-snap-type: none;
+//   scroll-behavior: auto;
+// }
+// .carousel.dragging .card {
+//   cursor: grab;
+//   user-select: none;
+// }
+// .carousel :where(.card, .img) {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .carousel .card {
+//   scroll-snap-align: start;
+//   list-style: none;
+//   cursor: pointer;
+//   flex-direction: column;
+//   border-radius: 8px;
+// }
 
-.card .img img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.carousel .card h2 {
-  font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
-}
-.carousel .card span {
-  color: #6A6D78;
-  font-size: 1.31rem;
-}
-@media screen and (max-width: 900px) {
-  .wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
-  }
-}
-@media screen and (max-width: 600px) {
-  .wrapper .carousel {
-    grid-auto-columns: 100%;
-  }
-}
+// .card .img img {
+//   height: 100%;
+//   width: 100%;
+//   object-fit: cover;
+// }
+// .carousel .card h2 {
+//   font-weight: 500;
+//   font-size: 1.56rem;
+//   margin: 30px 0 5px;
+// }
+// .carousel .card span {
+//   color: #6A6D78;
+//   font-size: 1.31rem;
+// }
+// @media screen and (max-width: 900px) {
+//   .wrapper .carousel {
+//     grid-auto-columns: calc((100% / 2) - 9px);
+//   }
+// }
+// @media screen and (max-width: 600px) {
+//   .wrapper .carousel {
+//     grid-auto-columns: 100%;
+//   }
+// }
 // FOOTER
 footer{
   color: $white;
@@ -151,4 +151,29 @@ footer{
 // ACCOUNT SECOND PAGE
 #form{
   color: white;
+}
+
+.row{
+ margin: 70px;
+}
+.row_poster{
+  width: 100%;
+  object-fit: contain;
+  max-height: 150px;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.row_posters{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row_posters:hover{
+  transform: scale(1.08);
+}
+
+.row_posters::-webkit-scrollbar{
+  display: none;
 }
