@@ -2,42 +2,87 @@
 @import 'mixins';
 
 
-body{
-    background-color: rgb(19, 14, 14) ;
-    box-sizing: border-box;
-    overflow-x: hidden;
+body {
+  background-color: rgb(19, 14, 14);
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-nav{
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-item {
+    padding-right: 20px;
+  }
+
+
+}
+
+// .dropdown{
+//   .nav-item{
+
+//       li a i{
+//         font-size: 35px;
+//         text-decoration: none;
+//         justify-content: center;
+//         align-items: center;
+//         align-self: center;
+//         color: white;
+//       }
+//   }
+// }
+
+.dropdown {
+  a{
+    text-decoration: none;
+    .bi {
+      font-size: 200%;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      color: white;
+      padding-right: 30px;
+    }
+    .bi-bell{
+      margin-left: 30px;
+    }
+  }
+
+}
+.kids a{
+  font-size: nth($fontSize,3);
+  color: red;
 }
 .nav_logo {
-    width: 230px;
-    align-self: center;
-  }
-  
-  .nav_avatar {
-    width: 95px;
-  }
+  width: 20%;
+  align-self: center;
+}
 
-  .navbar-nav{
-    li a{
-        font-size: nth($fontSize,3);
-        color: white;
-        text-decoration: $none;
-    }
-    a:focus{
-        background-color: red;
+.nav_avatar {
+  width: 100px;
+}
 
-    }
+.navbar-nav {
+  li a {
+    font-size: nth($fontSize, 3);
+    color: white;
+    text-decoration: $none;
   }
 
-  #collapse{
+  a:focus {
     background-color: red;
+
   }
+}
+
+#collapse {
+  background-color: red;
+}
 
 //   MAIN  CSS DEL VECCHIO SLIDER RIFATTO
 // .wrapper > * {
@@ -139,26 +184,28 @@ nav{
 //   }
 // }
 // FOOTER
-footer{
+footer {
   color: $white;
   display: flex;
   justify-content: center;
 
-  p{
-    font-size: nth($fontSize,2);
+  p {
+    font-size: nth($fontSize, 2);
   }
 
 }
+
 // ACCOUNT SECOND PAGE
-#form{
+#form {
   color: white;
 }
 
 //  MAIN 
-.section{
+.section {
   margin: 70px;
 }
-.slide{
+
+.slide {
   height: 200px;
   width: 350px;
   display: grid;
@@ -167,54 +214,56 @@ footer{
   perspective: 100px;
 }
 
-img{
+img {
   height: 100%;
-  width:90%;
+  width: 90%;
   transition: transform 1s;
 }
-.image-slider{
+
+.image-slider {
   display: grid;
   place-items: center;
 
   position: relative;
 
   overflow: hidden;
-  height: 250px;  
+  height: 250px;
   width: 100%;
 }
-.image-slider-film{
+
+.image-slider-film {
   display: flex;
-  width:calc(350px * 12);
+  width: calc(350px * 12);
   animation: play 40s linear infinite;
 }
 
-.image-slider-film:hover{
- animation-play-state: paused;
+.image-slider-film:hover {
+  animation-play-state: paused;
 }
 
 
-@keyframes play{
-  0%{
-      transform: translateX(0);
+@keyframes play {
+  0% {
+    transform: translateX(0);
   }
 
-  100%{
-      transform: translateX(calc(-250px*6));
+  100% {
+    transform: translateX(calc(-250px*6));
   }
 }
 
 
-  img:hover{
-      transform: translateZ(20px);
+img:hover {
+  transform: translateZ(20px);
+}
+
+//  FINE MAIN .
+
+.sec {
+  select {
+    background-color: black;
+    color: white;
+    padding: 10px 30px 10px 10px;
   }
 
-  //  FINE MAIN .
-
-  .sec{
-    select{
-      background-color: black;
-      color: white;
-      padding: 10px 30px 10px 10px;
-    }
-    
-  }
+}
