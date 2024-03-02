@@ -289,6 +289,7 @@
 body {
   background-color: rgb(19, 14, 14);
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 nav {
@@ -334,31 +335,60 @@ footer p {
   color: white;
 }
 
-.carousel {
-  height: 250px;
-  width: 80% auto;
-  display: flex;
-  border: 2px solid red;
-  margin: 60px;
-  display: flex;
-  justify-content: space-between;
+.section {
+  margin: 70px;
 }
 
-.carousel .switchLeft,
-.carousel .switchRight {
-  color: rgb(234, 234, 234);
-  font-weight: bold;
+.slide {
+  height: 200px;
+  width: 350px;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+img {
   height: 100%;
-  width: 45px;
-  line-height: 250px;
-  font-size: 25px;
-  background-color: red;
-  top: 0;
-  z-index: 3;
+  width: 90%;
+  transition: transform 1s;
 }
 
-.carousel .switchLeft {
-  margin-right: 98%;
+.image-slider {
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+}
+
+.image-slider-film {
+  display: flex;
+  width: 4200px;
+  animation: play 40s linear infinite;
+}
+
+.image-slider-film:hover {
+  animation-play-state: paused;
+}
+
+@keyframes play {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+img:hover {
+  transform: translateZ(20px);
+}
+
+.sec select {
+  background-color: black;
+  color: white;
+  padding: 10px 30px 10px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
