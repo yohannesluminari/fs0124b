@@ -15,8 +15,8 @@
                     this.prezzo = _prezzo;
                     this.ingredienti = _ingredienti;
                 }
-                mostraDettagli() { // METODO
-                    console.log(`La pizza ${this.gusto} costa ${this.prezzo}$`);
+                dettagli() { // METODO
+                    return + `La pizza ${this.gusto} costa ${this.prezzo}$`;
                 }
                 prezzoScontato() { // METODO
                     return this.prezzo * 0.8;
@@ -28,21 +28,21 @@
                     super(_gusto, _prezzo,['mozzarella']);
                 }
                 aggiungiIngredienti(...ingredienti){
-                    if(this.ingredienti != 'pomodoro'){
+                    if(this.ingredienti.includes('pomodoro')){
                         this.ingredienti.push(...ingredienti)
                     }
                 } 
+                dettagli() { // METODO
+                    return super.dettagli() + `La pizza ${this.gusto} costa ${this.prezzo}$ e niente ciao`;
+                }
             }
-
-            let margherita = new Pizza('Margherita', 5, ['pomodoro','mozzarella','basilico']);
 
             let formaggi = new PizzaBianca('4 Formaggi', 8);
             formaggi.aggiungiIngredienti('Emmental', 'Parmigiano', 'Gorgonzola')
-            
-            let salsiccia = new PizzaBianca('Salsiccia e Friarelli', 9);
-            console.log(margherita);
+
             console.log(formaggi);
-            console.log(salsiccia);
+    
+            console.log(formaggi.dettagli());
         }
     </script>
 </body>

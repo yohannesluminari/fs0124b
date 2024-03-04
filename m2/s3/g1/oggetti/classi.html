@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        {
+            class Pizza {
+
+                constructor(_gusto, _prezzo) {
+                    this.gusto = _gusto;
+                    this.prezzo = _prezzo;
+                    this.ingredienti = ['pomodoro', 'mozzarella']
+                }
+                mostraDettagli() { // METODO
+                    console.log(`La pizza ${this.gusto} costa ${this.prezzo}$`);
+                }
+                prezzoScontato() { // METODO
+                    return this.prezzo * 0.8;
+                }
+            }
+
+            let margherita = new Pizza('Margherita', 5);
+            let diavola = new Pizza('Diavola', 7);
+
+            console.table([margherita, diavola]); // se solo 1 non serve quadre se sono almeno 2 mettere le quadre per avere la tabella e non a mo di Pizza{}
+
+            margherita.mostraDettagli();
+            diavola.mostraDettagli();
+        }
+    </script>
+</body>
+
+</html>
