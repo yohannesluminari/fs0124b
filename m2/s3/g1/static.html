@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        div{
+            height: 100px;
+            width: 100%;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    
     <script>
 
+        // crea un elemento in console con tagName e classi
         class GestioneHTML {
-            
+
+            static creaElementoConsole(tagName, ...classi) {
+                let element = document.createElement(tagName)
+                element.classList.add(...classi)
+                return element;
+            }
         }
+        let result = GestioneHTML.creaElementoConsole('div', 'alert','alert-success');
+        let result1 = GestioneHTML.creaElementoConsole('button', 'btn', 'btn-primary');
+
+        document.body.appendChild(result);
+        document.body.appendChild(result1);
+        console.log(result, result1);
     </script>
 </body>
 </html>
+    
