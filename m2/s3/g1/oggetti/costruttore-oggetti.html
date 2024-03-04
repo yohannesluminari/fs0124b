@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let pizza = {
+            gusto: 'Margherita',
+            prezzo: 7,
+            'lista-ingredienti':[
+                'Mozzarella',
+                'Pomodoro'
+            ],
+            misure:{
+                mini: true,
+                normal: true,
+                metro:false
+            }
+        }
+
+        console.log(pizza.gusto);
+        // ARRAY DENTRO OGETTO
+        console.log(pizza['lista-ingredienti'][1]);
+        console.log(pizza.misure.metro);
+        
+
+    </script>
+</body>
+</html>
