@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            color: red;
+            font-size: 40px;
+        }
+
+        .li{
+            color: white;
+        }
+        .conatiner {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding-top: 10px;
+            height: 100vh;
+        }
+        form{
+            width: 50%;
+            border: 5px solid white;
+        }
+        input {
+            padding: 20px 90px 20px 90px;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        select {
+            margin-top: 30px;
+            padding: 20px 170px 20px 170px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: red;
+            padding: 20px 80px 20px 80px;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="conatiner">
+        <form action>
+            <h1>Aggiungi informazioni su un Animale</h1>
+            <div>
+                <input type="text" id="animal" placeholder="Inserisci un animale">
+            </div>
+
+            <div>
+                <input type="text" id="owner" placeholder="Inserisci il proprietario">
+            </div>
+
+            <div>
+                <select id="species" name="specie">
+                    <option value="inglese">inglese</option>
+                    <option value="pastore">pastore</option>
+                    <option value="ciao">ciao</option>
+                    <option value="inglese">inglese</option>
+                    <option value="pastore">pastore</option>
+                    <option value="ciao">ciao</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="breed" name="razza">
+                    <option value="labrador">inglese</option>
+                    <option value="bassotto">bassotto</option>
+                    <option value="barbone">barbone</option>
+                    <option value="labrador">labrador</option>
+                    <option value="bassotto">bassotto</option>
+                    <option value="barbone">barbone</option>
+                    
+                </select>
+            </div>
+            <button id="add">Aggiungi</button>
+            <ul id="listaAnimali"></ul>
+        </form>
+    </div>
+
+
+
+
+
+
+    <script>
+        { // ES 2 FORM
+            let animale1 = document.getElementById('animal')
+            let owner1 = document.getElementById('owner')
+            let species1 = document.getElementById('species')
+            let breed1 = document.getElementById('breed')
+
+            let listaAnimali = document.getElementById('listaAnimali')
+            let button = document.getElementById('add')
+
+            let animali = []
+
+            class Animali {
+                constructor(animale, owner, species, breed) {
+                    this.animale = animale
+                    this.ownerName = owner
+                    this.species = species
+                    this.breed = breed
+                }
+
+
+            }
+
+            const creaListaAnimali = function () {
+                listaAnimali.innerHTML = '' // <-- svuota la lista all'inizio
+                pets.forEach((pet) => {
+                    const newLi = document.createElement('li');
+                    newLi.innerText =
+                        'Name: ' + pet.animale + ', owner: ' + pet.owner + ', species: ' + pet.species, + ', breed: ' + pet.breed ;
+                        li.clssList.add('.li')
+                    listaAnimali.appendChild(newLi)
+                })
+            }
+
+        }
+        {
+            //    ES 1 
+
+            class User {
+                constructor(firstName, lastName, age, location) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                    this.age = age
+                    this.location = location
+                }
+
+                confrontoEtà(user2) {
+                    if (this.age < user2.age) {
+                        return `${user2.firstName} è più vecchio di ${this.firstName}.`
+                    } else if (this.age > user2.age) {
+                        return `${user2.firstName} è più giovane di ${this.firstName}.`
+                    } else {
+                        return `${user2.firstName} è della stessa età di ${this.firstName}.`
+                    }
+                }
+            }
+
+            let Luca = new User('Luca', 'Pietri', 20, 'Milano');
+
+            let Marco = new User('Marco', 'Dalla', 91, 'Firenze');
+
+            let Lucia = new User('Lucia', 'Polso', 45, 'Siena');
+
+            console.log(Luca.confrontoEtà(Lucia));
+
+            console.log(Marco.confrontoEtà(Luca));
+            
+            console.log(Lucia.confrontoEtà(Lucia));
+        }
+    </script>
+</body>
+
+</html>
