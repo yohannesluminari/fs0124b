@@ -104,9 +104,9 @@
             let breed1 = document.getElementById('breed')
 
             let listaAnimali = document.getElementById('listaAnimali')
-            let button = document.getElementById('add')
+            let buttonForm = document.getElementById('add')
 
-            let animali = []
+            const animali = []
 
             class Animali {
                 constructor(animale, owner, species, breed) {
@@ -120,7 +120,7 @@
             }
 
             const creaListaAnimali = function () {
-                listaAnimali.innerHTML = '' // <-- svuota la lista all'inizio
+                animali.innerHTML = '' // Svuota la lista all'inizio perq
                 pets.forEach((pet) => {
                     const newLi = document.createElement('li');
                     newLi.innerText =
