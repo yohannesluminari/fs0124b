@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Form di Registrazione</title>
+
+    <style>
+        .conatiner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #listaNomi {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ESERCZIO 1</h1>
+    <div class="container">
+        <form action="">
+            <div id="listaNomi"></div>
+            <h1>Form Salva Nome</h1>
+            <div>
+                <label for="nomeInput">Nome:</label>
+                <input type="text" id="nomeInput">
+            </div>
+            <div>
+                <button class="btn btn-primary m-3 px-5 py-3 text-dark" onclick="salvaNome()">Salva</button>
+                <button class="btn btn-danger  px-5 py-3 text-dark " onclick="rimuoviNome()">Rimuovi</button>
+            </div>
+            <div id="messaggio"></div>
+        </form>
+    </div>
+
+    <hr>
+    <h1>ESERCZIO 2</h1>
+    <div class="container">
+        <h1>Contatore di Tempo</h1>
+        <div id="contatore"></div>
+    </div>
+
+
+
+
+    <script>
+        function salvaNome() {
+            let nome = document.getElementById("nomeInput").value;
+            let nomiSalvati = JSON.parse(localStorage.getItem("nomiSalvati")) || [];
+            nomiSalvati.push(nome);
+            localStorage.setItem("nomiSalvati", JSON.stringify(nomiSalvati));
+            document.getElementById("messaggio").innerText = "Nome salvato: " + nome;
+            mostraNomiSalvati();
+        }
+
+        // Funzione per rimuovere il nome dal localStorage ho provato a usare lastChild per eliminare l'ultimo ma ho sbagliavo sinstassi o era sbagliato il ragionamento
+        function rimuoviNome() {
+            localStorage.removeItem("nomiSalvati");
+            document.getElementById("messaggio").innerText = "Nomi rimossi";
+            document.getElementById("listaNomi").innerText = "";
+            document.getElementById("nomeInput").value = "";
+        }
+
+        // mostra i nomi salvati
+        function mostraNomiSalvati() {
+            let nomiSalvati = JSON.parse(localStorage.getItem("nomiSalvati")) || [];
+            let listaNomiHTML = "<h2>Nomi Salvati:</h2><ul>";
+            nomiSalvati.forEach(function (nome) {
+                listaNomiHTML += "<li>" + nome + "</li>";
+            });
+            listaNomiHTML += "</ul>";
+            document.getElementById("listaNomi").innerHTML = listaNomiHTML;
+        }
+        window.onload = function () {
+            mostraNomiSalvati();
+        };
+
+
+
+
+        // es 2
+        let contatore = sessionStorage.getItem("contatore") ? parseInt(sessionStorage.getItem("contatore")) : 0;
+
+        //  aggiorna il contatore 
+        function aggiornaContatore() {
+            contatore++;
+            sessionStorage.setItem("contatore", contatore);
+            document.getElementById("contatore").innerText = "Tempo trascorso: " + contatore + " secondi";
+        }
+
+
+        setInterval(aggiornaContatore, 1000);
+
+        /*
+        //mi dava problemi o andava in contrasto con l'altro window.onload credo...per questo ho commentato
+        window.onload = function () {
+
+        document.getElementById("contatore").innerText = "Tempo trascorso: " + contatore + " secondi";
+    };
+    */
+
+
+    </script>
+</body>
+
+</html>
