@@ -7,10 +7,32 @@
 </head>
 <body>
     
-
     <script>
 
-        
+        let p = new Promise(function(success, reject){
+
+
+            setTimeout(()=>{
+
+                let password = 'password';
+                
+                if(password == 'password'){
+                    success('accesso consentito')
+                }else{
+                    reject('accesso rifiutato')
+                }
+                
+            },10000)
+        });
+
+
+        p.then(
+            function(successo){
+                console.log(successo)
+            },
+            errore => console.error(errore)  
+        )
+    
 
     </script>
 </body>
