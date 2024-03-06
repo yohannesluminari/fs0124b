@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let menuJson = localStorage.getItem('menuPizze');
+
+        //operatore ternario
+        //siccome menuJson potrebbe contenere null mi assicuro che non ci siano errori, controllando con un operatore ternario
+        //in questo modo il parse viene eseguito solo se menuJson non contiene null, qualora fosse null inserisco nella variabile menu un array vuoto
+        let menu = menuJson != null ? JSON.parse(menuJson) : [];
+
+        console.log(menu);
+
+        menu.forEach(element => {
+            console.log(element);
+        });
+
+
+        menu.push({
+            gusto: 'Mimosa',
+            prezzo: 8
+        })
+
+
+
+
+    </script>
+</body>
+</html>
