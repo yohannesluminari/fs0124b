@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+        </div>
+    </div>
+
+    <div class="container1">
+        <h2>Carrello</h2>
+        <ul id="cart" class="list-group">
+        </ul>
+    </div>
+    <script>
+
+
+        function addToCart(img, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ img, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+
+
+
+        fetch('https://striveschool-api.herokuapp.com/books')
+            .then(response => response.json())
+            .then(data => {
+                const users = data.slice(0, 40); // Limito a 40 la comparsa delle card che senno non mi carica l'intera pagina non ho capito perchè
+
+                const cardContainer = document.querySelector('.row');
+
+                /* 
+                    avevo un endpoint diverso sul browser non ho capito il perchè 
+                    console.log(users);
+                */
+                users.forEach(user => {
+                    const card = `
+                        <div class="col">
+                            <div class="card h-100">
+                            <img src="${user.img}" class="card-img-top" alt="Placeholder Image">
+                            <div class="card-body">
+                                <h5 class="card-title">${user.title}</h5>
+                                <p class="card-text"> $ ${user.price}</p>
+                                <button class="btn btn-danger scarta-btn">Scarta</button>
+                                <button class="btn btn-primary aggiungi-carrello-btn">Aggiungi al carrello</button>
+                            </div>
+                            </div>
+                        </div>
+                        `;
+
+                    // Aggiungi la card al container inizialmente vuoto 
+                    cardContainer.innerHTML += card;
+                });
+
+                const scartaButtons = document.querySelectorAll('.scarta-btn');
+                scartaButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const card = button.closest('.col');
+                        card.remove();
+                    });
+                });
+
+                const aggiungiCarello = document.querySelectorAll('.aggiungi-carrello-btn');
+                scartaButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const carrello = button.closest('.col');;
+                    });
+                });
+
+            })
+
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
