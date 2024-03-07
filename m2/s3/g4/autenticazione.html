@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        function call(url, method){
+
+            return fetch(url, {
+                method: method,
+                headers: {
+                    authorization: "Authentication kujyzsdgfujkusagfdkjhasdfb" 
+                }
+            })
+        }
+
+
+        call('https://listing-creation.api.autoscout24.com/customers/42/listings')
+        .then(response => response.json())
+        .then(console.log);
+
+
+
+    </script>
+</body>
+</html>

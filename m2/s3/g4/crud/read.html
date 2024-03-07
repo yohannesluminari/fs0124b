@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Lista pizze</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <th>#</th>
+                        <th>Gusto</th>
+                        <th>Prezzo</th>
+                        <th>Azioni</th>
+                    </thead>
+                    <tbody id="listaPizze">
+                        
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <template id="template-riga">
+
+        <tr>
+            <td class="id"></td>
+            <td class="gusto"></td>
+            <td class="prezzo"></td>
+            <td>
+                <a href="#" class="btn btn-warning edit">modifica</a>
+                <button class="btn btn-danger delete">Elimina</button>
+            </td>
+        </tr>
+
+    </template>
+
+
+    <script>
+
+        fetch('http://localhost:3000/pizze')
+        .then(res => res.json())
+        .then(pizze => {
+
+            console.log(pizze);
+
+            for(let pizza of pizze){
+                let riga = generaClone()
+
+                let id = riga.querySelector('.id');
+                let gusto = riga.querySelector('.gusto');
+                let prezzo = riga.querySelector('.prezzo');
+
+                id.innerText = pizza.id
+                gusto.innerText = pizza.gusto
+                prezzo.innerText = pizza.prezzo
+
+
+                document.querySelector('#listaPizze').append(riga)
+            }
+        })
+
+        
+        function generaClone(){
+            //crea un clone del template e inseriscilo nella row
+            let template = document.querySelector('#template-riga')
+            let clone = template.content.cloneNode(true)
+
+            return clone;
+        }
+
+
+    </script>
+
+</body>
+</html>
