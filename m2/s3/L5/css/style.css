@@ -1,0 +1,9 @@
+.card {
+  padding: 50px;
+}
+.card img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
