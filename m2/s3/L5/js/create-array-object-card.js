@@ -27,8 +27,6 @@ async function createAndPostPhoneCard(phone) {
         'Content-Type': 'application/json',
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhYzk0YzJkN2IxMTAwMTkwZTZkYjgiLCJpYXQiOjE3MDk5MDQ3MTgsImV4cCI6MTcxMTExNDMxOH0.XkaYR5emkds_eFxe7-sV7h2pAdxheVALxtpOGk6yeFg"
     };
-
-   
         const response = await fetch(url, {
             method: 'POST',
             headers: headers,
@@ -40,6 +38,8 @@ async function createAndPostPhoneCard(phone) {
         }
 
         console.log('Card creata con successo:', phone);
+
+        
 }
 
 // Array di nuovitelefoni
@@ -59,4 +59,6 @@ const phones = [
 //crea una card per ciascuno
 phones.forEach(phone => createPhoneCard(phone));
 
-phones.forEach(phone => console.log(phone))
+phones.forEach(phone => console.log(phone));
+
+
