@@ -19,6 +19,7 @@ function createPhoneCard(phone) {
 
     document.getElementById('phone-container').appendChild(clone);
 }
+
 // Funzione per creare una card e inviarla tramite una richiesta POST
 async function createAndPostPhoneCard(phone) {
     const url = 'https://striveschool-api.herokuapp.com/api/product/';
@@ -43,18 +44,18 @@ async function createAndPostPhoneCard(phone) {
     }
 }
 
-// Array di telefoni
+// Array di nuovitelefoni
 const phones = [
-    new Telefono(1, "Modello A", "Telefono con fotocamera da 12MP", "Marca X", "./img/1.jpg", 329),
-    new Telefono(2, "Modello B", "Schermo OLED da 6.5 pollici", "Marca Y", "./img/2.jpg", 409),
-    new Telefono(3, "Modello C", "Processore Octa-core e 8GB di RAM", "Marca Z", "./img/3.jpg", 799.99),
-    new Telefono(4, "Modello D", "Design ultraleggero e resistente", "Marca X", "./img/4.jpg", 129),
-    new Telefono(5, "Modello E", "Batteria ad alta capacità da 5000mAh", "Marca Y", "./img/5.webp", 104),
-    new Telefono(6, "Modello F", "Supporta la connettività 5G", "Marca Z", "./img/6.webp", 104),
-    new Telefono(7, "Modello C", "Processore Octa-core e 8GB di RAM", "Marca Z", "./img/7.webp", 799.99),
-    new Telefono(8, "Modello D", "Design ultraleggero e resistente", "Marca X", "./img/8.webp", 129),
-    new Telefono(9, "Modello E", "Batteria ad alta capacità da 5000mAh", "Marca Y", "./img/9.webp", 104),
-    new Telefono(10, "Modello F", "Supporta la connettività 5G", "Marca Z", "./img/10.webp", 104)
+    new Telefono(1, "Modello 1", "Telefono", "Marca A", "./img/1.jpg", 329),
+    new Telefono(2, "Modello 2", "Telefono", "Marca B", "./img/2.jpg", 409),
+    new Telefono(3, "Modello 3", "Telefono", "Marca C", "./img/3.jpg", 799.99),
+    new Telefono(4, "Modello 4", "Telefono", "Marca D", "./img/4.jpg", 129),
+    new Telefono(5, "Modello 5", "Telefono", "Marca E", "./img/5.webp", 104),
+    new Telefono(6, "Modello 6", "Telefono", "Marca F", "./img/6.webp", 104),
+    new Telefono(7, "Modello 7", "Telefono", "Marca G", "./img/7.webp", 799.99),
+    new Telefono(8, "Modello 8", "Telefono", "Marca H", "./img/8.webp", 129),
+    new Telefono(9, "Modello 9", "Telefono", "Marca I", "./img/9.webp", 104),
+    new Telefono(10, "Modello 10", "Telefono", "Marca L", "./img/10.webp", 104)
 ];
 
 //crea una card per ciascuno
