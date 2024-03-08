@@ -22,12 +22,16 @@ function createPhoneCard(phone) {
 
 // Array di telefoni
 const phones = [
-    new Telefono(1, "Modello A", "Telefono con fotocamera da 12MP", "Marca X", "./img/1.png", 329),
-    new Telefono(2, "Modello B", "Schermo OLED da 6.5 pollici", "Marca Y", "./img/2.png", 409),
-    new Telefono(3, "Modello C", "Processore Octa-core e 8GB di RAM", "Marca Z", "./img/3.png", 799.99),
-    new Telefono(4, "Modello D", "Design ultraleggero e resistente", "Marca X", "./img/4.png", 129),
-    new Telefono(5, "Modello E", "Batteria ad alta capacità da 5000mAh", "Marca Y", "./img/5.png", 104),
-    new Telefono(6, "Modello F", "Supporta la connettività 5G", "Marca Z", "./img/6.png", 104)
+    new Telefono(1, "Modello A", "Telefono con fotocamera da 12MP", "Marca X", "./img/1.jpg", 329),
+    new Telefono(2, "Modello B", "Schermo OLED da 6.5 pollici", "Marca Y", "./img/2.jpg", 409),
+    new Telefono(3, "Modello C", "Processore Octa-core e 8GB di RAM", "Marca Z", "./img/3.jpg", 799.99),
+    new Telefono(4, "Modello D", "Design ultraleggero e resistente", "Marca X", "./img/4.jpg", 129),
+    new Telefono(5, "Modello E", "Batteria ad alta capacità da 5000mAh", "Marca Y", "./img/5.webp", 104),
+    new Telefono(6, "Modello F", "Supporta la connettività 5G", "Marca Z", "./img/6.webp", 104),
+    new Telefono(7, "Modello C", "Processore Octa-core e 8GB di RAM", "Marca Z", "./img/7.webp", 799.99),
+    new Telefono(8, "Modello D", "Design ultraleggero e resistente", "Marca X", "./img/8.webp", 129),
+    new Telefono(9, "Modello E", "Batteria ad alta capacità da 5000mAh", "Marca Y", "./img/9.webp", 104),
+    new Telefono(10, "Modello F", "Supporta la connettività 5G", "Marca Z", "./img/10.webp", 104)
 ];
 
 //crea una card per ciascuno
