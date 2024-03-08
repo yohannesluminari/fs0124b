@@ -19,6 +19,29 @@ function createPhoneCard(phone) {
 
     document.getElementById('phone-container').appendChild(clone);
 }
+// Funzione per creare una card e inviarla tramite una richiesta POST
+async function createAndPostPhoneCard(phone) {
+    const url = 'https://striveschool-api.herokuapp.com/api/product/';
+    const headers = {
+        'Content-Type': 'application/json'
+    };
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(phone)
+        });
+
+        if (!response.ok) {
+            throw new Error('Errore durante la creazione della card');
+        }
+
+        console.log('Card creata con successo:', phone);
+    } catch (error) {
+        console.error('Si è verificato un errore:', error.message);
+    }
+}
 
 // Array di telefoni
 const phones = [
