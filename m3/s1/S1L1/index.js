@@ -31,12 +31,12 @@ const user1 = new User("mattia", "ghepardo");
 console.log(user1);
 console.log(user1.numero404);
 console.log(user1.getNumeroChiamate);
-console.log(user1.ricarica(10)); // undefind -- non mi trova il valore non sto capendo perchè
+console.log(user1.ricarica(10));
 user1.ricarica(90);
-console.log(user1.chiamata(10)); // undefind -- non mi trova il valore non sto capendo perchè
-console.log(user1.getNumeroChiamate); // output 1 giusto
-console.log(user1.chiamata(100)); // undefind output 1 sbagliato teoricamente qui dovrebbe darmi 2 dato che ho fatto una chiamata da 10m e una da 100m
-console.log(user1.getNumeroChiamate);
-console.log(user1.azzeraChiamate()); // undefind -- non mi trova il valore non sto capendo perchè
-console.log(user1.getNumeroChiamate); // output 1 giusto
+user1.chiamata(10);
+user1.getNumeroChiamate;
+user1.chiamata(100);
+user1.getNumeroChiamate;
+user1.azzeraChiamate();
+user1.getNumeroChiamate;
 //# sourceMappingURL=index.js.map
