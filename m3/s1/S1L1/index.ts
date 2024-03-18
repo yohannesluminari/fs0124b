@@ -50,8 +50,8 @@ console.log(user1)
 console.log(user1.numero404)
 console.log(user1.getNumeroChiamate)
 
-console.log(user1.ricarica(10)) 
-user1.ricarica(90);
+user1.ricarica(10)
+user1.ricarica(90)
 user1.chiamata(10)
 user1.getNumeroChiamate 
 user1.chiamata(100) 
