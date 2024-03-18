@@ -56,5 +56,4 @@ user1.chiamata(10)
 user1.getNumeroChiamate 
 user1.chiamata(100) 
 user1.getNumeroChiamate
-user1.azzeraChiamate() 
 user1.getNumeroChiamate 
