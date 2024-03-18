@@ -13,6 +13,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+
 //LEZIONE 2
 var Days;
 (function (Days) {
@@ -25,6 +26,7 @@ var Days;
     Days[Days["sunday"] = 7] = "sunday";
 })(Days || (Days = {}));
 console.log(Days.sunday);
+
 //CLASSI
 var Studente = /** @class */ (function () {
     function Studente(_nome, _cognome) {
@@ -45,6 +47,7 @@ var Studente = /** @class */ (function () {
 var nuovoStudente = new Studente('Mario', 'Rossi');
 console.log(nuovoStudente.getStudente());
 console.log(nuovoStudente.somma(15));
+
 //SOTTOCLASSE
 var Utente = /** @class */ (function (_super) {
     __extends(Utente, _super);
