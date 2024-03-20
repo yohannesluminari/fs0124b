@@ -13,24 +13,14 @@
     </div>
   </div>
 </nav>
-<table class="table filter_5
-">
-
-  <tr>
-    <th>#</th>
-    <th>Gusto</th>
-    <th>Prezzo</th>
-    <th>Disponiblità</th>
-  </tr>
-
-  <tr *ngFor="let articolo of postArr; let id = index">
-    <td>{{articolo.id }}</td>
-    <td>{{articolo.title}}</td>
-    <td>{{articolo.body}}</td>
-    <td [innerText]="articolo.active ? 'si' : 'no'"></td>
-  </tr>
-
-</table>
 
 
-</div>
+<div class="row mt-5">
+  <div *ngFor="let articolo of randomArray" class="col-6">
+    <h2>{{ articoliArr[1].title }}</h2>
+      <p>{{ articoliArr[1].body }}</p>
+    <h2>{{ articolo.title }}</h2>
+    <p>{{ articolo.body }}</p>
+  </div>
+
+<div class="container">
