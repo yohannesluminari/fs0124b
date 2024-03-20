@@ -12,7 +12,7 @@ export class AppComponent {
 
   ngOnInit(){
 
-    fetch('../assets/pizze.json')
+    fetch('../assets/db.json')
     .then(articoli => articoli.json())
     .then((articolo) => this.postArr = articolo)
   }
