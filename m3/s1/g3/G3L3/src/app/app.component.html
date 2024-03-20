@@ -1,0 +1,19 @@
+<table class="table">
+
+  <tr>
+    <th>#</th>
+    <th>Gusto</th>
+    <th>Prezzo</th>
+    <th>Disponiblità</th>
+  </tr>
+
+  <tr *ngFor="let articolo of postArr; let id = index">
+    <td>{{articolo.id }}</td>
+    <td>{{articolo.title}}</td>
+    <td>{{articolo.body}}</td>
+    <td [innerText]="articolo.active ? 'si' : 'no'"></td>
+  </tr>
+
+</table>
+
+
