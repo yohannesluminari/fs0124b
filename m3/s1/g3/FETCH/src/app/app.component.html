@@ -1,0 +1,21 @@
+<table class="table">
+
+  <tr>
+    <th>#</th>
+    <th>Gusto</th>
+    <th>Prezzo</th>
+    <th>Disponiblità</th>
+  </tr>
+
+  <tr *ngFor="let pizza of pizzeArr; let id = index">
+    <td>{{id + 1}}</td>
+    <td>{{pizza.gusto}}</td>
+    <td>{{pizza.prezzo | currency : 'EUR'}}</td>
+    <td [innerText]="pizza.disponibile ? 'si' : 'no'"></td>
+  </tr>
+
+</table>
+
+
+
+<button (click)="soloDisponibili()">Filtra disponibili</button>

@@ -1,0 +1,9 @@
+<p>{{titolo}}</p>
+
+{{pizza | json}} <!-- IL PIPE JSON CONVERTE IN STRINGA IL DATO PER POTERLO MOSTRARE COME JSON -->
+
+<p class="alert alert-success">
+  il gusto della pizza è {{pizza.gusto}} e costa {{pizza.prezzo | currency : 'USD'}}  <!--  'USD' 'EUR' '...' -->
+</p>
+
+
