@@ -19,4 +19,14 @@ export class DbService {
 
     })
   }
+
+  getActiveArticolo():Promise<iArticolo[]>{
+    return this.getAllArticolo()
+    .then(res => res.filter(p => p.active))
+  }
+  getInActiveArticolo():Promise<iArticolo[]>{
+    return this.getAllArticolo()
+    .then(res => res.filter(p => !p.active))
+  }
+
 }

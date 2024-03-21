@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DbService } from '../../db.service';
+import { iArticolo } from '../../Models/articolo';
 
 @Component({
   selector: 'app-active',
@@ -7,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class ActiveComponent {
 
+  articoliArr:iArticolo[] = [];
+
+  constructor(private articoliSvc:DbService){}
+
+  ngOnInit(){
+
+    this.articoliSvc.getActiveArticolo().then(res => {
+
+      this.articoliArr = res;
+
+    })
+
+  }
 }

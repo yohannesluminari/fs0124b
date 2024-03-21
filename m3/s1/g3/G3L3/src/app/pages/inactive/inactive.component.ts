@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { iArticolo } from '../../Models/articolo';
+import { DbService } from '../../db.service';
 
 @Component({
   selector: 'app-inactive',
@@ -7,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class InactiveComponent {
 
+
+  articoliArr:iArticolo[] = [];
+
+  constructor(private articoliSvc:DbService){}
+
+  ngOnInit(){
+
+    this.articoliSvc.getInActiveArticolo().then(res => {
+
+      this.articoliArr = res;
+
+    })
+
+  }
 }
