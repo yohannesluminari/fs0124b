@@ -10,6 +10,9 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+truncateText(arg0: string,arg1: number) {
+throw new Error('Method not implemented.');
+}
   articoliArr:iArticolo[] = [];
 
 
