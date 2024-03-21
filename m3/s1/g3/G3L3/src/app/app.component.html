@@ -1,20 +1,26 @@
 <div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
-    </div>
-  </div>
-</nav>
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Simple header</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a routerLink="/" class="nav-link" aria-current="page">Home</a></li>
+      <li class="nav-item"><a routerLink="/chi-siamo" class="nav-link">Active</a></li>
+      <li class="nav-item"><a routerLink="/contatti" class="nav-link">Inactive</a></li>
+    </ul>
+  </header>
 
 
+
+    <router-outlet></router-outlet>
+
+
+
+
+</div>
+<!--
 <div class="row mt-5">
   <div *ngFor="let articolo of randomArray" class="col-6">
     <h2>{{ articoliArr[1].title }}</h2>
@@ -23,4 +29,4 @@
     <p>{{ articolo.body }}</p>
   </div>
 
-<div class="container">
+<div class="container"> -->
