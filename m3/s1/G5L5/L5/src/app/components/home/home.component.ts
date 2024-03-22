@@ -23,4 +23,17 @@ export class HomeComponent {
     })
 
   }
+
+  getCardBackgroundColor(brand: string): string {
+    switch (brand) {
+      case 'Ford':
+        return '#3399ff';
+      case 'Fiat':
+        return '#ffcc00';
+      case 'Audi':
+        return '#ff6666';
+      default:
+        return '#ffffff';
+    }
+  }
 }

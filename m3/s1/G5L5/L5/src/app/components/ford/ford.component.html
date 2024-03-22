@@ -11,6 +11,10 @@
           <p class="card-text">Year: {{ auto.year }}</p>
           <p class="card-text">Price: {{ auto.price }}</p>
           <p class="card-text">Available: {{ auto.available ? 'Yes' : 'No' }}</p>
+          <a *ngIf="auto.available; else notAvailable" class="btn btn-primary px-5">Buy</a>
+          <ng-template #notAvailable>
+            <a class="btn btn-secondary px-5">Not Available</a>
+          </ng-template>
         </div>
       </div>
     </div>
