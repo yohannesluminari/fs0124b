@@ -1,27 +1,23 @@
 import { DbService } from './../../auto.service';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Importa Router
 import { iAuto } from '../../models/auto';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss'] // Modifica 'styleUrl' in 'styleUrls'
 })
 export class HomeComponent {
 
-  autoArr:iAuto[] = [];
+  autoArr: iAuto[] = [];
 
+  constructor(private autoSvc: DbService, private router: Router) {} // Inietta Router nel costruttore
 
-  constructor(private autoSvc:DbService){}
-
-  ngOnInit(){
-
+  ngOnInit() {
     this.autoSvc.getAllAuto().then(res => {
-
       this.autoArr = res;
-
-    })
-
+    });
   }
 
   getCardBackgroundColor(brand: string): string {
@@ -34,6 +30,22 @@ export class HomeComponent {
         return '#ff6666';
       default:
         return '#ffffff';
+    }
+  }
+
+  redirectToBrand(brand: string) {
+    switch (brand) {
+      case 'Ford':
+        this.router.navigate(['/ford']);
+        break;
+      case 'Fiat':
+        this.router.navigate(['/fiat']);
+        break;
+      case 'Audi':
+        this.router.navigate(['/audi']);
+        break;
+      default:
+        break;
     }
   }
 }

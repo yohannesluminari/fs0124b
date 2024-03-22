@@ -15,20 +15,25 @@ h1{
     width: 20%;
     padding: 20px;
 }
+
 }
 
-  .card{
-    // background-color: #e0ac1c;
-    margin-bottom: 50px;
+.card{
+  // background-color: #e0ac1c;
+  margin-bottom: 50px;
+  border-radius: 30px;
+  img{
     border-radius: 30px;
-    img{
-      border-radius: 30px;
-    }
   }
+}
 
 
-.support{
-  display: flex;
-  justify-content: center;
-  text-align: center;
+.loghi1{
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  img{
+    width: 20%;
+    padding: 20px;
+}
 }
