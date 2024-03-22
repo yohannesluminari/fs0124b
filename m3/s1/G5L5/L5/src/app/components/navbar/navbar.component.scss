@@ -1,3 +1,30 @@
-img{
-  width: 10%;
+.header {
+  background:linear-gradient(to left, rgb(0, 0, 0), rgb(72, 60, 60));
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
 }
+
+img {
+  width: 15%;
+}
+
+.navbar a {
+  color: green;
+  font-size: 1.7rem;
+  margin-left: 4rem;
+  transition: .3s;
+  text-decoration: none;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+  color: red;
+}
+

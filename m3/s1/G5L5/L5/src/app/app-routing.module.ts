@@ -29,6 +29,13 @@ const routes: Routes = [
   }
 ];
 
+  const routes1: Routes = [
+    { path: 'fiat', component: FiatComponent },
+    { path: 'ford', component: FordComponent },
+    { path: 'audi', component: AudiComponent },
+    { path: '**', component: Page404Component}
+  ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
