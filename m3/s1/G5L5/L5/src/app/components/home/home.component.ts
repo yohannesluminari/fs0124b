@@ -1,12 +1,12 @@
 import { DbService } from './../../auto.service';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; // Importa Router
+import { Router } from '@angular/router';
 import { iAuto } from '../../models/auto';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'] // Modifica 'styleUrl' in 'styleUrls'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
 

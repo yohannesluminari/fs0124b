@@ -10,7 +10,7 @@
   </div>
   <h1>Welcome To <span>CarSpa</span></h1>
   <div class="row">
-    <div class="col-md-4" *ngFor="let auto of autoArr">
+    <div class="col-md-6 col-lg-6 col-xl-4" *ngFor="let auto of autoArr">
       <div class="card" [style.background-color]="getCardBackgroundColor(auto.brand)" (click)="redirectToBrand(auto.brand)">
         <img class="card-img-top" [src]="auto.brandLogo" alt="Brand Logo">
         <div class="card-body">
