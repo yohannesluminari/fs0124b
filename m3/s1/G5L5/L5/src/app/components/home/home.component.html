@@ -1,0 +1,18 @@
+
+<!-- {{autoArr | json}} -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let auto of autoArr">
+      <div class="card">
+        <img class="card-img-top" [src]="auto.brandLogo" alt="Brand Logo">
+        <div class="card-body">
+          <h5 class="card-title">{{ auto.brand }}</h5>
+          <p class="card-text">Model: {{ auto.model }}</p>
+          <p class="card-text">Year: {{ auto.year }}</p>
+          <p class="card-text">Price: {{ auto.price }}</p>
+          <p class="card-text">Available: {{ auto.available ? 'Yes' : 'No' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
