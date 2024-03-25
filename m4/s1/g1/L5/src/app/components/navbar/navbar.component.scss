@@ -1,0 +1,41 @@
+.header {
+  background:linear-gradient(to left, rgb(0, 0, 0), rgb(72, 60, 60));
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+img {
+  width: 15%;
+}
+
+.navbar a {
+  color: green;
+  font-size: 1.4rem;
+  margin-left: 4rem;
+  transition: .3s;
+  text-decoration: none;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+  color: red;
+}
+
+
+
+@media screen and (max-width: 693px) {
+    img {
+      width: 7%;
+    }
+    .navbar a{
+    font-size: .7rem;
+  }
+}
+

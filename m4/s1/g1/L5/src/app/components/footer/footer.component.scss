@@ -1,0 +1,129 @@
+.footer-div {
+  background:linear-gradient(to right, rgb(0, 0, 0), rgb(72, 60, 60));
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer-div .footer-left, .footer-div .footer-center, .footer-div .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+/* sezione sinistra */
+
+.footer-div .footer-left {
+  width: 30%;
+}
+
+.footer-div h3 {
+  color: #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+
+.footer-div h3 span {
+  color: #e0ac1c;
+}
+
+/* Footer centrale  ho fatto un po di confusione con css perche non mi andavano i link e farlo con bootsrap mi sembrava noioso*/
+
+.footer-div .footer-center {
+  width: 35%;
+}
+
+.footer-div .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-div .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-div .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-div .footer-center p a {
+  color: #e0ac1c;
+  text-decoration: none;
+  ;
+}
+
+/* sezione destra */
+
+.footer-div .footer-right {
+  width: 30%;
+}
+
+.footer-div .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-div .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-div .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-div .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+
+@media (max-width: 880px) {
+  .footer-div .footer-left, .footer-div .footer-center, .footer-div .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+  }
+  .footer-div .footer-center i {
+      margin-left: 0;
+  }
+}
+
+
