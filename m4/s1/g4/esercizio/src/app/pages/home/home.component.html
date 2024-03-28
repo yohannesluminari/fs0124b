@@ -1,0 +1,19 @@
+<div>
+  <h2>Liked Cards: {{ likedCards.length }}</h2>
+  <ul>
+    <li *ngFor="let likedCard of likedCards">{{ likedCard.title }}</li>
+  </ul>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of products">
+    <div class="card">
+      <img [src]="p.thumbnailUrl" class="card-img-top" alt="Product Thumbnail">
+      <div class="card-body">
+        <h5 class="card-title">{{ p.title }}</h5>
+        <p class="card-text">{{ p.albumId }}</p>
+        <button (click)="addToFavourites(p)" class="btn btn-primary">Like</button>
+      </div>
+    </div>
+  </div>
+</div>
