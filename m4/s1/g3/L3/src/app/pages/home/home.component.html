@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of  products">
+
+    <div class="card">
+      <img [src]="p.thumbnail" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{p.title}}</h5>
+        <p class="card-text">{{p.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Rimasti: {{p.stock}}</li>
+        <li class="list-group-item">Valutazione {{p.rating}}</li>
+        <li class="list-group-item">Marca: {{p.brand}}</li>
+        <li class="list-group-item">Categoria: {{p.category}}</li>
+        <li class="list-group-item">Prezzo: {{p.price}}</li>
+      </ul>
+      <div class="card-body">
+        <button class="btn btn-primary">Preferiti</button>
+        <button (click)="addToCart(p)" class="btn btn-secondary">Aggiungi al carrello</button>
+      </div>
+    </div>
+
+  </div>
+  </div>
