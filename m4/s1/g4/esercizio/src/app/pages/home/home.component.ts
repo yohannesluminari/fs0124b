@@ -17,12 +17,20 @@ export class HomeComponent {
   ngOnInit() {
     this.productSvc.getAll().subscribe(products => {
       this.products = products;
+      this.likedCards = this.productSvc.getFavourites();
     });
   }
 
   addToFavourites(product: iProduct) {
-    this.productSvc.addToFavorites(product);
-    this.likedCards.push(product);
+    const isAlreadyLiked = this.likedCards.some(p => p.id === product.id);
+    if (!isAlreadyLiked) {
+      this.productSvc.addToFavorites(product);
+      this.likedCards.push(product);
+    }
   }
 
+  removeFromFavourites(product: iProduct) {
+    this.productSvc.removeFromFavorites(product);
+    this.likedCards = this.likedCards.filter(p => p.id !== product.id);
+  }
 }

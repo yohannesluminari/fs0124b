@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iProduct } from '../../Models/product';
 import { ProductService } from '../../product.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @Component({
   selector: 'app-favourites',
@@ -13,17 +14,12 @@ export class FavouritesComponent implements OnInit {
   constructor(private productSvc: ProductService) {}
 
   ngOnInit() {
-    // Recupera i prodotti preferiti dal servizio ProductService
-    this.likedCards = this.productSvc.favourites;
+    this.likedCards = this.productSvc.getFavourites();
   }
 
   removeFromFavourites(product: iProduct) {
-    // Rimuove il prodotto dai preferiti
-    const index = this.likedCards.indexOf(product);
-    if (index !== -1) {
-      this.likedCards.splice(index, 1);
-      // Aggiorna i preferiti anche nel servizio ProductService
-      this.productSvc.favourites = this.likedCards;
-    }
+    this.productSvc.removeFromFavorites(product);
+    this.likedCards = this.likedCards.filter(p => p.id !== product.id);
   }
 }
+
