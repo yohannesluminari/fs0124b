@@ -1,16 +1,18 @@
-<!-- home.component.html -->
-
-<!-- <div *ngFor="let task of tasksWithUserNames">
-  <input type="checkbox" [checked]="task.completed" disabled>
-  <span [style.color]="task.completed ? 'green' : 'red'">{{ task.todo }} - Completed by: {{ task.userName }}</span>
-</div> -->
-
+<!--
 
 <div *ngFor="let task of tasksWithUserNames">
   <div>
     <input type="checkbox" >
-    <span [style.color]="task.completed ? 'green' : 'red'">{{ task.todo }}</span>
-    <p>- Completed by: {{ task.userName }}</p>
+    <span>{{ task.todo }}</span>
+    <p>Completed by: {{ task.userName }}</p>
   </div>
 
+</div> -->
+<div *ngFor="let todo of todosWithUserNames">
+  <div [style.background-color]="todo.backgroundColor">
+    <p>Todo: {{ todo.todo }}</p>
+    <p>User Name: {{ todo.userName }}</p>
+   
+    <input type="checkbox" [checked]="todo.completed" (click)="toggleTodoCompletion(todo)">
+  </div>
 </div>

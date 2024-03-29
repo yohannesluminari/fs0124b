@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../../todo.service';
 
 @Component({
   selector: 'app-task-left',
   templateUrl: './task-left.component.html',
-  styleUrl: './task-left.component.scss'
+  styleUrls: ['./task-left.component.scss']
 })
-export class TaskLeftComponent {
+export class TaskLeftComponent implements OnInit {
+  uncompletedTodos: any[] = [];
 
+  constructor(private todoService: TodoService) { }
+
+  ngOnInit(): void {
+    this.uncompletedTodos = this.todoService.getUncompletedTodos();
+  }
 }

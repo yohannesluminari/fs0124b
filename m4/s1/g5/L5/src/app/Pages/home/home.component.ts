@@ -1,8 +1,5 @@
-
-
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../todo.service';
-
 
 @Component({
   selector: 'app-home',
@@ -10,11 +7,16 @@ import { TodoService } from '../../todo.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  tasksWithUserNames: any[] | undefined;
+  todosWithUserNames: any[] = [];
 
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
-    this.tasksWithUserNames = this.todoService.getAllTodosWithUserNames();
+    this.todosWithUserNames = this.todoService.getAllTodosWithUserNames();
+  }
+
+  toggleTodoCompletion(todo: any): void {
+    todo.completed = !todo.completed;
+    todo.backgroundColor = todo.completed ? 'green' : 'red';
   }
 }

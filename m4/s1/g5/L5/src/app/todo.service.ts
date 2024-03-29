@@ -8,6 +8,9 @@ import { iUsers } from './Models/users';
 
 
 export class TodoService {
+  getUsers(): iUsers[] {
+    throw new Error('Method not implemented.');
+  }
 
   private todos:iTodo[] =[
     {
@@ -1723,8 +1726,13 @@ export class TodoService {
       const user = this.users.find(res => res.id === todo.userId);
       return {
         todo: todo.todo,
-        userName: user ? `${user.firstName} ${user.lastName}` : 'Unknown'
+        userName: user ? `${user.firstName} ${user.lastName}` : 'Unknown',
+        completed: todo.completed,
+        backgroundColor: todo.completed ? 'green' : 'red'
       };
     });
+  }
+  getUncompletedTodos(): any[] {
+    return this.todos.filter(todo => !todo.completed);
   }
 }
