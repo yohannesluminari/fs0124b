@@ -1,0 +1,6 @@
+<div *ngFor="let todo of todosWithUserNames" [style.background-color]="getColor(todo)">
+  <label>
+    <input type="checkbox" [checked]="todo.completed" (change)="toggleCompleted(todo)">
+    {{ todo.todo }} - Completed by: {{ todo.userName }}
+  </label>
+</div>
