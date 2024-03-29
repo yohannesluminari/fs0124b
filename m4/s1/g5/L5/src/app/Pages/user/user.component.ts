@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../../todo.service';
-import { iUsers } from '../../Models/users'; // Assicurati di importare correttamente l'interfaccia iUsers
+import { UsersService } from '../../users.service';
+import { iUsers } from '../../Models/users';
 
 @Component({
   selector: 'app-user',
@@ -10,9 +10,9 @@ import { iUsers } from '../../Models/users'; // Assicurati di importare corretta
 export class UserComponent implements OnInit {
   users: iUsers[] = [];
 
-  constructor(private todoService: TodoService) { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {
-    this.users = this.todoService.getUsers();
+    this.users = this.userService.getAll();
   }
 }

@@ -1,13 +1,18 @@
-<div class="container">
+<div class="cont1 mx-5">
   <div class="row">
-    <div class="col-sm-6 col-md-4" *ngFor="let user of users">
-      <div class="card">
-        <img [src]="user.image" class="card-img-top" alt="User Image">
-        <div class="card-body">
-          <h5 class="card-title">ID: {{ user.id }}</h5>
-          <p class="card-text">Name: {{ user.firstName }} {{ user.lastName }}</p>
-          <p class="card-text">Email: {{ user.email }}</p>
-          <p class="card-text">Title: {{ user.title }}</p>
+    <div class="col-xs-1 col-md-6 col-lg-4 col-xl-3" *ngFor="let user of users">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="user.image" class="img-fluid rounded-start" alt="User Image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ user.title }}</h5>
+              <p class="card-text">{{ user.email }}</p>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>

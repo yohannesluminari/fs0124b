@@ -1,6 +1,6 @@
 <!--
 
-<div *ngFor="let task of tasksWithUserNames">
+<div *ngFor="let task of TaskTodoCompleted">
   <div>
     <input type="checkbox" >
     <span>{{ task.todo }}</span>
@@ -8,11 +8,14 @@
   </div>
 
 </div> -->
+
+<h1 class="text-white">Todo list</h1>
 <div *ngFor="let todo of todosWithUserNames">
-  <div [style.background-color]="todo.backgroundColor">
+  <div [style.background-color]="todo.backgroundColor" class="col">
     <p>Todo: {{ todo.todo }}</p>
     <p>User Name: {{ todo.userName }}</p>
-   
+
     <input type="checkbox" [checked]="todo.completed" (click)="toggleTodoCompletion(todo)">
   </div>
 </div>
+

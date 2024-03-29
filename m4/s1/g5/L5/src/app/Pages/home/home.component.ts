@@ -7,6 +7,9 @@ import { TodoService } from '../../todo.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+taskCompleted(_t4: any) {
+throw new Error('Method not implemented.');
+}
   todosWithUserNames: any[] = [];
 
   constructor(private todoService: TodoService) { }

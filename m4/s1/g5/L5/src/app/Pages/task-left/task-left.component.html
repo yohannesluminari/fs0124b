@@ -1,5 +1,5 @@
-<div *ngFor="let todo of uncompletedTodos">
-  <div [style.background-color]="todo.backgroundColor">
+<div *ngFor="let todo of uncompletedTodos" >
+  <div [style.background-color]="todo.backgroundColor" class="col">
     <p>Todo: {{ todo.todo }}</p>
     <p>User Name: {{ todo.userName }}</p>
   </div>
