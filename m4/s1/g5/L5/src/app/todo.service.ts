@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { iTodo } from './Models/todo';
+import { iUsers } from './Models/users';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +9,7 @@ import { Injectable } from '@angular/core';
 
 export class TodoService {
 
-  private todos =[
+  private todos:iTodo[] =[
     {
       id:1,
       todo:"Do something nice for someone I care about",
@@ -910,7 +912,7 @@ export class TodoService {
     }
   ];
 
-  private users = [
+  private users: iUsers[] = [
     {
       id:1,
       firstName:"Terry",
@@ -1724,5 +1726,5 @@ export class TodoService {
         userName: user ? `${user.firstName} ${user.lastName}` : 'Unknown'
       };
     });
-}
+  }
 }
