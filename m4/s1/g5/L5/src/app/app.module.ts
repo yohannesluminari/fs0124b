@@ -7,6 +7,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { TaskLeftComponent } from './Pages/task-left/task-left.component';
 import { UserComponent } from './Pages/user/user.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

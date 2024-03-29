@@ -10,6 +10,11 @@
 </div> -->
 
 <h1 class="text-white">Todo list</h1>
+<div class="input-group mb-3">
+  <input type="text" [(ngModel)]="searchQuery" class="form-control" placeholder="Search tasks..." aria-describedby="searchButton">
+  <button class="btn btn-outline-secondary" type="button" id="searchButton" (click)="ssearchTasks()">Search</button>
+</div>
+
 <div *ngFor="let todo of todosWithUserNames">
   <div [style.background-color]="todo.backgroundColor" class="col">
     <p>Todo: {{ todo.todo }}</p>

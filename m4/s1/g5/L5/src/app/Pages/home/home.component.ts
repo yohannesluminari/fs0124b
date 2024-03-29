@@ -7,6 +7,8 @@ import { TodoService } from '../../todo.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  searchQuery: any;
+  filteredTodos: any[] | undefined;
 taskCompleted(_t4: any) {
 throw new Error('Method not implemented.');
 }
@@ -22,4 +24,19 @@ throw new Error('Method not implemented.');
     todo.completed = !todo.completed;
     todo.backgroundColor = todo.completed ? 'green' : 'red';
   }
+
+  ssearchTasks(): void {
+    if (this.searchQuery.trim() === '') {
+      this.filteredTodos = this.todosWithUserNames;
+    } else {
+      const searchTerm = this.searchQuery.toLowerCase().trim();
+      this.filteredTodos = this.todosWithUserNames.filter(todo => {
+        return (
+          todo.todo.toLowerCase().includes(searchTerm) ||
+          todo.userName.toLowerCase().includes(searchTerm)
+        );
+      });
+    }
+  }
+
 }

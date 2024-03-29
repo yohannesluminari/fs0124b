@@ -8,6 +8,10 @@ import { iUsers } from '../../Models/users';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
+searchQuery: any;
+searchTasks() {
+throw new Error('Method not implemented.');
+}
   users: iUsers[] = [];
 
   constructor(private userService: UsersService) { }
