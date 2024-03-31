@@ -7,17 +7,15 @@ import { TodoService } from '../../todo.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  searchQuery: any;
-  filteredTodos: any[] | undefined;
-taskCompleted(_t4: any) {
-throw new Error('Method not implemented.');
-}
+  searchQuery: string | undefined;
+  filteredTodos: any[] = [];
   todosWithUserNames: any[] = [];
 
   constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
     this.todosWithUserNames = this.todoService.getAllTodosWithUserNames();
+    this.filteredTodos = this.todosWithUserNames;
   }
 
   toggleTodoCompletion(todo: any): void {
@@ -25,18 +23,16 @@ throw new Error('Method not implemented.');
     todo.backgroundColor = todo.completed ? 'green' : 'red';
   }
 
-  ssearchTasks(): void {
-    if (this.searchQuery.trim() === '') {
+  searchTasks(): void {
+    if (!this.searchQuery || this.searchQuery.trim() === '') {
+
       this.filteredTodos = this.todosWithUserNames;
     } else {
       const searchTerm = this.searchQuery.toLowerCase().trim();
       this.filteredTodos = this.todosWithUserNames.filter(todo => {
-        return (
-          todo.todo.toLowerCase().includes(searchTerm) ||
-          todo.userName.toLowerCase().includes(searchTerm)
-        );
+        const userName = todo.userName.toLowerCase();
+        return userName.includes(searchTerm);
       });
     }
   }
-
 }
