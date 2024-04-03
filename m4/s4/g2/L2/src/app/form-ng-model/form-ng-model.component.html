@@ -1,0 +1,28 @@
+<form class="border border-danger">
+
+  <input type="text" name="nome"
+  [(ngModel)]="loginData.nome"
+  class="form-control"
+  placeholder="Nome">
+
+  <input
+    [type]="formType"
+    class="form-control"
+    placeholder="Password"
+    [(ngModel)]="loginData.password"
+    name="password"
+  >
+  <input
+    [type]="formType"
+    class="form-control"
+    placeholder="Email"
+    [(ngModel)]="loginData.email"
+    name="email"
+  >
+  <div class="my-4">
+  <button class="btn btn-danger px-5">Invia</button>
+
+  <button (click)="showHide()" [innerText]="getButtonText()" class="btn btn-warning px-4 mx-5"> </button>
+</div>
+</form>
+

@@ -1,0 +1,29 @@
+<form [formGroup]="form" class="border border-warning my-5">
+
+  <input type="text" required formControlName="nome" class="form-control"
+  placeholder="nome">
+  <div *ngIf="isValid('nome')" class="alert alert-danger">
+    Devi inserire il nome
+  </div>
+
+  <input type="text" formControlName="cognome" class="form-control"
+  placeholder="cognome">
+
+  <div formGroupName="authData" class="form-row row">
+    <div class="form-group col-6">
+      <input type="email" formControlName="email" class="form-control"
+      placeholder="email">
+      <div *ngIf="!isValid('authData.email')" class="alert alert-danger">
+        Devi inserire l'email<br>
+      </div>
+    </div>
+    <div class="form-group col-6">
+      <input type="password" formControlName="password" class="form-control"
+      placeholder="password">
+    </div>
+  </div>
+
+  
+  <button  class="btn btn-success">Invia</button>
+
+</form>
