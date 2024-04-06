@@ -13,6 +13,7 @@ const routes: Routes = [
 
 },
   { path: 'registeredUsers', loadChildren: () => import('./registered-users/registered-users.module').then(m => m.RegisteredUsersModule) },
+  { path: 'FavouriteMovies', loadChildren: () => import('./favourite-movies/favourite-movies.module').then(m => m.FavouriteMoviesModule) },
 ];
 
 @NgModule({

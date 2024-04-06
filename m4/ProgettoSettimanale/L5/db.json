@@ -13,6 +13,13 @@
       "firstname": "luca",
       "lastname": "mario",
       "id": 2
+    },
+    {
+      "email": "ciao@gmail.com",
+      "password": "$2a$10$H5CMWhAT6tHSl4V7p96P7OdeghssJlW6zpiuK4.UYX3wFYzhZLYjC",
+      "firstname": "ema",
+      "lastname": "lumi",
+      "id": 3
     }
   ],
   "movies": [

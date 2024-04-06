@@ -13,6 +13,10 @@
           <a class="nav-link" routerLink="/registeredUsers">Registered Users</a>
         </li>
 
+        <li class="nav-item" *ngIf = "isUserLoggedIn">
+          <a class="nav-link" routerLink="/FavouriteMovies">Favourite Films</a>
+        </li>
+
         <li class="nav-item" *ngIf = "!isUserLoggedIn">
           <a class="nav-link active" aria-current="page" routerLink="">Home</a>
         </li>
