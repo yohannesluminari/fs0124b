@@ -3,11 +3,11 @@ import { IUser } from '../models/i-user';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-registered-users',
+  templateUrl: './registered-users.component.html',
+  styleUrl: './registered-users.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class RegisteredUsersComponent implements OnInit {
   users: IUser[] = [];
 
   constructor(private authSvc:AuthService) { }

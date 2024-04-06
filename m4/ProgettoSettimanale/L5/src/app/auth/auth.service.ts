@@ -16,7 +16,6 @@ type AccessData = {
   providedIn: 'root'
 })
 export class AuthService {
-
   jwtHelper:JwtHelperService = new JwtHelperService()
 
   authSubject = new BehaviorSubject<IUser | null>(null) // null non sei ancolra collegato
@@ -93,5 +92,10 @@ syncIsLoggedIn:boolean = false;
 
       this.authSubject.next(accessData.user)
       this.autoLogout(accessData.accessToken)
+  }
+
+
+  getAllUsers(): Observable<IUser[]> {
+    return this.Http.get<IUser[]>(environment.userUrl); // Assumi che ci sia un endpoint 'usersUrl' nel tuo environment per ottenere gli utenti
   }
 }
