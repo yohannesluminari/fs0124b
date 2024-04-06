@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "email": "y.luminari@gmail.com",
+      "password": "$2a$10$11d/VuKI9go1qSAozW/Xzun5WtdL935.rrAMnbEHKru0zJ62V5GZS",
+      "firstname": "elumix",
+      "lastname": "Luminari",
+      "id": 1
+    },
+    {
+      "email": "l.mario@gmail.com",
+      "password": "$2a$10$/LVgkQdoJ0Ec51A98El4GOwB7FY4aX7ZyYBDnZsMkeyxgrEfmCija",
+      "firstname": "luca",
+      "lastname": "mario",
+      "id": 2
+    }
+  ],
+  "movies": []
+}
