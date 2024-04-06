@@ -6,6 +6,8 @@ import { IUser } from '../models/i-user';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 import { ILoginData } from '../models/i-login-data';
+import { IMovies } from '../models/i-movies';
+
 
 
 type AccessData = {
@@ -35,6 +37,7 @@ syncIsLoggedIn:boolean = false;
 
   resgisterUrl:string = environment.resgisterUrl
   loginUrl:string =  environment.loginUrl
+  movieUrl:string = environment.movieUrl;
 
   register(newUser:Partial<IUser>):Observable<AccessData>{
 
@@ -96,6 +99,10 @@ syncIsLoggedIn:boolean = false;
 
 
   getAllUsers(): Observable<IUser[]> {
-    return this.Http.get<IUser[]>(environment.userUrl); // Assumi che ci sia un endpoint 'usersUrl' nel tuo environment per ottenere gli utenti
+    return this.Http.get<IUser[]>(environment.userUrl); 
+  }
+
+  getAllMovies(): Observable<IMovies[]> {
+    return this.Http.get<IMovies[]>(this.movieUrl);
   }
 }

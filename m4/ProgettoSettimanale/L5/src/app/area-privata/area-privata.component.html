@@ -1,1 +1,14 @@
-<h1>Benevenuto {{user?.firstname}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let movie of movies">
+      <div class="card">
+        <img [src]="movie.image" class="card-img-top" alt="Movie Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.name }}</h5>
+          <p class="card-text">Author: {{ movie.author }}</p>
+          <p class="card-text">Release Year: {{ movie.ReleaseDate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

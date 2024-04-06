@@ -1,23 +1,26 @@
-
-import { Component } from '@angular/core';
-import { AuthService } from '../auth/auth.service';
-import { IUser } from '../models/i-user';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IMovies } from '../models/i-movies';
 
 
 @Component({
   selector: 'app-area-privata',
   templateUrl: './area-privata.component.html',
-  styleUrl: './area-privata.component.scss'
+  styleUrls: ['./area-privata.component.scss']
 })
-export class AreaPrivataComponent {
+export class AreaPrivataComponent implements OnInit {
+  movies: IMovies[] = [];
 
-  constructor(private authsvc:AuthService){}
+  constructor(private http: HttpClient) { }
 
-user!:IUser | undefined
+  ngOnInit(): void {
+    this.getMovies();
+  }
 
-  ngOnInit(){
-    this.authsvc.user$.subscribe(user => {
-      this.user = user || undefined;
-    })
+  getMovies() {
+    this.http.get<IMovies[]>('http://localhost:3000/movies')
+      .subscribe(movies => {
+        this.movies = movies;
+      });
   }
 }
