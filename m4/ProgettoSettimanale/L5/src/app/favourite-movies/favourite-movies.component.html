@@ -1,1 +1,17 @@
-<p>favourite-movies works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let movie of favouriteMovies">
+      <div class="card">
+        <img [src]="movie.image" class="card-img-top" alt="Movie Image">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.name }}</h5>
+          <p class="card-text">Author: {{ movie.author }}</p>
+          <p class="card-text">Release Year: {{ movie.ReleaseDate }}</p>
+          <button class="btn btn-danger" (click)="removeFromFavorites(movie.id)">Remove from Favorites</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
