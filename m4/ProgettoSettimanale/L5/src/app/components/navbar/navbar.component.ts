@@ -10,7 +10,7 @@ export class NavbarComponent {
 
   show:boolean = false
   isUserLoggedIn:boolean = false
-
+  showNavbar: boolean = false;
   constructor(private authSvc:AuthService){}
 
   ngOnInit(){
@@ -18,7 +18,9 @@ export class NavbarComponent {
       this.isUserLoggedIn  = data
     })
   }
-
+  toggleNavbar(): void {
+    this.showNavbar = !this.showNavbar;
+  }
 
   logout(){
     this.authSvc.logout()

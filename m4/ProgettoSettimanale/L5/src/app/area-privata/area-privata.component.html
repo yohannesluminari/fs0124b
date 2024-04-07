@@ -1,20 +1,16 @@
 <body>
-
   <h1>ciao</h1>
   <div class="container">
-    <h1 class="text-white mt-4">Benvenuto {{ currentUser?.firstname }}</h1>
+    <h1 class="text-white">Benvenuto {{ currentUser?.firstname }}</h1>
     <div class="row">
-      <div class="col-xl-3 col-lg-3 col-md-4 col-ms-6 mt-5" *ngFor="let movie of movies">
-        <div class="card">
+      <div class="col-xl-3 col-lg-3 col-md-4 col-ms-6 mt-5" *ngFor="let movie of movies; let i = index">
+        <div class="card" [style.background-color]="movie.backgroundColor">
           <img [src]="movie.image" class="card-img-top" alt="Movie Image">
           <div class="card-body">
             <h5 class="card-title">{{ movie.name }}</h5>
             <p class="card-text">Author: {{ movie.author }}</p>
             <p class="card-text">Release Year: {{ movie.ReleaseDate }}</p>
-            <i class="bi bi-heart"
-            [class.text-danger]="movie.isLiked"
-            (click)="toggleLike(movie)"></i>
-
+            <i class="bi bi-heart" [class.text-danger]="movie.isLiked" (click)="toggleLike(movie)"></i>
           </div>
         </div>
       </div>

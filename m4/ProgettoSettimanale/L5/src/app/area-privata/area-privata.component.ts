@@ -3,8 +3,10 @@ import { IMovies } from '../models/i-movies';
 import { IUser } from '../models/i-user';
 import { AuthService } from '../auth/auth.service';
 
+
 interface MovieWithLikeStatus extends IMovies {
-  isLiked: boolean;
+  isLiked: boolean
+  backgroundColor: string;
 }
 
 @Component({
@@ -18,16 +20,34 @@ export class AreaPrivataComponent implements OnInit {
 
   constructor(private authSvc: AuthService) { }
 
+  generateRandomColor(): string {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  setRandomBackgroundColor(): void {
+    this.movies.forEach(movie => {
+      movie.backgroundColor = this.generateRandomColor();
+    });
+  }
+
   ngOnInit(): void {
     this.authSvc.getMovies().subscribe(movies => {
       this.movies = movies.map(movie => ({
         ...movie,
         isLiked: this.currentUser && this.currentUser.FavouriteFilms ?
           this.currentUser.FavouriteFilms.some(favMovie => favMovie.id === movie.id) :
-          false
+          false,
+        backgroundColor: ''
       }));
+      this.setRandomBackgroundColor();
     });
 
+  
     const userData = localStorage.getItem('accessData');
     if (userData) {
       const accessData = JSON.parse(userData);
