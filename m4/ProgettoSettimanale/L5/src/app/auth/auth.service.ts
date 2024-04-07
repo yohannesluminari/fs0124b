@@ -18,6 +18,7 @@ type AccessData = {
   providedIn: 'root'
 })
 export class AuthService {
+  private users: IUser[] = [];
   jwtHelper:JwtHelperService = new JwtHelperService()
 
   authSubject = new BehaviorSubject<IUser | null>(null) // null non sei ancolra collegato
@@ -35,6 +36,7 @@ syncIsLoggedIn:boolean = false;
 
   }
 
+  movies: (IMovies & { isLiked: boolean })[] = [];
   resgisterUrl:string = environment.resgisterUrl
   loginUrl:string =  environment.loginUrl
   movieUrl:string = environment.movieUrl;
@@ -99,10 +101,45 @@ syncIsLoggedIn:boolean = false;
 
 
   getAllUsers(): Observable<IUser[]> {
-    return this.Http.get<IUser[]>(environment.userUrl); 
+    return this.Http.get<IUser[]>(environment.userUrl);
   }
 
-  getAllMovies(): Observable<IMovies[]> {
-    return this.Http.get<IMovies[]>(this.movieUrl);
+  getMovies(): Observable<IMovies[]> {
+    return this.Http.get<IMovies[]>(environment.movieUrl);
   }
+
+  getUsers(): IUser[] {
+    return this.users;
+  }
+
+
+  updateFavoriteMovies(userId: number, favoriteMovies: IMovies[]): void {
+    const userIndex = this.users.findIndex(user => user.id === userId);
+    if (userIndex !== -1) {
+      this.users[userIndex].FavouriteFilms = favoriteMovies;
+      localStorage.setItem('users', JSON.stringify(this.users));
+    }
+}
+
+  getFavoriteMovies(userId: number): IMovies[] | undefined {
+    const userData = localStorage.getItem('users');
+    if (userData) {
+      const users: IUser[] = JSON.parse(userData);
+      const user = users.find(user => user.id === userId);
+      return user ? user.FavouriteFilms : undefined;
+    }
+    return undefined;
+  }
+
+  removeFromFavorites(userId: number, movieId: number): void {
+    const user = this.users.find(user => user.id === userId);
+    if (user && user.FavouriteFilms) {
+      const index = user.FavouriteFilms.findIndex(movie => movie.id === movieId);
+      if (index !== -1) {
+        user.FavouriteFilms.splice(index, 1);
+        // Aggiorna i dati dell'utente nel localStorage o sul server, se necessario
+        // Esempio: localStorage.setItem('users', JSON.stringify(this.users));
+      }
+    }
+}
 }

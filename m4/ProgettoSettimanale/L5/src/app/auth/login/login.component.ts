@@ -12,7 +12,7 @@ import { ILoginData } from '../../models/i-login-data';
 export class LoginComponent {
 
   loginData:ILoginData= {
-    email:'y.luminari@gmail.com',
+    email:'g.lum@gmail.com',
     password:'11111111'
   }
 

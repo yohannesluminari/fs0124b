@@ -20,6 +20,13 @@
       "firstname": "ema",
       "lastname": "lumi",
       "id": 3
+    },
+    {
+      "email": "g.lum@gmail.com",
+      "password": "$2a$10$97HvzV9ts5eI/.sCjn2MWOyCsqgcElxfqcNZqUEP.VgtfaHKNcKOu",
+      "firstname": "yo",
+      "lastname": "lumi",
+      "id": 4
     }
   ],
   "movies": [

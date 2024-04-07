@@ -7,8 +7,9 @@
           <h5 class="card-title">{{ movie.name }}</h5>
           <p class="card-text">Author: {{ movie.author }}</p>
           <p class="card-text">Release Year: {{ movie.ReleaseDate }}</p>
-          <!-- //da collegare bootstrap -->
-          <i class="bi bi-heart"></i>
+          <i class="bi bi-heart"
+          [class.text-danger]="movie.isLiked"
+          (click)="toggleLike(movie)"></i>
 
         </div>
       </div>
