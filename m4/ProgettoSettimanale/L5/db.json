@@ -34,350 +34,350 @@
       "id": 1,
       "name": "Il Padrino",
       "author": "Francis Ford Coppola",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=1",
       "ReleaseDate": 1972
     },
     {
       "id": 2,
       "name": "Forrest Gump",
       "author": "Robert Zemeckis",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=2",
       "ReleaseDate": 1994
     },
     {
       "id": 3,
       "name": "Schindler's List",
       "author": "Steven Spielberg",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=3",
       "ReleaseDate": 1993
     },
     {
       "id": 4,
       "name": "Pulp Fiction",
       "author": "Quentin Tarantino",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=4",
       "ReleaseDate": 1994
     },
     {
       "id": 5,
       "name": "The Shawshank Redemption",
       "author": "Frank Darabont",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=5",
       "ReleaseDate": 1994
     },
     {
       "id": 6,
       "name": "The Godfather: Part II",
       "author": "Francis Ford Coppola",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=6",
       "ReleaseDate": 1974
     },
     {
       "id": 7,
       "name": "The Dark Knight",
       "author": "Christopher Nolan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=7",
       "ReleaseDate": 2008
     },
     {
       "id": 8,
       "name": "12 Angry Men",
       "author": "Sidney Lumet",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=8",
       "ReleaseDate": 1957
     },
     {
       "id": 9,
       "name": "Inception",
       "author": "Christopher Nolan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=9",
       "ReleaseDate": 2010
     },
     {
       "id": 10,
       "name": "Fight Club",
       "author": "David Fincher",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=10",
       "ReleaseDate": 1999
     },
     {
       "id": 11,
       "name": "The Lord of the Rings: The Return of the King",
       "author": "Peter Jackson",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=11",
       "ReleaseDate": 2003
     },
     {
       "id": 12,
       "name": "The Lord of the Rings: The Fellowship of the Ring",
       "author": "Peter Jackson",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=12",
       "ReleaseDate": 2001
     },
     {
       "id": 13,
       "name": "The Lord of the Rings: The Two Towers",
       "author": "Peter Jackson",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=13",
       "ReleaseDate": 2002
     },
     {
       "id": 14,
       "name": "The Matrix",
       "author": "The Wachowskis",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=14",
       "ReleaseDate": 1999
     },
     {
       "id": 15,
       "name": "The Matrix Reloaded",
       "author": "The Wachowskis",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=15",
       "ReleaseDate": 2003
     },
     {
       "id": 16,
       "name": "The Matrix Revolutions",
       "author": "The Wachowskis",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=16",
       "ReleaseDate": 2003
     },
     {
       "id": 17,
       "name": "Goodfellas",
       "author": "Martin Scorsese",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=17",
       "ReleaseDate": 1990
     },
     {
       "id": 18,
       "name": "City of God",
       "author": "Fernando Meirelles",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=18",
       "ReleaseDate": 2002
     },
     {
       "id": 19,
       "name": "Life is Beautiful",
       "author": "Roberto Benigni",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=19",
       "ReleaseDate": 1997
     },
     {
       "id": 20,
       "name": "Saving Private Ryan",
       "author": "Steven Spielberg",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=20",
       "ReleaseDate": 1998
     },
     {
       "id": 21,
       "name": "The Departed",
       "author": "Martin Scorsese",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=21",
       "ReleaseDate": 2006
     },
     {
       "id": 22,
       "name": "Gladiator",
       "author": "Ridley Scott",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=22",
       "ReleaseDate": 2000
     },
     {
       "id": 23,
       "name": "The Green Mile",
       "author": "Frank Darabont",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=23",
       "ReleaseDate": 1999
     },
     {
       "id": 24,
       "name": "American History X",
       "author": "Tony Kaye",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=24",
       "ReleaseDate": 1998
     },
     {
       "id": 25,
       "name": "The Lion King",
       "author": "Rob Minkoff, Roger Allers",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=25",
       "ReleaseDate": 1994
     },
     {
       "id": 26,
       "name": "Terminator 2: Judgment Day",
       "author": "James Cameron",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=26",
       "ReleaseDate": 1991
     },
     {
       "id": 27,
       "name": "The Prestige",
       "author": "Christopher Nolan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=27",
       "ReleaseDate": 2006
     },
     {
       "id": 28,
       "name": "The Intouchables",
       "author": "Olivier Nakache, Éric Toledano",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=28",
       "ReleaseDate": 2011
     },
     {
       "id": 29,
       "name": "The Usual Suspects",
       "author": "Bryan Singer",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=29",
       "ReleaseDate": 1995
     },
     {
       "id": 30,
       "name": "The Silence of the Lambs",
       "author": "Jonathan Demme",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=30",
       "ReleaseDate": 1991
     },
     {
       "id": 31,
       "name": "The Sixth Sense",
       "author": "M. Night Shyamalan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=31",
       "ReleaseDate": 1999
     },
     {
       "id": 32,
       "name": "Se7en",
       "author": "David Fincher",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=32",
       "ReleaseDate": 1995
     },
     {
       "id": 33,
       "name": "The Departed",
       "author": "Martin Scorsese",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=33",
       "ReleaseDate": 2006
     },
     {
       "id": 34,
       "name": "The Shining",
       "author": "Stanley Kubrick",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=34",
       "ReleaseDate": 1980
     },
     {
       "id": 35,
       "name": "The Godfather: Part III",
       "author": "Francis Ford Coppola",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=35",
       "ReleaseDate": 1990
     },
     {
       "id": 36,
       "name": "The Truman Show",
       "author": "Peter Weir",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=36",
       "ReleaseDate": 1998
     },
     {
       "id": 37,
       "name": "The Matrix",
       "author": "The Wachowskis",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=37",
       "ReleaseDate": 1999
     },
     {
       "id": 38,
       "name": "The Sixth Sense",
       "author": "M. Night Shyamalan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=38",
       "ReleaseDate": 1999
     },
     {
       "id": 39,
       "name": "Inglourious Basterds",
       "author": "Quentin Tarantino",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=39",
       "ReleaseDate": 2009
     },
     {
       "id": 40,
       "name": "The Lion King",
       "author": "Rob Minkoff, Roger Allers",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=40",
       "ReleaseDate": 1994
     },
     {
       "id": 41,
       "name": "The Departed",
       "author": "Martin Scorsese",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=41",
       "ReleaseDate": 2006
     },
     {
       "id": 42,
       "name": "Se7en",
       "author": "David Fincher",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=42",
       "ReleaseDate": 1995
     },
     {
       "id": 43,
       "name": "The Prestige",
       "author": "Christopher Nolan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=43",
       "ReleaseDate": 2006
     },
     {
       "id": 44,
       "name": "The Silence of the Lambs",
       "author": "Jonathan Demme",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=44",
       "ReleaseDate": 1991
     },
     {
       "id": 45,
       "name": "The Sixth Sense",
       "author": "M. Night Shyamalan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=45",
       "ReleaseDate": 1999
     },
     {
       "id": 46,
       "name": "Inglourious Basterds",
       "author": "Quentin Tarantino",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=46",
       "ReleaseDate": 2009
     },
     {
       "id": 47,
       "name": "The Lion King",
       "author": "Rob Minkoff, Roger Allers",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=47",
       "ReleaseDate": 1994
     },
     {
       "id": 48,
       "name": "The Departed",
       "author": "Martin Scorsese",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=48",
       "ReleaseDate": 2006
     },
     {
       "id": 49,
       "name": "Se7en",
       "author": "David Fincher",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=49",
       "ReleaseDate": 1995
     },
     {
       "id": 50,
       "name": "The Prestige",
       "author": "Christopher Nolan",
-      "image": "https://picsum.photos/200/300",
+      "image": "https://picsum.photos/200/200?t=50",
       "ReleaseDate": 2006
     }
   ]
