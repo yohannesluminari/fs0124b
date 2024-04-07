@@ -4,7 +4,7 @@
     <h1 class="text-white">Benvenuto {{ currentUser?.firstname }}</h1>
     <div class="row">
       <div class="col-xl-3 col-lg-3 col-md-4 col-ms-6 mt-5" *ngFor="let movie of movies; let i = index">
-        <div class="card" [style.background-color]="movie.backgroundColor">
+        <div class="card text-white" [style.background-color]="movie.backgroundColor">
           <img [src]="movie.image" class="card-img-top" alt="Movie Image">
           <div class="card-body">
             <h5 class="card-title">{{ movie.name }}</h5>

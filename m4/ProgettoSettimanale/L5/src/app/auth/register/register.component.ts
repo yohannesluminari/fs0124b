@@ -4,6 +4,8 @@ import { AuthService } from '../auth.service';
 import { IUser } from '../../models/i-user';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,14 +13,27 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
 
-  registerData:Partial<IUser> = {}
+  registerData: Partial<IUser> = {};
+  showError: { [key in keyof IUser]?: boolean } = {};
 
-  constructor(private autSvc:AuthService, private router:Router){}
+  constructor(private authSvc:AuthService, private router:Router){}
 
-  signUp(){
-    this.autSvc.register(this.registerData)
-    .subscribe(data => {
-      this.router.navigate(['areaPrivata'])
-    })
+  signUp() {
+    if (!this.registerData.firstname || !this.registerData.lastname || !this.registerData.email || !this.registerData.password) {
+
+      return;
+    }
+
+    this.authSvc.register(this.registerData)
+      .subscribe(data => {
+        this.router.navigate(['/areaPrivata']);
+      });
+  }
+  checkEmpty(field: keyof IUser) {
+    if (this.registerData[field]) {
+      this.showError[field] = false;
+    } else {
+      this.showError[field] = true;
+    }
   }
 }

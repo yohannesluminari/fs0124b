@@ -60,7 +60,6 @@ export class AreaPrivataComponent implements OnInit {
     if (movie.isLiked) {
       this.authSvc.addToFavorites(movie);
     } else {
-      // Rimuovi il film dai preferiti se l'icona "like" è deselezionata
       this.authSvc.removeFromFavorites(movie);
     }
   }

@@ -11,6 +11,7 @@ import { ILoginData } from '../../models/i-login-data';
 })
 export class LoginComponent {
   loginData: ILoginData = { email: '', password: '' };
+  submitted: boolean = false;
   // loginData!:ILoginData
   // loginData:ILoginData= {
   //   email:'g.lum@gmail.com',
@@ -18,17 +19,20 @@ export class LoginComponent {
   // }
 
   constructor(
-    private authSvc:AuthService,
-    private router:Router
-    ){}
+    private authSvc: AuthService,
+    private router: Router
+  ){}
 
-    signIn(){
+  signIn() {
+    this.submitted = true;
 
-      this.authSvc.login(this.loginData)
-      .subscribe(data => {
-        this.router.navigate(['/areaPrivata'])
-      })
-
+    if (!this.loginData.email || !this.loginData.password) {
+      return;
     }
 
+    this.authSvc.login(this.loginData)
+      .subscribe(data => {
+        this.router.navigate(['/areaPrivata']);
+      });
+  }
 }
