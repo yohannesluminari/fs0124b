@@ -2,8 +2,8 @@
   <h2 class="page-title">Ecco la lista degli Utenti Registrati</h2>
   <div class="row mt-4">
     <div class="col-md-6" *ngFor="let user of users; let i = index">
-      <div class="card" [ngStyle]="{ 'background-color': getRandomColor() }">
-        <div class="card-header" [ngStyle]="{ 'background-color': getRandomColor() }">
+      <div class="card" [ngStyle]="{ 'background-color': cardColors[i] }">
+        <div class="card-header" [ngStyle]="{ 'background-color': cardColors[i] }">
           {{ user.firstname }} {{ user.lastname }}
         </div>
         <div class="card-body">

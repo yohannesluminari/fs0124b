@@ -34,7 +34,7 @@ export class AuthService {
     this.restoreUser();
   }
 
-  movies: (IMovies & { isLiked: boolean })[] = [];
+
   resgisterUrl: string = environment.resgisterUrl;
   loginUrl: string = environment.loginUrl;
   movieUrl: string = environment.movieUrl;
@@ -99,37 +99,22 @@ export class AuthService {
   getUsers(): IUser[] {
     return this.users;
   }
+  private favoriteMoviesKey = 'favoriteMovies';
 
-  updateFavoriteMovies(userId: number, favoriteMovies: IMovies[]): void {
-    const userIndex = this.users.findIndex(user => user.id === userId);
-    if (userIndex !== -1) {
-      this.users[userIndex].FavouriteFilms = favoriteMovies;
-      localStorage.setItem('users', JSON.stringify(this.users));
-    }
+  addToFavorites(movie: IMovies): void {
+    const favoriteMovies = this.getFavoriteMovies();
+    favoriteMovies.push(movie);
+    localStorage.setItem(this.favoriteMoviesKey, JSON.stringify(favoriteMovies));
   }
 
-  removeFromFavorites(userId: number, movieId: number): void {
-    const userData = localStorage.getItem('users');
-    if (userData) {
-      const users: IUser[] = JSON.parse(userData);
-      const user = users.find(user => user.id === userId);
-      if (user && user.FavouriteFilms) {
-        const index = user.FavouriteFilms.findIndex(movie => movie.id === movieId);
-        if (index !== -1) {
-          user.FavouriteFilms.splice(index, 1);
-          localStorage.setItem('users', JSON.stringify(users));
-        }
-      }
-    }
+  removeFromFavorites(movie: IMovies): void {
+    let favoriteMovies = this.getFavoriteMovies();
+    favoriteMovies = favoriteMovies.filter(m => m.id !== movie.id);
+    localStorage.setItem(this.favoriteMoviesKey, JSON.stringify(favoriteMovies));
   }
 
-  getFavoriteMovies(userId: number): IMovies[] | undefined {
-    const userData = localStorage.getItem('users');
-    if (userData) {
-      const users: IUser[] = JSON.parse(userData);
-      const user = users.find(user => user.id === userId);
-      return user ? user.FavouriteFilms : undefined;
-    }
-    return undefined;
+  getFavoriteMovies(): IMovies[] {
+    const favoriteMoviesJson = localStorage.getItem(this.favoriteMoviesKey);
+    return favoriteMoviesJson ? JSON.parse(favoriteMoviesJson) : [];
   }
 }

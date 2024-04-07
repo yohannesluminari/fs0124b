@@ -1,17 +1,18 @@
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-4" *ngFor="let movie of favouriteMovies">
-      <div class="card">
-        <img [src]="movie.image" class="card-img-top" alt="Movie Image">
-        <div class="card-body">
-          <h5 class="card-title">{{ movie.name }}</h5>
-          <p class="card-text">Author: {{ movie.author }}</p>
-          <p class="card-text">Release Year: {{ movie.ReleaseDate }}</p>
-          <button class="btn btn-danger" (click)="removeFromFavorites(movie.id)">Remove from Favorites</button>
-
+<body>
+  <div class="container">
+    <div class="row" id="cardRow">
+      <div class="col-xl-3 col-lg-3 col-md-4 col-ms-6 mt-5" *ngFor="let movie of favouriteMovies">
+        <div class="card">
+          <img [src]="movie.image" class="card-img-top" alt="Movie Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.name }}</h5>
+            <p class="card-text">Author: {{ movie.author }}</p>
+            <p class="card-text">Release Year: {{ movie.ReleaseDate }}</p>
+            <!-- Aggiungi il bottone per rimuovere il film dai preferiti -->
+            <button class="btn btn-danger" (click)="removeFromFavorites(movie)">Remove from Favorites</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</body>

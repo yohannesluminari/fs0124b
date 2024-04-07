@@ -1,0 +1,14 @@
+body{
+  background-color: black;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 140px;
+}
+
+
+.card {
+  flex: 1;
+  margin: 0 10px; /* Aggiungi spaziatura tra le card */
+}

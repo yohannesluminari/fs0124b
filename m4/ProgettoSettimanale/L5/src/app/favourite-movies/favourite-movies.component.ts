@@ -18,17 +18,13 @@ export class FavouriteMoviesComponent implements OnInit {
     this.authSvc.user$.subscribe(user => {
       if (user) {
         this.currentUser = user;
-        const userId = user.id;
-        this.favouriteMovies = this.authSvc.getFavoriteMovies(userId) || [];
+        this.favouriteMovies = this.authSvc.getFavoriteMovies();
       }
     });
   }
-
-  removeFromFavorites(movieId: number): void {
-    if (this.currentUser) {
-      const userId = this.currentUser.id;
-      this.authSvc.removeFromFavorites(userId, movieId);
-      this.favouriteMovies = this.authSvc.getFavoriteMovies(userId) || [];
-    }
+  removeFromFavorites(movie: IMovies): void {
+    this.authSvc.removeFromFavorites(movie);
+    this.favouriteMovies = this.authSvc.getFavoriteMovies();
   }
+
 }

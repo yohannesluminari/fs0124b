@@ -10,11 +10,12 @@ import { ILoginData } from '../../models/i-login-data';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-
-  loginData:ILoginData= {
-    email:'g.lum@gmail.com',
-    password:'11111111'
-  }
+  loginData: ILoginData = { email: '', password: '' };
+  // loginData!:ILoginData
+  // loginData:ILoginData= {
+  //   email:'g.lum@gmail.com',
+  //   password:'11111111'
+  // }
 
   constructor(
     private authSvc:AuthService,

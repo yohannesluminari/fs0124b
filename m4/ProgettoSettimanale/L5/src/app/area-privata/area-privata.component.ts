@@ -47,7 +47,7 @@ export class AreaPrivataComponent implements OnInit {
       this.setRandomBackgroundColor();
     });
 
-  
+
     const userData = localStorage.getItem('accessData');
     if (userData) {
       const accessData = JSON.parse(userData);
@@ -57,20 +57,12 @@ export class AreaPrivataComponent implements OnInit {
 
   toggleLike(movie: MovieWithLikeStatus): void {
     movie.isLiked = !movie.isLiked;
-
-    if (this.currentUser) {
-      if (!this.currentUser.FavouriteFilms) {
-        this.currentUser.FavouriteFilms = [];
-      }
-
-      const index = this.currentUser.FavouriteFilms.findIndex(favMovie => favMovie.id === movie.id);
-      if (index !== -1) {
-        this.currentUser.FavouriteFilms.splice(index, 1);
-      } else {
-        this.currentUser.FavouriteFilms.push(movie);
-      }
-
-      localStorage.setItem('accessData', JSON.stringify({ accessToken: '', user: this.currentUser }));
+    if (movie.isLiked) {
+      this.authSvc.addToFavorites(movie);
+    } else {
+      // Rimuovi il film dai preferiti se l'icona "like" è deselezionata
+      this.authSvc.removeFromFavorites(movie);
     }
   }
 }
+
