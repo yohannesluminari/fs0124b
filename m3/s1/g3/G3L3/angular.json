@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "G3L3": {
+    "G3l3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/g3-l3",
+            "outputPath": "dist/g3l3",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -40,12 +40,7 @@
               "src/styles.scss",
               "node_modules/bootstrap/scss/bootstrap.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -75,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "G3L3:build:production"
+              "buildTarget": "G3l3:build:production"
             },
             "development": {
-              "buildTarget": "G3L3:build:development"
+              "buildTarget": "G3l3:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "G3L3:build"
+            "buildTarget": "G3l3:build"
           }
         },
         "test": {

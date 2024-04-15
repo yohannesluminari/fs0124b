@@ -1,16 +1,13 @@
-<p>home works!</p>
-{{articoliArr | json}}
-
 <div class="container">
-  <div class="row gap-0">
-    <div *ngFor="let articolo of articoliArr" class="col-6 card">
-      <div class="card-body">
-        <h5 class="card-title">{{ articolo.id }}</h5>
-        <h5 class="card-title">{{ articolo.title }}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">{{ articolo.tags }}</h6>
-        <p class="card-text">
-          {{ truncateText(articolo.body, 200) }}
-        </p>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let prodotto of prodotti">
+      <div class="card h-100">
+        <img class="card-img-top" [src]="prodotto.thumbnail" [alt]="prodotto.title">
+        <div class="card-body">
+          <h4 class="card-title">{{ prodotto.title }}</h4>
+          <h5>{{ prodotto.price }}</h5>
+          <p class="card-text">{{ prodotto.description }}</p>
+        </div>
       </div>
     </div>
   </div>

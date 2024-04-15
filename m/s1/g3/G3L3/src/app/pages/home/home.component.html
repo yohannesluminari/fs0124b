@@ -1,0 +1,17 @@
+<p>home works!</p>
+{{articoliArr | json}}
+
+<div class="container">
+  <div class="row gap-0">
+    <div *ngFor="let articolo of articoliArr" class="col-6 card">
+      <div class="card-body">
+        <h5 class="card-title">{{ articolo.id }}</h5>
+        <h5 class="card-title">{{ articolo.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">{{ articolo.tags }}</h6>
+        <p class="card-text">
+          {{ truncateText(articolo.body, 200) }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

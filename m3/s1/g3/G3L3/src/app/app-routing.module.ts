@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { InactiveComponent } from './pages/inactive/inactive.component';
-import { ActiveComponent } from './pages/active/active.component';
-import { Page404Component } from './pages/page404/page404.component';
-
+import { HomeComponent } from './Pages/home/home.component';
+import { FavouriteComponent } from './Pages/favourite/favourite.component';
 
 const routes: Routes = [
   {
@@ -12,17 +9,9 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:'active',
-    component: ActiveComponent
+    path:'favourite',
+    component: FavouriteComponent
   },
-  {
-    path:'inactive',
-    component: InactiveComponent
-  },
-  {
-    path:'**',
-    component: Page404Component
-  }
 ];
 
 @NgModule({

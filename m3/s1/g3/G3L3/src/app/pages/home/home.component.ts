@@ -1,30 +1,24 @@
-import { DbService } from './../../db.service';
-import { iArticolo } from './../../Models/articolo';
-import { Component } from '@angular/core';
-
-
+import { Component, OnInit } from '@angular/core';
+import { iProdotti } from '../../Models/prodotti';
+import { ProdottoService } from '../../prodotti.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
-truncateText(arg0: string,arg1: number) {
-throw new Error('Method not implemented.');
-}
-  articoliArr:iArticolo[] = [];
+export class HomeComponent implements OnInit {
+  prodotti: iProdotti[] = [];
 
+  constructor(private prodottoSvc: ProdottoService) {}
 
-  constructor(private articoliSvc:DbService){}
-
-  ngOnInit(){
-
-    this.articoliSvc.getAllArticolo().then(res => {
-
-      this.articoliArr = res;
-
+  ngOnInit() {
+    this.prodottoSvc.getAll().subscribe(prodotti => {
+      this.prodotti = this.prodotti
+      console.log('sono dentro qui')
+      console.log(prodotti)
     })
 
   }
+
 }
