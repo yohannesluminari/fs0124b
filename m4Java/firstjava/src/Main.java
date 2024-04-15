@@ -4,7 +4,7 @@
 public class Main {
 
     public static String concat(String a, String b, String c) {
-        return "il prodotto di <a e b> è: " + a + b + c;
+        return "il prodotto di <a e b> è: " +  a + b + c;
     }
 
     public static int moltiplica(int a, int b) {
