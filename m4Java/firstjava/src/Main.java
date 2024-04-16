@@ -1,7 +1,7 @@
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class g1Exercise {
 
     public static String concat(String a, String b, String c) {
         return "il prodotto di <a e b> è: " +  a + b + c;
@@ -29,9 +29,6 @@ public class Main {
 
         return area;
     }
-
-
-
 
 
     public static void main(String[] args) {
