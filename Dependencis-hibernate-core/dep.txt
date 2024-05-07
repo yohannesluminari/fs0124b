@@ -1,0 +1,6 @@
+// da copiare nel file pom.xml
+
+<dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+</dependency>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/S1/GIOVEDI/Esercizi" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/S1/L5/esercizioW1S1" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/S1/MERCOLEDI/G3ES3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S1/GIOVEDI/Esercizi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S1/L5/esercizioW1S1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S1/MARTEDI/EsM4S1G2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S1/MERCOLEDI/G3ES3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S2/BibliotecaEpicode" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S2/g2/it.epicode" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/W1/S3/BibliotecaEpicodePgAdmin" vcs="Git" />
   </component>
 </project>
