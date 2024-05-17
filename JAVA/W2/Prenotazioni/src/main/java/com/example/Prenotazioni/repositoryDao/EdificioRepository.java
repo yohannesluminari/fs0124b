@@ -1,4 +1,4 @@
-package com.example.Prenotazioni.repository;
+package com.example.Prenotazioni.repositoryDao;
 
 import com.example.Prenotazioni.models.Edificio;
 import org.springframework.data.jpa.repository.JpaRepository;

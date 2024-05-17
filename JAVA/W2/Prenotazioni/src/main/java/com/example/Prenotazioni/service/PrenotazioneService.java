@@ -1,12 +1,10 @@
 package com.example.Prenotazioni.service;
 
 import com.example.Prenotazioni.models.Prenotazione;
-import com.example.Prenotazioni.repository.PrenotazioneRepository;
+import com.example.Prenotazioni.repositoryDao.PrenotazioneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.LocalDate;
 
 @Service
 public class PrenotazioneService {
