@@ -11,10 +11,10 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource() {
         return DataSourceBuilder.create()
-                .url("jdbc:h2:mem:testdb")
-                .username("sa")
-                .password("password")
-                .driverClassName("org.h2.Driver")
+                .url("jdbc:postgresql://localhost:5432/mydatabase")
+                .username("Prenetation")
+                .password("postgressql")
+                .driverClassName("org.postgresql.Driver")
                 .build();
     }
 }
