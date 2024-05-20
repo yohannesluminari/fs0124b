@@ -3,23 +3,27 @@ package com.example.Prenotazioni.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
 @Getter
 @Setter
+@Entity
+@Data
 @AllArgsConstructor
-@Builder(setterPrefix = "with")
 @NoArgsConstructor
-public class Edificio {
+@Builder(setterPrefix = "with")
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 80)
-    private String name;
+    private String username;
 
     @Column(length = 80)
-    private String address;
+    private String fullName;
 
     @Column(length = 80)
-    private String city;
+    private String email;
+
+
 }
