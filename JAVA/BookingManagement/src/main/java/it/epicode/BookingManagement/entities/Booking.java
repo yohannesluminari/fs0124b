@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 @Table(name = "device")
@@ -20,6 +22,9 @@ public class Booking {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @Column(nullable = false)
+    private LocalDateTime bookingDate;
 
     @ManyToOne
     @JoinColumn(name = "event_id")

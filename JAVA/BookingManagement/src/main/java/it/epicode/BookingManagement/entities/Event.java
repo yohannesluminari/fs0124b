@@ -1,39 +1,47 @@
 package it.epicode.BookingManagement.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jdk.jfr.EventType;
+import lombok.*;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Data
 @Table(name = "events")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(setterPrefix = "with")
 public class Event {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "events_seq")
+    @SequenceGenerator(name = "events_seq", sequenceName = "events_seq")
     private Long id;
 
-    @Column(length = 100)
-    private String title;
+    @Column(nullable = false)
+    private String eventName;
 
-    @Column(columnDefinition = "TEXT-DESCRIPTION")
-    private String description;
+    @Column(nullable = false)
+    private String eventDescription;
 
-    private LocalDate date;
+    @Column(nullable = false)
+    private LocalDateTime eventDate;
 
-    @Column(length = 100)
-    private String location;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private EventType eventType;
 
-    private int availableSeats;
+    @Column(nullable = false)
+    private int eventAvailableSeats;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User organizer;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
+
+    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Booking> bookings = new ArrayList<>();
 
 }
